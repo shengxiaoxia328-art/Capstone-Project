@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# 环境变量
+.env
+.env.local
+
+# 向量数据库
+vector_db/
+*.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 日志
+*.log
+
+# 临时文件
+*.tmp
+*.temp
+
+# 图片文件（可选，如果不想提交测试图片）
+# *.jpg
+# *.jpeg
+# *.png
