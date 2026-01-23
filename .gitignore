@@ -24,7 +24,7 @@ wheels/
 *.egg
 
 # 环境变量
-.env
+# .env  # 允许提交.env文件
 .env.local
 
 # 向量数据库
