@@ -37,6 +37,9 @@ vector_db/
 *.swp
 *.swo
 
+# 双周报目录
+bioweekly report/
+
 # 日志
 *.log
 
