@@ -5,20 +5,35 @@
 from typing import Dict, List, Optional
 import config
 
+# 导入增强的追问机制（可选）
+try:
+    from src.enhanced_followup import EnhancedFollowupGenerator
+    ENHANCED_FOLLOWUP_AVAILABLE = True
+except ImportError:
+    ENHANCED_FOLLOWUP_AVAILABLE = False
+
 
 class QuestionGenerator:
     """访谈问题生成器"""
     
-    def __init__(self, api_key: str = None, api_endpoint: str = None):
+    def __init__(self, api_key: str = None, api_endpoint: str = None, use_enhanced_followup: bool = True):
         """
         初始化问题生成器
         
         Args:
             api_key: 混元API密钥
             api_endpoint: API端点
+            use_enhanced_followup: 是否使用增强的追问机制
         """
         self.api_key = api_key or config.HUNYUAN_API_KEY
         self.api_endpoint = api_endpoint or config.HUNYUAN_API_ENDPOINT
+        self.use_enhanced_followup = use_enhanced_followup and ENHANCED_FOLLOWUP_AVAILABLE
+        
+        # 初始化增强的追问生成器
+        if self.use_enhanced_followup:
+            self.enhanced_followup = EnhancedFollowupGenerator()
+        else:
+            self.enhanced_followup = None
     
     def generate_initial_questions(
         self, 
@@ -73,7 +88,14 @@ class QuestionGenerator:
         Returns:
             后续问题
         """
-        prompt = self._build_followup_prompt(analysis_result, previous_qa, context)
+        # 如果启用增强追问机制，使用增强版本
+        if self.use_enhanced_followup and self.enhanced_followup:
+            prompt = self.enhanced_followup.generate_enhanced_followup_prompt(
+                analysis_result, previous_qa, context
+            )
+        else:
+            prompt = self._build_followup_prompt(analysis_result, previous_qa, context)
+        
         raw_question = self._call_api_for_questions(prompt, single=True)
         
         # 过滤思考过程，提取实际问题
