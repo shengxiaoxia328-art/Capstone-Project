@@ -4,9 +4,10 @@
 
 "照片的故事"是一个基于多模态大模型的智能照片故事生成系统。系统能够深度解析照片内容，自动生成针对性的访谈问题，引导用户展开对话，最终生成图文并茂的照片故事。
 
-系统支持两种使用模式：
-- **交互式模式**：完整的命令行交互体验，适合个人用户
-- **程序化调用**：提供API接口，适合集成到其他应用
+系统支持三种使用方式：
+- **Web 界面**：Material UI 前端 + Flask API，浏览器中完成选模式、上传、访谈、生成故事（推荐）
+- **命令行交互**：运行 `python main.py`，在终端完成完整流程
+- **程序化调用**：`main.py` 中的 `PhotoStorySystem` 提供单图/多图处理接口，适合集成
 
 ## 核心功能
 
@@ -40,8 +41,10 @@
 ├── requirements.txt             # Python依赖包
 ├── config.py                    # 系统配置文件
 ├── env_example.txt              # 环境变量配置示例
-├── main.py                      # 主程序入口（程序化调用）
-├── interactive_photo_story.py   # 交互式系统（推荐使用）
+├── main.py                      # 主程序入口（含交互式流程）
+├── server.py                    # Web API 服务（供前端调用）
+├── interactive_photo_story.py   # 交互式系统（可选，与 main 功能一致）
+├── frontend/                    # Web 前端（React + Vite + Material UI）
 ├── src/                         # 核心模块目录
 │   ├── __init__.py
 │   ├── multimodal_analyzer.py  # 多模态图像分析模块
@@ -106,20 +109,40 @@ pip install -r requirements.txt
 
 ## 使用方法
 
-### 交互式模式（推荐）
+### Web 界面（推荐）
 
-适合个人用户，提供完整的交互体验：
+使用 Material UI 前端在浏览器中完成全流程：
+
+1. **启动后端 API**（项目根目录）：
+   ```bash
+   pip install -r requirements.txt   # 若未安装，需包含 flask、flask-cors
+   python server.py
+   ```
+   服务运行在 http://127.0.0.1:5000
+
+2. **启动前端**：
+   ```bash
+   cd frontend
+   npm install
+   npm run dev
+   ```
+   浏览器打开 http://localhost:5173
+
+3. 在页面中：选择模式（单图深挖 / 多图叙事链）→ 上传照片 → 按提示回答问题 → 生成故事，可复制或重新开始。
+
+### 命令行交互模式
+
+适合在终端中完成全流程：
 
 ```bash
-python interactive_photo_story.py
+python main.py
 ```
 
 运行后会引导你：
-1. 选择照片（支持从 `test_images/` 目录选择或输入自定义路径）
-2. 系统自动分析照片内容
-3. 回答系统生成的访谈问题（支持 `skip` 跳过、`done` 提前结束）
-4. 自动生成照片故事
-5. 可选择保存结果到文件
+1. 选择模式（单图深挖 / 多图叙事链）
+2. 选择照片（支持从 `test_images/` 或自定义路径）
+3. 系统分析照片并生成访谈问题，逐题回答（支持 `skip`、`done`）
+4. 生成照片故事并可选保存
 
 ### 程序化调用
 

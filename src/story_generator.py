@@ -1,9 +1,47 @@
 """
 故事生成模块
 融合视觉描述与访谈内容，生成图文并茂的文章
+支持多种叙事风格：个人叙事、名家叙事、知名回忆录叙事
 """
-from typing import Dict, List, Optional
+from typing import Dict, List, Optional, Callable
 import config
+
+# 叙事风格体系：用户可选的大类及对应提示词描述
+NARRATIVE_STYLES = {
+    "personal": {
+        "name": "个人叙事风格",
+        "description": "第一人称、口语化、亲切自然，像在跟朋友讲述自己的经历。",
+        "prompt_extra": """
+叙事风格要求（必须严格遵循）：
+- 采用第一人称「我」的视角叙述
+- 语言口语化、亲切自然，像在跟朋友聊天讲故事
+- 适当保留口语感，可带轻微感慨或调侃
+- 情感真挚、不刻意煽情，突出个人经历与感受
+""",
+    },
+    "famous_writer": {
+        "name": "名家叙事风格（如沈从文等）",
+        "description": "文学性强、含蓄隽永、乡土气息、白描手法，类似沈从文式的笔调。",
+        "prompt_extra": """
+叙事风格要求（必须严格遵循）：
+- 采用类似沈从文等名家的文学笔调：含蓄、隽永、留白
+- 多用白描，少用直白抒情；用细节与场景说话
+- 语言简洁干净，有乡土或怀旧气息，节奏舒缓
+- 可第三人称或第一人称，整体偏文学化、可读性强
+""",
+    },
+    "memoir": {
+        "name": "知名回忆录叙事风格（如马斯克传、李飞飞传）",
+        "description": "传记式、纪实感、有细节与转折，理性与情感并重。",
+        "prompt_extra": """
+叙事风格要求（必须严格遵循）：
+- 采用知名回忆录/传记式写法：纪实、有细节、有因果与转折
+- 理性与情感并重：既交代事实与背景，又有人物感受与选择
+- 叙述清晰、结构分明，可带一点「回顾人生节点」的视角
+- 语气稳重、有分量，类似《马斯克传》《李飞飞自传》等回忆录风格
+""",
+    },
+}
 
 
 class StoryGenerator:
@@ -24,7 +62,9 @@ class StoryGenerator:
         self,
         photo_id: str,
         analysis_result: Dict,
-        qa_history: List[Dict]
+        qa_history: List[Dict],
+        narrative_style: Optional[str] = None,
+        on_stream_chunk: Optional[Callable[[str], None]] = None,
     ) -> str:
         """
         生成单张照片的故事文章
@@ -33,27 +73,34 @@ class StoryGenerator:
             photo_id: 照片ID
             analysis_result: 照片分析结果
             qa_history: 问答历史
+            narrative_style: 叙事风格键名，如 "personal" / "famous_writer" / "memoir"，None 表示不指定
+            on_stream_chunk: 可选，流式输出时每收到一段文本就调用此回调（用于前端实时显示）
             
         Returns:
             生成的故事文章
         """
-        # 构建故事生成提示词
-        prompt = self._build_story_prompt(analysis_result, qa_history, single_photo=True)
+        # 构建故事生成提示词（含叙事风格）
+        prompt = self._build_story_prompt(
+            analysis_result, qa_history, single_photo=True, narrative_style=narrative_style
+        )
         
-        # 调用API生成故事
-        raw_story = self._call_api_for_story(prompt)
+        # 调用API生成故事（支持流式时实时回调）
+        raw_story = self._call_api_for_story(prompt, on_stream_chunk=on_stream_chunk)
         
         # 过滤思考过程
         story = self._filter_thinking_process(raw_story)
+        # 移除 API 可能返回的 JSON、分析说明等非叙事内容
+        story = self._strip_analysis_from_story(story)
         
         # 如果过滤后还是思考过程或为空，尝试更激进的方法
         if self._is_mostly_thinking_process(story) or not story.strip():
             print("[提示] 故事响应主要是思考过程，尝试更激进的提取...")
             story = self._extract_story_aggressive(raw_story)
+            story = self._strip_analysis_from_story(story or "")
         
-        # 如果还是无法提取，基于分析结果生成故事
+        # 若仍无有效叙事，用分析+访谈拼出故事（保证访谈回答被写进正文）
         if self._is_mostly_thinking_process(story) or not story.strip():
-            print("[提示] 无法从API响应中提取故事，基于照片分析结果生成故事...")
+            print("[提示] 无法从API响应中提取故事，将根据访谈内容生成...")
             story = self._generate_story_from_analysis(analysis_result, qa_history)
         
         return story
@@ -86,32 +133,37 @@ class StoryGenerator:
         self,
         analysis_result: Dict,
         qa_history: List[Dict],
-        single_photo: bool = True
+        single_photo: bool = True,
+        narrative_style: Optional[str] = None
     ) -> str:
-        """构建故事生成提示词"""
+        """构建故事生成提示词；narrative_style 为 NARRATIVE_STYLES 的键名时注入对应风格要求。"""
         # 格式化问答内容
         qa_text = "\n".join([
             f"问：{qa.get('question', '')}\n答：{qa.get('answer', '')}"
             for qa in qa_history
         ])
         
-        prompt = f"""请基于以下照片分析和访谈内容，撰写一篇温暖、生动的"照片故事"文章。
+        style_block = ""
+        if narrative_style and narrative_style in NARRATIVE_STYLES:
+            style_block = NARRATIVE_STYLES[narrative_style]["prompt_extra"]
+        
+        prompt = f"""请基于以下「照片视觉分析」和「访谈内容」撰写一篇照片故事文章。
+{style_block}
 
-照片视觉分析：
+【照片视觉分析】（仅作背景，不要大段复述）：
 {analysis_result.get('overall_description', '')}
 
-访谈内容：
+【访谈内容】（必须作为故事核心，把用户的回答写进故事）：
 {qa_text}
 
-要求：
-1. 文章要融合视觉描述和口述内容，自然流畅
-2. 保持第一人称或第三人称叙述，根据访谈内容选择
-3. 突出照片中的关键细节和情感
-4. 文章结构：开头引入照片场景 → 描述照片内容 → 展开背后的故事 → 结尾升华情感
-5. 字数控制在800-1200字
-6. 语言要温暖、有感染力，能够引起读者共鸣
+重要要求：
+1. 故事必须以用户在「访谈内容」里的回答为核心。把用户提到的人物、事件、感受、回忆写进正文，用第一人称或自然叙述呈现，不能只写照片画面描述。
+2. 禁止输出任何 JSON、代码块、分析结构、「深度分析」「请看以下」等说明性文字；只输出可读的叙事文章。
+3. 输出必须是「一段完整的话」：整篇故事写成一段或数段连贯的叙述，前后衔接自然，像在讲一个完整的小故事，不要分点、不要列表、不要小标题。
+4. 文章结构：简短引入照片场景 → 结合用户回答展开背后的故事（重点）→ 结尾升华情感。
+5. 字数 800-1200 字，语言自然、有感染力。
 
-请直接输出文章内容，不要添加标题或其他说明。"""
+请直接输出文章正文，不要任何标题、前缀或说明。"""
         
         return prompt
     
@@ -144,9 +196,10 @@ class StoryGenerator:
 1. 文章要能够自然地连接多张照片，展现时间线和故事发展
 2. 在描述每张照片时，要引用前一张照片中提到的人物、地点或事件，形成连贯的叙事
 3. 突出照片之间的关联和变化（时间、人物、场景的变化）
-4. 文章结构：整体引入 → 按时间顺序描述每张照片及其故事 → 总结和升华
-5. 字数控制在1500-2500字
-6. 语言要温暖、有感染力，能够展现人生的变迁和情感的延续
+4. 输出必须是「一段完整的话」：整篇文章写成连贯的叙述，段落之间衔接自然，像在讲一个完整的人生故事，不要分点、不要列表、不要小标题。
+5. 文章结构：整体引入 → 按时间顺序描述每张照片及其故事 → 总结和升华
+6. 字数控制在1500-2500字
+7. 语言要温暖、有感染力，能够展现人生的变迁和情感的延续
 
 重要：只输出文章内容，不要输出任何思考过程、解释、元信息或英文内容。
 直接开始写文章，格式如下：
@@ -230,6 +283,61 @@ class StoryGenerator:
         
         # 如果完全没有故事内容，返回空字符串（让调用者知道需要处理）
         return ""
+    
+    def _strip_analysis_from_story(self, text: str) -> str:
+        """从故事文本中移除 JSON、分析说明等非叙事内容，只保留可读叙事。"""
+        import re
+        if not text or not text.strip():
+            return text
+        s = text
+        # 移除 ```json ... ``` 或 ``` ... ``` 代码块
+        s = re.sub(r'```json\s*[\s\S]*?```', '', s, flags=re.IGNORECASE)
+        s = re.sub(r'```\s*[\s\S]*?```', '', s)
+        # 移除 { "key": "value" } 形式的 JSON 块（跨行）
+        s = re.sub(r'\{\s*"[^"]+"\s*:\s*[^{}]+\s*\}', '', s)
+        s = re.sub(r'\{\s*"visual_elements"[^}]*\}', '', s, flags=re.DOTALL)
+        # 移除典型分析/说明句（整句）
+        analysis_phrases = [
+            r'好的[，,]?\s*请看以下[^。]*?分析[。.]?',
+            r'其画面精度[、,]?\s*光影效果[^。]*?指向了这一点[。.]?',
+            r'这张图片并非[^。]*?电子游戏的截\s*图[。.]?',
+            r'因此[，,]?\s*以下的分析将基于[^。]*?前提[。.]?',
+            r'以下的分析将基于[^。]*?数字创作品的前提[。.]?',
+        ]
+        for pat in analysis_phrases:
+            s = re.sub(pat, '', s, flags=re.IGNORECASE)
+        # 按行过滤：丢弃明显是分析结构的行
+        lines = s.split('\n')
+        kept = []
+        skip_keywords = ('visual_elements', 'expression_and_emotion', 'background_architecture', '"人物"', '"场景"', '"数量"', '"年龄"', '"性别"', '关系推测', '建筑风格', '人物表情', '姿态和情绪')
+        for line in lines:
+            line_stripped = line.strip()
+            if not line_stripped:
+                continue
+            if any(kw in line_stripped for kw in skip_keywords):
+                continue
+            if re.match(r'^\s*[\{\[]', line_stripped) or (line_stripped.startswith('"') and '":' in line_stripped):
+                continue
+            kept.append(line_stripped)
+        s = '\n'.join(kept)
+        s = re.sub(r'\n{3,}', '\n\n', s)
+        s = re.sub(r' +', ' ', s)  # 仅合并空格，保留换行
+        return s.strip()
+    
+    def _story_uses_qa(self, story: str, qa_history: List[Dict]) -> bool:
+        """判断故事是否明显用到了访谈内容（至少包含某条回答中的片段）。"""
+        if not story or not qa_history:
+            return bool(qa_history)
+        story_lower = story.strip()[:2000]
+        for qa in qa_history:
+            ans = (qa.get('answer') or '').strip()
+            if len(ans) < 3:
+                continue
+            # 取回答的前 15 个字符作为片段，避免过长
+            fragment = ans[:15] if len(ans) >= 15 else ans
+            if fragment in story_lower:
+                return True
+        return False
     
     def _is_mostly_thinking_process(self, text: str) -> bool:
         """判断文本是否主要是思考过程"""
@@ -417,15 +525,16 @@ class StoryGenerator:
             if desc_clean and len(desc_clean) > 20:
                 story_parts.append(f"\n{desc_clean}。")
         
-        # 添加访谈内容（如果有）
+        # 以访谈回答为核心写故事（保证用户说的内容出现在正文里）
         if qa_history:
-            story_parts.append("\n\n通过访谈，我们了解到更多背后的故事：")
-            for qa in qa_history[:3]:  # 只取前3个问答
-                q = qa.get('question', '')
-                a = qa.get('answer', '')
-                if q and a and len(a) > 5:
-                    # 将问答自然地融入故事
-                    story_parts.append(f"\n{a}")
+            story_parts.append("\n\n在访谈里，我分享了和这张照片有关的回忆：")
+            for qa in qa_history[:5]:  # 最多 5 组问答
+                q = (qa.get('question') or '').strip()
+                a = (qa.get('answer') or '').strip()
+                if not a or len(a) < 2:
+                    continue
+                # 把用户回答写成一句或一段叙述
+                story_parts.append(f"\n{a}")
         
         # 结尾 - 根据照片类型选择
         if '游戏' in overall_desc or '游戏截图' in overall_desc:
@@ -474,21 +583,24 @@ class StoryGenerator:
         story_keywords = ['照片', '故事', '回忆', '时光', '那年', '那时', '记得', '想起']
         return any(keyword in line for keyword in story_keywords)
     
-    def _call_api_for_story(self, prompt: str) -> str:
+    def _call_api_for_story(
+        self, prompt: str, on_stream_chunk: Optional[Callable[[str], None]] = None
+    ) -> str:
         """
-        调用API生成故事（支持Gemini和混元）
+        调用API生成故事（支持Gemini和混元；Gemini 支持流式时实时回调）
         
         Args:
             prompt: 故事生成提示词
+            on_stream_chunk: 可选，流式时每段文本回调
             
         Returns:
             生成的故事文本
         """
-        # 检查是否使用Gemini API
+        if config.USE_GEMINI and on_stream_chunk is not None:
+            return self._call_gemini_text_api_stream(prompt, on_stream_chunk)
         if config.USE_GEMINI:
             return self._call_gemini_text_api(prompt)
-        else:
-            return self._call_hunyuan_text_api(prompt)
+        return self._call_hunyuan_text_api(prompt)
     
     def _call_gemini_text_api(self, prompt: str) -> str:
         """调用Gemini API生成文本"""
@@ -510,7 +622,7 @@ class StoryGenerator:
             ],
             "generationConfig": {
                 "temperature": config.TEMPERATURE,
-                "maxOutputTokens": 4096  # 故事需要更多token
+                "maxOutputTokens": getattr(config, "STORY_MAX_OUTPUT_TOKENS", 4096)
             }
         }
         
@@ -541,7 +653,56 @@ class StoryGenerator:
             print(f"Gemini API调用错误: {e}")
             if 'response' in locals():
                 print(f"响应内容: {response.text}")
-            return self._get_mock_story()
+            # 失败时返回空，让调用方使用 _generate_story_from_analysis 根据用户回答生成
+            return ""
+
+    def _call_gemini_text_api_stream(self, prompt: str, on_chunk: Callable[[str], None]) -> str:
+        """调用 Gemini 流式 API，每收到一段文本就调用 on_chunk，最后返回完整文本"""
+        import json
+        import requests
+        
+        model_name = getattr(config, "GEMINI_MODEL_NAME", "gemini-2.5-pro")
+        base = (self.api_endpoint or "https://generativelanguage.googleapis.com/v1beta").rstrip("/")
+        # 如果 base 已经包含 /models/xxx，就直接在后面拼 :streamGenerateContent
+        if "/models/" in base:
+            url = f"{base}:streamGenerateContent?key={self.api_key}"
+        else:
+            url = f"{base}/models/{model_name}:streamGenerateContent?key={self.api_key}"
+        headers = {"Content-Type": "application/json"}
+        payload = {
+            "contents": [{"parts": [{"text": prompt}]}],
+            "generationConfig": {
+                "temperature": config.TEMPERATURE,
+                "maxOutputTokens": getattr(config, "STORY_MAX_OUTPUT_TOKENS", 4096),
+            },
+        }
+        full_text = []
+        try:
+            with requests.post(url, headers=headers, json=payload, stream=True, timeout=120) as resp:
+                resp.raise_for_status()
+                for line in resp.iter_lines(decode_unicode=True):
+                    if not line:
+                        continue
+                    s = line.strip()
+                    if s.startswith("data:"):
+                        s = s[5:].strip()
+                    if not s or s == "[DONE]":
+                        continue
+                    try:
+                        data = json.loads(s)
+                        if "candidates" in data and data["candidates"]:
+                            c = data["candidates"][0]
+                            if "content" in c and "parts" in c["content"] and c["content"]["parts"]:
+                                text = c["content"]["parts"][0].get("text", "")
+                                if text:
+                                    full_text.append(text)
+                                    on_chunk(text)
+                    except (json.JSONDecodeError, KeyError, IndexError):
+                        pass
+        except Exception as e:
+            print(f"Gemini 流式 API 错误: {e}")
+        # 失败时返回空，让调用方使用 _generate_story_from_analysis 根据用户回答生成
+        return "".join(full_text) if full_text else ""
     
     def _call_hunyuan_text_api(self, prompt: str) -> str:
         """调用混元API生成文本（原始实现）"""
@@ -580,7 +741,8 @@ class StoryGenerator:
                 
         except Exception as e:
             print(f"混元API调用错误: {e}")
-            return self._get_mock_story()
+            # 失败时返回空，让调用方使用 _generate_story_from_analysis 根据用户回答生成
+            return ""
     
     def _get_mock_story(self) -> str:
         """返回模拟故事（用于测试）"""

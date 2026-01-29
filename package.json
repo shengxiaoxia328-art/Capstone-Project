@@ -1,0 +1,13 @@
+{
+  "name": "photo-story",
+  "private": true,
+  "description": "照片的故事 - 前后端一键启动",
+  "scripts": {
+    "dev": "concurrently -n backend,frontend -c blue,green \"python server.py\" \"cd frontend && npm run dev\"",
+    "backend": "python server.py",
+    "frontend": "cd frontend && npm run dev"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
