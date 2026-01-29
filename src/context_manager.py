@@ -173,11 +173,13 @@ class ContextManager:
         from src.question_generator import QuestionGenerator
         generator = QuestionGenerator()
         
+        prev_analysis = previous_photo["analysis"] or {}
         question = generator.generate_cross_photo_question(
             current_analysis=current_analysis,
             previous_photo_info={
-                "analysis": previous_photo["analysis"],
-                "key_info": previous_photo["key_info"]
+                "analysis": prev_analysis,
+                "key_info": previous_photo["key_info"],
+                "overall_description": prev_analysis.get("overall_description", ""),
             },
             previous_qa=previous_photo["qa_history"]
         )

@@ -46,9 +46,7 @@ class QuestionGenerator:
         
         # 如果无法提取问题，尝试更激进的方法
         if not questions:
-            print(f"[提示] 无法提取问题，尝试从原始响应中提取...")
-            print(f"[调试] 原始响应前500字符: {questions_text[:500]}")
-            # 尝试直接查找所有包含问号的句子
+            # 尝试直接查找所有包含问号的句子（仅保留中文）
             questions = self._extract_any_questions(questions_text, analysis_result)
         
         # 如果还是无法提取，基于分析结果直接生成问题
@@ -117,10 +115,11 @@ class QuestionGenerator:
 
 例如："这还是刚才提到的那位李叔叔吗？" 或 "这张照片是在你刚才说的那个老房子附近拍的吗？"
 
-只返回问题，不要其他内容。"""
+重要：必须用中文回答。只输出一个中文问题，不要输出任何思考过程、推理或英文内容。直接输出问题。"""
         
-        question = self._call_api_for_questions(prompt, single=True)
-        return question
+        raw_question = self._call_api_for_questions(prompt, single=True)
+        question = self._parse_single_question(raw_question)
+        return question if question else "这张照片和上一张之间有什么关联？"
     
     def _build_question_prompt(
         self, 
@@ -269,114 +268,92 @@ class QuestionGenerator:
             return self._call_hunyuan_text_api(prompt, single)
     
     def _call_gemini_text_api(self, prompt: str) -> str:
-        """调用Gemini API生成文本"""
+        """调用Gemini API生成文本（优先使用 Google AI 官方格式）"""
         import requests
         
-        # 尝试多种可能的API格式
-        # 格式1: OpenAI兼容格式（很多第三方API使用）
-        headers = {
-            "Authorization": f"Bearer {self.api_key}",
-            "Content-Type": "application/json"
-        }
-        
-        # 尝试OpenAI兼容格式
-        payload_openai = {
-            "model": "gpt-3.5-turbo",  # 或 "gemini-pro"
-            "messages": [
-                {
-                    "role": "user",
-                    "content": prompt
-                }
-            ],
-            "temperature": config.TEMPERATURE
-        }
-        
-        # 尝试Gemini原生格式
+        model_name = getattr(config, "GEMINI_MODEL_NAME", "gemini-2.5-pro")
         payload_gemini = {
-            "contents": [
-                {
-                    "parts": [
-                        {
-                            "text": prompt
-                        }
-                    ]
-                }
-            ],
+            "contents": [{"parts": [{"text": prompt}]}],
             "generationConfig": {
                 "temperature": config.TEMPERATURE,
-                "maxOutputTokens": 2048
-            }
+                "maxOutputTokens": 2048,
+            },
         }
-        
-        # 尝试不同的endpoint路径
-        endpoints_to_try = [
-            f"{self.api_endpoint}/chat/completions",  # OpenAI兼容格式
-            f"{self.api_endpoint}/v1/chat/completions",
-            f"{self.api_endpoint}/models/gemini-pro:generateContent",  # Gemini原生
-            f"{self.api_endpoint}?key={self.api_key}",  # 查询参数格式
-            self.api_endpoint,  # 直接使用endpoint
-        ]
-        
-        for endpoint in endpoints_to_try:
+        last_error = None
+        base = (self.api_endpoint or "https://generativelanguage.googleapis.com/v1beta").rstrip("/")
+
+        # 1. 优先：Google AI 官方 endpoint（generativelanguage.googleapis.com）
+        if "generativelanguage.googleapis.com" in base:
+            official_url = f"{base}/models/{model_name}:generateContent"
+            headers = {
+                "Content-Type": "application/json",
+                "x-goog-api-key": self.api_key,
+            }
             try:
-                # 尝试OpenAI格式
-                if "chat/completions" in endpoint or endpoint == self.api_endpoint:
-                    response = requests.post(
-                        endpoint,
-                        headers=headers,
-                        json=payload_openai,
-                        timeout=30
-                    )
-                    response.raise_for_status()
-                    result = response.json()
-                    
-                    # OpenAI格式响应
-                    if "choices" in result and len(result["choices"]) > 0:
-                        return result["choices"][0]["message"]["content"]
-                
-                # 尝试Gemini格式
-                if "generateContent" in endpoint or "?key=" in endpoint:
-                    gemini_headers = {"Content-Type": "application/json"}
-                    if "?key=" in endpoint:
-                        response = requests.post(
-                            endpoint,
-                            headers=gemini_headers,
-                            json=payload_gemini,
-                            timeout=30
-                        )
-                    else:
-                        gemini_headers["Authorization"] = f"Bearer {self.api_key}"
-                        response = requests.post(
-                            endpoint,
-                            headers=gemini_headers,
-                            json=payload_gemini,
-                            timeout=30
-                        )
-                    
-                    response.raise_for_status()
-                    result = response.json()
-                    
-                    # Gemini格式响应
-                    if "candidates" in result and len(result["candidates"]) > 0:
-                        candidate = result["candidates"][0]
-                        if "content" in candidate and "parts" in candidate["content"]:
-                            parts = candidate["content"]["parts"]
-                            if parts and "text" in parts[0]:
-                                return parts[0]["text"]
-                
-                # 如果都不匹配，尝试直接提取text字段
+                response = requests.post(
+                    official_url,
+                    headers=headers,
+                    json=payload_gemini,
+                    timeout=30,
+                )
+                response.raise_for_status()
+                result = response.json()
+                if "candidates" in result and len(result["candidates"]) > 0:
+                    candidate = result["candidates"][0]
+                    if "content" in candidate and "parts" in candidate["content"]:
+                        parts = candidate["content"]["parts"]
+                        if parts and "text" in parts[0]:
+                            return parts[0]["text"]
+            except requests.exceptions.HTTPError as e:
+                last_error = f"HTTP {e.response.status_code}: {e.response.text[:200] if e.response.text else str(e)}"
+            except Exception as e:
+                last_error = str(e)
+
+        # 2. 其他 endpoint：OpenAI 兼容或 Bearer + Gemini 体
+        headers_bearer = {
+            "Authorization": f"Bearer {self.api_key}",
+            "Content-Type": "application/json",
+        }
+        payload_openai = {
+            "model": "gpt-3.5-turbo",
+            "messages": [{"role": "user", "content": prompt}],
+            "temperature": config.TEMPERATURE,
+        }
+        endpoints_to_try = [
+            (f"{base}/chat/completions", payload_openai, "choices"),
+            (f"{base}/v1/chat/completions", payload_openai, "choices"),
+            (f"{base}/models/{model_name}:generateContent", payload_gemini, "candidates"),
+            (base, payload_gemini, "candidates"),
+        ]
+        for endpoint, payload, key in endpoints_to_try:
+            if not endpoint or "generativelanguage.googleapis.com" in endpoint:
+                continue
+            try:
+                resp = requests.post(
+                    endpoint,
+                    headers=headers_bearer,
+                    json=payload,
+                    timeout=30,
+                )
+                resp.raise_for_status()
+                result = resp.json()
+                if key == "choices" and "choices" in result and result["choices"]:
+                    return result["choices"][0]["message"]["content"]
+                if key == "candidates" and "candidates" in result and result["candidates"]:
+                    c = result["candidates"][0]
+                    if "content" in c and "parts" in c["content"] and c["content"]["parts"]:
+                        return c["content"]["parts"][0].get("text", "")
                 if "text" in result:
                     return result["text"]
-                    
             except requests.exceptions.HTTPError as e:
-                # 继续尝试下一个endpoint
-                continue
+                last_error = f"HTTP {e.response.status_code}: {e.response.text[:200] if e.response.text else str(e)}"
             except Exception as e:
-                # 继续尝试下一个endpoint
-                continue
-        
-        # 所有格式都失败，返回模拟数据
-        print(f"警告: 所有API格式尝试都失败，使用模拟数据")
+                last_error = str(e)
+
+        if last_error:
+            print(f"警告: 所有API格式尝试都失败，使用模拟数据。最后错误: {last_error}")
+        else:
+            print("警告: 所有API格式尝试都失败，使用模拟数据")
         return self._get_mock_questions(False)
     
     def _call_hunyuan_text_api(self, prompt: str, single: bool = False) -> str:
@@ -495,7 +472,7 @@ class QuestionGenerator:
         return False
     
     def _filter_thinking_process(self, text: str) -> str:
-        """过滤掉思考过程"""
+        """过滤掉思考过程（含英文推理句）"""
         import re
         
         # 移除明显的思考过程标记
@@ -506,6 +483,9 @@ class QuestionGenerator:
             r'Now I\'m\s+.*?\.',  # Now I'm ...
             r'I am\s+.*?\.',  # I am ...
             r'I have\s+.*?\.',  # I have ...
+            r'How can I\s+.*?[.?]',  # How can I ...
+            r'I\'m leaning\s+.*?[.?]',  # I'm leaning ...
+            r'leaning towards\s+.*?[.?]',  # leaning towards ...
             r'我正在.*?。',  # 我正在...
             r'我已经.*?。',  # 我已经...
             r'现在.*?。',  # 现在...
@@ -513,12 +493,12 @@ class QuestionGenerator:
         
         cleaned = text
         for pattern in thinking_patterns:
-            cleaned = re.sub(pattern, '', cleaned, flags=re.IGNORECASE | re.MULTILINE)
+            cleaned = re.sub(pattern, '', cleaned, flags=re.IGNORECASE | re.MULTILINE | re.DOTALL)
         
         return cleaned
     
     def _is_thinking_line(self, line: str) -> bool:
-        """判断是否是思考过程行"""
+        """判断是否是思考过程行（含英文推理句）"""
         thinking_indicators = [
             "I'm", "I've", "Now I'm", "I am", "I have",
             "**Analyzing", "**Formulating", "**Crafting",
@@ -527,7 +507,9 @@ class QuestionGenerator:
             "**Targeted", "**Comprehending", "**Integrating",
             "我正在", "我已经", "现在", "接下来",
             "Crafting", "Designing", "Formulating", "currently",
-            "stemming from", "I'm currently", "I've been"
+            "stemming from", "I'm currently", "I've been",
+            "how can I", "I'm leaning", "leaning towards",
+            "visual paradox", "relationship between", "weave",
         ]
         
         line_lower = line.lower()
@@ -545,6 +527,11 @@ class QuestionGenerator:
             chinese_chars = sum(1 for c in line if '\u4e00' <= c <= '\u9fff')
             if chinese_chars < len(line) * 0.3:  # 中文少于30%，很可能是思考过程
                 return True
+        
+        # 整句主要为英文且不含问号，视为推理/思考
+        chinese_chars = sum(1 for c in line if '\u4e00' <= c <= '\u9fff')
+        if chinese_chars < len(line) * 0.2 and "?" not in line and "？" not in line:
+            return True
         
         return False
     
@@ -769,8 +756,14 @@ class QuestionGenerator:
         return questions[:5]
     
     def _parse_single_question(self, question_text: str) -> str:
-        """解析单个问题，过滤思考过程"""
+        """解析单个问题，过滤思考过程，只返回中文问题"""
         import re
+        
+        def is_mainly_chinese(s: str) -> bool:
+            if not s:
+                return False
+            chinese_chars = sum(1 for c in s if '\u4e00' <= c <= '\u9fff')
+            return chinese_chars >= len(s) * 0.5
         
         # 过滤思考过程
         cleaned_text = self._filter_thinking_process(question_text)
@@ -789,27 +782,25 @@ class QuestionGenerator:
             line = re.sub(r'\*\*.*?\*\*', '', line)
             line = re.sub(r'^#+\s*', '', line)
             
-            # 检查是否是有效问题
-            if line and len(line) > 5:
-                # 优先选择包含问号的行
+            # 只接受中文问题
+            if line and len(line) > 5 and is_mainly_chinese(line):
                 if '?' in line or '？' in line:
-                    if not self._is_thinking_line(line):
-                        return line
-                # 或者看起来像问题的行
-                elif self._looks_like_question(line):
+                    return line
+                if self._looks_like_question(line):
                     return line
         
-        # 如果解析失败，尝试从文本中提取问题（更激进）
+        # 如果解析失败，尝试从文本中提取问题（更激进，且只要中文）
         questions = self._extract_questions_aggressive(question_text)
-        if questions:
-            return questions[0]
+        for q in questions:
+            if is_mainly_chinese(q):
+                return q
         
-        # 最后，尝试从思考过程中提取问题
+        # 最后，尝试从思考过程中提取问题（只要中文）
         questions = self._extract_questions_from_thinking(question_text)
-        if questions:
-            return questions[0]
+        for q in questions:
+            if is_mainly_chinese(q):
+                return q
         
-        # 如果完全无法提取，返回空字符串（让调用者处理）
         return ""
     
     def _get_mock_questions(self, single: bool = False) -> str:

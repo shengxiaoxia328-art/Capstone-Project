@@ -10,7 +10,11 @@ load_dotenv()
 # API配置（支持混元或Gemini）
 # 优先使用Gemini，如果没有则使用混元
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", os.getenv("HUNYUAN_API_KEY", ""))
-GEMINI_API_ENDPOINT = os.getenv("GEMINI_API_ENDPOINT", os.getenv("HUNYUAN_API_ENDPOINT", ""))
+# Gemini 默认使用 Google AI 官方 base URL；可改为代理或 Vertex 等
+GEMINI_API_ENDPOINT = os.getenv(
+    "GEMINI_API_ENDPOINT",
+    os.getenv("HUNYUAN_API_ENDPOINT", "https://generativelanguage.googleapis.com/v1beta")
+)
 # 兼容旧配置（向后兼容）
 HUNYUAN_API_KEY = GEMINI_API_KEY
 HUNYUAN_API_ENDPOINT = GEMINI_API_ENDPOINT
