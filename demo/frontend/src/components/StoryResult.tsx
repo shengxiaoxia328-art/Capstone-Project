@@ -21,7 +21,7 @@ export default function StoryResult({ story, onRestart }: Props) {
         生成的故事
       </Typography>
       <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
-        叙事风格：第一人称个人叙事
+        叙事风格：第一人称回忆录成文
       </Typography>
       <Box
         sx={{

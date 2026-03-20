@@ -4,6 +4,8 @@
 
 "照片的故事"是一个基于多模态大模型的智能照片故事生成系统。系统能够深度解析照片内容，自动生成针对性的访谈问题，引导用户展开对话，最终生成图文并茂的照片故事。
 
+当前项目默认和推荐使用腾讯混元 API。仓库中的 Gemini 相关配置与代码路径仅作为兼容保留，不再作为默认说明路线。
+
 系统支持三种使用方式：
 - **Web 界面**：Material UI 前端 + Flask API，浏览器中完成选模式、上传、访谈、生成故事（推荐）
 - **命令行交互**：运行 `python main.py`，在终端完成完整流程
@@ -74,7 +76,7 @@ pip install -r requirements.txt
 
 ### 3. 配置API密钥
 
-系统支持 Gemini API（推荐）或混元API。配置方式有两种：
+系统当前默认使用混元 API。Gemini 配置仍可保留作为兼容备用，但后续使用建议统一按混元配置。
 
 #### 方式一：使用环境变量（推荐）
 
@@ -89,8 +91,12 @@ pip install -r requirements.txt
 
 2. 编辑 `.env` 文件，填入你的API密钥：
    ```env
-   GEMINI_API_KEY=your_api_key_here
-   GEMINI_API_ENDPOINT=https://your_endpoint_here
+   HUNYUAN_API_KEY=your_api_key_here
+   HUNYUAN_API_ENDPOINT=https://api.hunyuan.cloud.tencent.com/v1/chat/completions
+   # 可选：视觉模型
+   # HUNYUAN_VISION_MODEL=hunyuan-vision
+   # 可选：文本模型
+   # HUNYUAN_TEXT_MODEL=hunyuan-vision
    ```
 
 #### 方式二：直接修改 config.py
@@ -101,11 +107,15 @@ pip install -r requirements.txt
 
 主要配置项在 `config.py` 中：
 
-- `GEMINI_MODEL_NAME`: 使用的模型名称（默认：gemini-2.5-pro）
+- `HUNYUAN_API_ENDPOINT`: 混元聊天接口地址
+- `HUNYUAN_VISION_MODEL`: 图片理解模型名
+- `HUNYUAN_TEXT_MODEL`: 问题生成、故事生成和评分使用的文本模型名
 - `MAX_DIALOGUE_ROUNDS`: 单张照片最大对话轮数（默认：10）
 - `MAX_CONTEXT_LENGTH`: 最大上下文长度（默认：4000）
 - `TEMPERATURE`: 生成温度（默认：0.7）
 - `VECTOR_DB_PATH`: 向量数据库存储路径（默认：./vector_db）
+
+说明：当前代码会优先读取混元配置。只有在未启用混元、且显式配置了 Gemini 的情况下，才会走 Gemini 兼容路径。
 
 ## 使用方法
 
@@ -204,6 +214,39 @@ python judge_story.py \
 - 若未提供 `prompt` 或 `reference`，`relevance` 会退化为“主题聚焦度/是否跑题”的判断。
 - 该评分器基于 HANNA 六维方法构建，适合快速打样和批量筛选；单篇故事评分仍应结合人工判断。
 
+### 照片分 + 故事分融合评分
+
+如果你已经准备好了照片 benchmark 数据和生成后的故事文本，可以直接计算最终加权分：
+
+```bash
+python judge_final.py \
+   --benchmark-file path/to/benchmark_data.json \
+   --sample-index 0 \
+   --image-root path/to/images \
+   --story-file path/to/story.txt \
+   --photo-weight 0.4 \
+   --story-weight 0.6 \
+   --output final_evaluation.json
+```
+
+说明：
+
+- `benchmark-file` 支持单个样本对象，或样本数组。
+- `sample-index` 用来指定当前故事对应哪一条照片 benchmark 样本。
+- `photo-weight` 和 `story-weight` 会自动归一化，因此只需要表达相对权重。
+- 照片分会输出三部分明细：`mme`、`mmbench`、`hooks`。
+- 最终 `final_score` 采用 0-5 分制，其中：
+   - 照片分先按 benchmark 原始得分归一化到 0-5；
+   - 故事分直接使用 HANNA 六维平均分；
+   - 最终分按权重加权求和。
+
+输出 JSON 包含：
+
+- `final_score`：最终融合分
+- `weights`：归一化后的照片/故事权重
+- `photo_evaluation`：照片 benchmark 的原始分、归一化分和逐题明细
+- `story_evaluation`：HANNA 六维评分结果
+
 ## 核心模块说明
 
 ### MultimodalAnalyzer
@@ -245,7 +288,7 @@ python judge_story.py \
 ## 技术栈
 
 - **Python 3.8+**: 主要编程语言
-- **Gemini API / 混元API**: 多模态大模型服务
+- **腾讯混元 API**: 当前默认的多模态与文本生成服务
 - **LangChain**: 对话流程管理
 - **ChromaDB**: 向量数据库，用于上下文存储
 - **Sentence Transformers**: 文本向量化
