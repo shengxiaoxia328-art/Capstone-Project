@@ -1,0 +1,17 @@
+# 仿真测试集流水线配置
+# 路径均相对于 simulation/ 目录
+
+# 每段回忆录最多生成几张图（用于 Text2Image）
+max_images_per_segment: 2
+
+# 每张图最多对话轮数（问+答算一轮）
+max_dialogue_rounds: 3
+
+# 回忆录原始数据目录
+raw_dir: "raw"
+
+# 各阶段输出目录
+text2image_dir: "text2image"
+pipeline_output_dir: "pipeline_output"
+evaluation_dir: "evaluation"
+persona_dir: "config"

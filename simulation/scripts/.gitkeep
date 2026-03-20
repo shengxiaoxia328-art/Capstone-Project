@@ -1,0 +1,8 @@
+# 将以下脚本放在此目录：
+# - prepare_raw.py       (可选) 纯文本回忆录 → raw/memoir_xxx.json
+# - text2image.py         文段 → 仿真图片 + mapping.json
+# - extract_persona.py   回忆录 → config/user_persona_xxx.json
+# - user_sim.py          用户模拟 LLM（单条回答）
+# - run_pipeline.py      单图/批量：分析+问题+User Sim → dialogue.json
+# - run_judge.py         原文+仿真对话 → evaluation/*_judge.json
+# - aggregate_evaluation.py  汇总所有 judge 结果为表格/报告

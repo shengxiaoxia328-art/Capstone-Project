@@ -6,6 +6,7 @@ __pycache__/
 .Python
 env/
 venv/
+.venv/
 ENV/
 build/
 develop-eggs/
@@ -24,7 +25,7 @@ wheels/
 *.egg
 
 # 环境变量
-# .env  # 允许提交.env文件
+# .env  # 允许提交 .env 文件
 .env.local
 
 # 向量数据库
