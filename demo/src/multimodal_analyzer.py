@@ -8,6 +8,7 @@ from typing import Dict, List, Optional
 from PIL import Image
 import io
 import config
+from src.model_backend import call_vision_api, get_model_settings
 
 
 class MultimodalAnalyzer:
@@ -21,14 +22,10 @@ class MultimodalAnalyzer:
             api_key: 混元API密钥
             api_endpoint: API端点
         """
-        if api_key and api_endpoint:
-            self.api_key, self.api_endpoint = api_key, api_endpoint
-        elif config.USE_HUNYUAN:
-            self.api_key = config.HUNYUAN_API_KEY
-            self.api_endpoint = config.HUNYUAN_API_ENDPOINT
-        else:
-            self.api_key = config.GEMINI_API_KEY
-            self.api_endpoint = config.GEMINI_API_ENDPOINT
+        self.model_settings = get_model_settings(api_key=api_key, api_endpoint=api_endpoint)
+        self.api_key = self.model_settings["api_key"]
+        self.api_endpoint = self.model_settings["api_endpoint"]
+        self.backend = self.model_settings["provider"]
         
     def _encode_image(self, image_path: str) -> str:
         """
@@ -104,7 +101,6 @@ class MultimodalAnalyzer:
 
 请以结构化的JSON格式返回分析结果。"""
         
-        # 调用API（支持Gemini和混元）
         analysis_result = self._call_hunyuan_api(
             image_base64=image_base64,
             prompt=analysis_prompt,
@@ -125,11 +121,19 @@ class MultimodalAnalyzer:
         Returns:
             API返回的文本结果
         """
-        if config.USE_HUNYUAN:
-            return self._call_hunyuan_vision_api(image_base64, prompt, image_format)
-        if config.USE_GEMINI:
-            return self._call_gemini_vision_api(image_base64, prompt, image_format)
-        return self._get_mock_analysis_result()
+        try:
+            return call_vision_api(
+                self.model_settings,
+                image_base64=image_base64,
+                prompt=prompt,
+                image_format=image_format,
+                temperature=config.TEMPERATURE,
+                max_tokens=2048,
+            )
+        except Exception as e:
+            print(f"[警告] 模型视觉调用错误: {e}")
+            print("       当前使用模拟数据...")
+            return self._get_mock_analysis_result()
     
     def _call_gemini_vision_api(self, image_base64: str, prompt: str, image_format: str = "jpeg") -> str:
         """
@@ -303,6 +307,11 @@ class MultimodalAnalyzer:
         Returns:
             结构化的分析结果字典
         """
+        if not raw_result:
+            return {
+                "visual_elements": "", "emotions": "", "clothing": "",
+                "background": "", "era_items": "", "overall_description": "图片分析失败，使用默认值",
+            }
         # 尝试解析JSON，如果失败则使用文本解析
         import json
         try:
@@ -329,6 +338,8 @@ class MultimodalAnalyzer:
     
     def _extract_keywords(self, text: str, keywords: List[str]) -> str:
         """从文本中提取包含关键词的句子"""
+        if not text:
+            return ""
         sentences = text.split('。')
         relevant = [s for s in sentences if any(kw in s for kw in keywords)]
         return '。'.join(relevant[:3])  # 返回前3个相关句子

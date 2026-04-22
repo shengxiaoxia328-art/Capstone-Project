@@ -16,3 +16,25 @@ HUNYUAN_API_ENDPOINT=https://api.hunyuan.cloud.tencent.com/v1/chat/completions
 # GEMINI_API_KEY=your_gemini_api_key_here
 # GEMINI_API_ENDPOINT=https://generativelanguage.googleapis.com/v1beta
 # GEMINI_MODEL_NAME=gemini-2.5-pro
+
+# ---------- 通用模型入口（7 模型 benchmark 推荐）-----------
+# benchmark 脚本会自动写入这组变量，供 demo/src 下的通用后端读取。
+# 手动调试非混元/Gemini 模型时，也可以直接设置以下变量。
+#
+# MODEL_PROVIDER 可选：
+# - openai_compatible   适用于 Qwen / DeepSeek / MiniMax / Kimi 等 OpenAI 兼容接口
+# - anthropic           适用于 Claude 官方接口
+# - hunyuan             适用于腾讯混元官方接口
+# - gemini              适用于 Gemini 官方接口
+#
+# MODEL_PROVIDER=openai_compatible
+# MODEL_API_KEY=your_api_key_here
+# MODEL_API_ENDPOINT=https://your-endpoint.example.com/v1
+# MODEL_TEXT_MODEL=your_text_model_name
+# MODEL_VISION_MODEL=your_vision_model_name
+
+# ---------- OpenRouter（你当前这批模型建议这样配）-----------
+# 推荐直接给 simulation/config/models.yaml 提供统一环境变量。
+# OPENROUTER_API_KEY=your_openrouter_api_key_here
+# OPENROUTER_API_ENDPOINT=https://openrouter.ai/api/v1
+# HUNYUAN_API_KEY=your_hunyuan_api_key_here

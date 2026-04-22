@@ -5,6 +5,7 @@
 """
 from typing import Dict, List, Optional, Callable
 import config
+from src.model_backend import call_text_api, get_model_settings
 
 # 叙事风格体系：用户可选的大类及对应提示词描述
 NARRATIVE_STYLES = {
@@ -57,14 +58,10 @@ class StoryGenerator:
             api_key: 混元API密钥
             api_endpoint: API端点
         """
-        if api_key and api_endpoint:
-            self.api_key, self.api_endpoint = api_key, api_endpoint
-        elif config.USE_HUNYUAN:
-            self.api_key = config.HUNYUAN_API_KEY
-            self.api_endpoint = config.HUNYUAN_API_ENDPOINT
-        else:
-            self.api_key = config.GEMINI_API_KEY
-            self.api_endpoint = config.GEMINI_API_ENDPOINT
+        self.model_settings = get_model_settings(api_key=api_key, api_endpoint=api_endpoint)
+        self.api_key = self.model_settings["api_key"]
+        self.api_endpoint = self.model_settings["api_endpoint"]
+        self.backend = self.model_settings["provider"]
     
     def generate_single_photo_story(
         self,
@@ -629,16 +626,15 @@ class StoryGenerator:
         Returns:
             生成的故事文本
         """
-        if config.USE_HUNYUAN:
-            result = self._call_hunyuan_text_api(prompt)
-            if on_stream_chunk is not None and result:
-                on_stream_chunk(result)
-            return result
-        if config.USE_GEMINI and on_stream_chunk is not None:
-            return self._call_gemini_text_api_stream(prompt, on_stream_chunk)
-        if config.USE_GEMINI:
-            return self._call_gemini_text_api(prompt)
-        return self._call_hunyuan_text_api(prompt)
+        result = call_text_api(
+            self.model_settings,
+            prompt,
+            temperature=config.TEMPERATURE,
+            max_tokens=getattr(config, "STORY_MAX_OUTPUT_TOKENS", 4096),
+        )
+        if on_stream_chunk is not None and result:
+            on_stream_chunk(result)
+        return result
     
     def _call_gemini_text_api(self, prompt: str) -> str:
         """调用Gemini API生成文本"""

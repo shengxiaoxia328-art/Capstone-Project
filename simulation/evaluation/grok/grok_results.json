@@ -1,0 +1,2385 @@
+{
+  "model_name": "grok",
+  "eval_time": "2026-03-29T22:26:53.554637",
+  "provider": "openai_compatible",
+  "configured_text_model": "x-ai/grok-4.20-beta",
+  "configured_vision_model": "x-ai/grok-4.20-beta",
+  "total_samples": 11,
+  "successful_samples": 11,
+  "failed_samples": 0,
+  "weights": {
+    "photo": 0.3,
+    "story": 0.5,
+    "interview": 0.2
+  },
+  "photo": {
+    "mean": 4.16,
+    "std": 0.38,
+    "min": 3.46,
+    "max": 4.64
+  },
+  "story": {
+    "mean": 3.83,
+    "std": 0.28,
+    "min": 3.5,
+    "max": 4.5
+  },
+  "interview": {
+    "mean": 2.06,
+    "std": 0.58,
+    "min": 1.03,
+    "max": 2.8
+  },
+  "final": {
+    "mean": 3.57,
+    "std": 0.24,
+    "min": 3.26,
+    "max": 3.95
+  },
+  "samples": [
+    {
+      "sample_id": "镇长上任",
+      "photo_score": 4.33,
+      "story_score": 3.5,
+      "interview_score": 2.41,
+      "final_score": 3.53,
+      "generated_story": "我看到这张老照片，心里就忍不住翻腾起来。照片上那个坐在红色本田摩托车上、手里拿着大对讲机的人，就是我。那时候我大概四十出头，戴着干部帽，穿一身洗得发白的深蓝色中山装，眉头皱着，正对着对讲机说话。路边是咱们华北农村常见的土路，两边是砖房和瓦房，电线杆子歪歪斜斜地立着，远处还有两个人在聊天。这张照片是1988年左右在乡里拍的，一看到它，我就想起那段既忙碌又为难的日子，也想起自己这一辈子是怎么一步步走过来的。\n我叫李守成，1939年出生在河北保定附近的一个小村子。那时候家里穷，兄弟姐妹多，父亲种着几亩薄地，母亲给人缝缝补补，勉强把我们拉扯大。我小时候最深的记忆，就是冬天屋里冻得像冰窖，夏天蚊子咬得满腿是包。家里吃不上细粮，玉米面饼子掺野菜是常事。父亲常说：“好好念书，将来别像我这样面朝黄土背朝天。”我听了他的话，一直念到高小毕业，后来因为家里实在供不起，就回家务农了。那几年我放过羊、赶过车，也跟着村里人去修水渠，肩膀上磨出老茧，脚底板裂得像老树皮。1958年大跃进的时候，我才十九岁，被抽去炼钢铁，整天抡大锤，晚上睡在工棚里，累得骨头都散架了。那时候年轻啊，吃再多苦也觉得是应该的。\n1962年，我二十三岁，经人介绍娶了她是邻村的，家里条件比我们好一点，但也穷。结婚后我们一起过日子，日子虽紧巴，却也踏实。没过几年，村里开始搞“四清”，后来又闹“文革”，村干部换了一茬又一茬。我因为老实肯干，又识点字，就被推到生产队记工分，后来又当了生产队长。那时候每天天不亮就得起来安排活计，晚上还要开会学习文件，回家时老婆已经把饭热了好几遍。1970年，我们的大儿子出生，1973年又添了女儿，家里多了两张嘴，压力更大了。我记得有一年冬天，粮食不够吃，我夜里偷偷去生产队仓库借了半袋玉米，被人发现后挨了批斗。那滋味，\n转折发生在1978年以后。改革开放了，农村开始分田到户，乡里也需要有文化、能干事的人。我1980年被调到乡政府，先是在办公室管材料，后来又去民政、计生、农技都干过。1985年左右，乡里配了一辆红色本田摩托车，那在当时可是稀罕物，全乡就两辆，一辆给书记，一辆给我用。因为我负责跑片，下面十几个村都要去，骑自行车太慢，对讲机也是那时候配的，大砖头一样，拿着沉甸甸的。乡亲们一见我骑着摩托车来，都说“老李\n最让我为难的，就是照片上这一段。那时候组织上准备让我去老家那个镇当副镇长。我的亲戚、岳父家、舅舅家都在那个镇，盘根错节。我一听就急了。在组织部找我谈话时，我只提了一个要求：“其他都服从安排，但请不要让我回我老家那个镇工作。”我当时跟他们说得很实在：回去以后，亲戚找上门来，帮了是违反纪律，不帮又难做人，里外不是人。领导后来尊重了我的意见，把我调到了另一个乡。我至今还记得那天从县里回来的路上，心里既松了一口气，又觉得有点空落落的。干部做到这份上，连回家乡为人民服务都不敢，也算是种无奈吧。\n调到新乡以后，我一干就是十几年。每天骑着那辆摩托车，背着对讲机，在各个村里跑。夏天顶着大太阳去督促夏收夏种，冬天踩着雪去给五保户送煤送粮。有一年发大水，我带着人连夜转移群众，在河堤上守了三天三夜，衣服都没干过。1992年，我儿子考上了中专，女儿也嫁了人，我心里才觉得松快了一些。1998年我退休的时候，乡里开了个小会，送了我一个塑料壳的收音机。我骑着那辆已经旧得掉漆的摩托车最后一次离开乡政府，心里五味杂陈。回来后我把摩托车还给了公家，对讲机也上交了，从此再没碰过这些东西。\n老婆前几年走了，我有时一个人坐在阳台上，就想起年轻时候那些事。照片里的我还那么严肃，那么认真，好像全世界的事都压在肩上。我这辈子没做过什么惊天动地的大事，就是老老实实当农民、当生产队长、当乡干部，把自己那份工作干好，把家里人照顾好，没犯大错，也没占过公家便宜。\n要说遗憾，也有。遗憾没能好好陪老婆，遗憾没能在父母身边尽更多孝道，遗憾孩子们小时候我太忙，没能多抱抱他们。但我也有些骄傲，骄傲自己从一个放羊娃走到了乡干部的位置，骄傲自己在那样的年代守住了底线，没给后辈留下骂名。\n孩子们，你们但不管走到哪里，都要记住两个字：实在。做人要实在，干事要实在，对得起自己的良心，对得起那份责任。别怕吃苦，也别怕得罪人，该坚持的就坚持，该拒绝的就拒绝。人生一辈子，说长也长，说短也短，关键是走得正，走得稳。\n我把这张照片翻出来，就是想告诉你们，我当年坐在摩托车上拿着对讲机的时候，心里想的不是风光，而是怎么才能对得起这份工作，又不亏欠自己的家人。你们要是哪天遇到两难的事，也可以想想你爷爷当年的选择。\n这就是我这辈子，平平常常，却也问心无愧。",
+      "qa_history": [
+        {
+          "question": "你当时坐在那辆红色本田摩托车上，用对讲机说什么呢？",
+          "answer": "”我的亲戚、岳父家、舅舅家都在那个镇，盘根错节，我怕回去不好开展工作，帮了违反纪律，不帮又难做人。在组织部找我谈话时，我只提了一个要求：“其他都服从安排，但请不要让我回我老家那个镇工作。"
+        }
+      ],
+      "analysis_result": {
+        "visual_elements": "```json\n{\n  \"visual_elements\": {\n    \"people\": [\n      {\n        \"position\": \"main_subject\",\n        \"gender\": \"male\",\n        \"age_estimated\": \"35-45\",\n        \"description\": \"中年男子，坐在摩托车上，手持大型无线对讲机\",\n        \"relationship_inference\": \"可能是村干部、乡镇干部或基层通讯员\"\n      },\n      {\n        \"position\": \"background\",\n        \"gender\": \"male\",\n        \"age_estimated\": \"30-50\",\n        \"description\": \"两名男子站在远处路边\",\n        \"relationship_inference\": \"可能是同事或当地村民\"\n      }\n    ],\n    \"scene\": \"中国北方农村的乡村道路\",\n    \"objects\": [\n      \"红色本田摩托车（Honda）\",\n      \"大型手持式无线对讲机（带长天线）\",\n      \"摩托车后座有金属货架\",\n      \"路边宣传栏/黑板报\",\n      \"电线杆和电线\",\n      \"砖房和瓦房\"\n    ]\n  },\n  \"expressions_and_emotions\": {\n    \"main_man\": {\n      \"facial_expression\": \"严肃专注，眉头微皱，目光直视前方\",\n      \"posture\": \"坐在摩托车上，身体略微前倾，左手持对讲机靠近嘴部\",\n      \"emotion\": \"认真、责任感强，带有工作状态中的紧迫感\",\n      \"inferred_state\": \"正在进行重要通讯或传达指令\"\n    },\n    \"background_men\": {\n      \"facial_expression\": \"无法清晰辨认\",\n      \"posture\": \"站立交谈\",\n      \"emotion\": \"放松或闲谈状态\"\n    }\n  },\n  \"clothing_details\": {\n    \"main_man\": {\n      \"upper\": \"深蓝色中山装式工作服（干部服），四个口袋\",\n      \"lower\": \"卡其色或浅棕色长裤\",\n      \"headwear\": \"深色干部帽（类似解放帽）\",\n      \"style\": \"典型80年代中国基层干部/公务人员着装\",\n      \"features\": \"衣服略显陈旧，实用耐穿\"\n    }\n  },\n  \"background_architecture\": {\n    \"buildings\": \"低矮的砖木结构平房，部分为红砖墙、部分为土坯或灰砖\",\n    \"style\": \"典型的北方农村民居\",\n    \"era_features\": \"80年代初期的乡村建筑，未见明显现代化楼房\",\n    \"location_inference\": \"中国华北地区（河北、山东、河南或京郊农村）\"\n  },\n  \"era_items\": {\n    \"motorcycle\": {\n      \"brand\": \"Honda（本田）\",\n      \"model_inference\": \"80年代流行的Honda XL125或类似越野/实用型摩托\",\n      \"significance\": \"当时农村非常稀有的高档交通工具，象征一定地位\"\n    },\n    \"walkie_talkie\": {\n      \"type\": \"大型手持式无线电对讲机（带加长天线）\",\n      \"era\": \"80年代中期至90年代初期\",\n      \"significance\": \"当时极为昂贵和先进的通讯设备，通常只有乡镇政府、公安或重要部门才配备\"\n    },\n    \"other_items\": [\n      \"路边白底黑字的宣传栏，内容可能为‘公开选聘’相关政策\",\n      \"木质电线杆和高压/电话线\"\n    ]\n  },\n  \"overall_description\": {\n    \"atmosphere\": \"严肃、朴素、带有强烈时代气息的基层工作场景\",\n    \"era_estimation\": \"1985-1992年（最可能是1987-1990年）\",\n    \"possible_scene\": \"乡镇干部在乡村执行公务，可能正在通过对讲机向上级汇报情况或接收指令",
+        "emotions": "",
+        "clothing": "",
+        "background": "```json\n{\n  \"visual_elements\": {\n    \"people\": [\n      {\n        \"position\": \"main_subject\",\n        \"gender\": \"male\",\n        \"age_estimated\": \"35-45\",\n        \"description\": \"中年男子，坐在摩托车上，手持大型无线对讲机\",\n        \"relationship_inference\": \"可能是村干部、乡镇干部或基层通讯员\"\n      },\n      {\n        \"position\": \"background\",\n        \"gender\": \"male\",\n        \"age_estimated\": \"30-50\",\n        \"description\": \"两名男子站在远处路边\",\n        \"relationship_inference\": \"可能是同事或当地村民\"\n      }\n    ],\n    \"scene\": \"中国北方农村的乡村道路\",\n    \"objects\": [\n      \"红色本田摩托车（Honda）\",\n      \"大型手持式无线对讲机（带长天线）\",\n      \"摩托车后座有金属货架\",\n      \"路边宣传栏/黑板报\",\n      \"电线杆和电线\",\n      \"砖房和瓦房\"\n    ]\n  },\n  \"expressions_and_emotions\": {\n    \"main_man\": {\n      \"facial_expression\": \"严肃专注，眉头微皱，目光直视前方\",\n      \"posture\": \"坐在摩托车上，身体略微前倾，左手持对讲机靠近嘴部\",\n      \"emotion\": \"认真、责任感强，带有工作状态中的紧迫感\",\n      \"inferred_state\": \"正在进行重要通讯或传达指令\"\n    },\n    \"background_men\": {\n      \"facial_expression\": \"无法清晰辨认\",\n      \"posture\": \"站立交谈\",\n      \"emotion\": \"放松或闲谈状态\"\n    }\n  },\n  \"clothing_details\": {\n    \"main_man\": {\n      \"upper\": \"深蓝色中山装式工作服（干部服），四个口袋\",\n      \"lower\": \"卡其色或浅棕色长裤\",\n      \"headwear\": \"深色干部帽（类似解放帽）\",\n      \"style\": \"典型80年代中国基层干部/公务人员着装\",\n      \"features\": \"衣服略显陈旧，实用耐穿\"\n    }\n  },\n  \"background_architecture\": {\n    \"buildings\": \"低矮的砖木结构平房，部分为红砖墙、部分为土坯或灰砖\",\n    \"style\": \"典型的北方农村民居\",\n    \"era_features\": \"80年代初期的乡村建筑，未见明显现代化楼房\",\n    \"location_inference\": \"中国华北地区（河北、山东、河南或京郊农村）\"\n  },\n  \"era_items\": {\n    \"motorcycle\": {\n      \"brand\": \"Honda（本田）\",\n      \"model_inference\": \"80年代流行的Honda XL125或类似越野/实用型摩托\",\n      \"significance\": \"当时农村非常稀有的高档交通工具，象征一定地位\"\n    },\n    \"walkie_talkie\": {\n      \"type\": \"大型手持式无线电对讲机（带加长天线）\",\n      \"era\": \"80年代中期至90年代初期\",\n      \"significance\": \"当时极为昂贵和先进的通讯设备，通常只有乡镇政府、公安或重要部门才配备\"\n    },\n    \"other_items\": [\n      \"路边白底黑字的宣传栏，内容可能为‘公开选聘’相关政策\",\n      \"木质电线杆和高压/电话线\"\n    ]\n  },\n  \"overall_description\": {\n    \"atmosphere\": \"严肃、朴素、带有强烈时代气息的基层工作场景\",\n    \"era_estimation\": \"1985-1992年（最可能是1987-1990年）\",\n    \"possible_scene\": \"乡镇干部在乡村执行公务，可能正在通过对讲机向上级汇报情况或接收指令",
+        "era_items": "```json\n{\n  \"visual_elements\": {\n    \"people\": [\n      {\n        \"position\": \"main_subject\",\n        \"gender\": \"male\",\n        \"age_estimated\": \"35-45\",\n        \"description\": \"中年男子，坐在摩托车上，手持大型无线对讲机\",\n        \"relationship_inference\": \"可能是村干部、乡镇干部或基层通讯员\"\n      },\n      {\n        \"position\": \"background\",\n        \"gender\": \"male\",\n        \"age_estimated\": \"30-50\",\n        \"description\": \"两名男子站在远处路边\",\n        \"relationship_inference\": \"可能是同事或当地村民\"\n      }\n    ],\n    \"scene\": \"中国北方农村的乡村道路\",\n    \"objects\": [\n      \"红色本田摩托车（Honda）\",\n      \"大型手持式无线对讲机（带长天线）\",\n      \"摩托车后座有金属货架\",\n      \"路边宣传栏/黑板报\",\n      \"电线杆和电线\",\n      \"砖房和瓦房\"\n    ]\n  },\n  \"expressions_and_emotions\": {\n    \"main_man\": {\n      \"facial_expression\": \"严肃专注，眉头微皱，目光直视前方\",\n      \"posture\": \"坐在摩托车上，身体略微前倾，左手持对讲机靠近嘴部\",\n      \"emotion\": \"认真、责任感强，带有工作状态中的紧迫感\",\n      \"inferred_state\": \"正在进行重要通讯或传达指令\"\n    },\n    \"background_men\": {\n      \"facial_expression\": \"无法清晰辨认\",\n      \"posture\": \"站立交谈\",\n      \"emotion\": \"放松或闲谈状态\"\n    }\n  },\n  \"clothing_details\": {\n    \"main_man\": {\n      \"upper\": \"深蓝色中山装式工作服（干部服），四个口袋\",\n      \"lower\": \"卡其色或浅棕色长裤\",\n      \"headwear\": \"深色干部帽（类似解放帽）\",\n      \"style\": \"典型80年代中国基层干部/公务人员着装\",\n      \"features\": \"衣服略显陈旧，实用耐穿\"\n    }\n  },\n  \"background_architecture\": {\n    \"buildings\": \"低矮的砖木结构平房，部分为红砖墙、部分为土坯或灰砖\",\n    \"style\": \"典型的北方农村民居\",\n    \"era_features\": \"80年代初期的乡村建筑，未见明显现代化楼房\",\n    \"location_inference\": \"中国华北地区（河北、山东、河南或京郊农村）\"\n  },\n  \"era_items\": {\n    \"motorcycle\": {\n      \"brand\": \"Honda（本田）\",\n      \"model_inference\": \"80年代流行的Honda XL125或类似越野/实用型摩托\",\n      \"significance\": \"当时农村非常稀有的高档交通工具，象征一定地位\"\n    },\n    \"walkie_talkie\": {\n      \"type\": \"大型手持式无线电对讲机（带加长天线）\",\n      \"era\": \"80年代中期至90年代初期\",\n      \"significance\": \"当时极为昂贵和先进的通讯设备，通常只有乡镇政府、公安或重要部门才配备\"\n    },\n    \"other_items\": [\n      \"路边白底黑字的宣传栏，内容可能为‘公开选聘’相关政策\",\n      \"木质电线杆和高压/电话线\"\n    ]\n  },\n  \"overall_description\": {\n    \"atmosphere\": \"严肃、朴素、带有强烈时代气息的基层工作场景\",\n    \"era_estimation\": \"1985-1992年（最可能是1987-1990年）\",\n    \"possible_scene\": \"乡镇干部在乡村执行公务，可能正在通过对讲机向上级汇报情况或接收指令",
+        "overall_description": "```json\n{\n  \"visual_elements\": {\n    \"people\": [\n      {\n        \"position\": \"main_subject\",\n        \"gender\": \"male\",\n        \"age_estimated\": \"35-45\",\n        \"description\": \"中年男子，坐在摩托车上，手持大型无线对讲机\",\n        \"relationship_inference\": \"可能是村干部、乡镇干部或基层通讯员\"\n      },\n      {\n        \"position\": \"background\",\n        \"gender\": \"male\",\n        \"age_estimated\": \"30-50\",\n        \"description\": \"两名男子站在远处路边\",\n        \"relationship_inference\": \"可能是同事或当地村民\"\n      }\n    ],\n    \"scene\": \"中国北方农村的乡村道路\",\n    \"objects\": [\n      \"红色本田摩托车（Honda）\",\n      \"大型手持式无线对讲机（带长天线）\",\n      \"摩托车后座有金属货架\",\n      \"路边宣传栏/黑板报\",\n      \"电线杆和电线\",\n      \"砖房和瓦房\"\n    ]\n  },\n  \"expressions_and_emotions\": {\n    \"main_man\": {\n      \"facial_expression\": \"严肃专注，眉头微皱，目光直视前方\",\n      \"posture\": \"坐在摩托车上，身体略微前倾，左手持对讲机靠近嘴部\",\n      \"emotion\": \"认真、责任感强，带有工作状态中的紧迫感\",\n      \"inferred_state\": \"正在进行重要通讯或传达指令\"\n    },\n    \"background_men\": {\n      \"facial_expression\": \"无法清晰辨认\",\n      \"posture\": \"站立交谈\",\n      \"emotion\": \"放松或闲谈状态\"\n    }\n  },\n  \"clothing_details\": {\n    \"main_man\": {\n      \"upper\": \"深蓝色中山装式工作服（干部服），四个口袋\",\n      \"lower\": \"卡其色或浅棕色长裤\",\n      \"headwear\": \"深色干部帽（类似解放帽）\",\n      \"style\": \"典型80年代中国基层干部/公务人员着装\",\n      \"features\": \"衣服略显陈旧，实用耐穿\"\n    }\n  },\n  \"background_architecture\": {\n    \"buildings\": \"低矮的砖木结构平房，部分为红砖墙、部分为土坯或灰砖\",\n    \"style\": \"典型的北方农村民居\",\n    \"era_features\": \"80年代初期的乡村建筑，未见明显现代化楼房\",\n    \"location_inference\": \"中国华北地区（河北、山东、河南或京郊农村）\"\n  },\n  \"era_items\": {\n    \"motorcycle\": {\n      \"brand\": \"Honda（本田）\",\n      \"model_inference\": \"80年代流行的Honda XL125或类似越野/实用型摩托\",\n      \"significance\": \"当时农村非常稀有的高档交通工具，象征一定地位\"\n    },\n    \"walkie_talkie\": {\n      \"type\": \"大型手持式无线电对讲机（带加长天线）\",\n      \"era\": \"80年代中期至90年代初期\",\n      \"significance\": \"当时极为昂贵和先进的通讯设备，通常只有乡镇政府、公安或重要部门才配备\"\n    },\n    \"other_items\": [\n      \"路边白底黑字的宣传栏，内容可能为‘公开选聘’相关政策\",\n      \"木质电线杆和高压/电话线\"\n    ]\n  },\n  \"overall_description\": {\n    \"atmosphere\": \"严肃、朴素、带有强烈时代气息的基层工作场景\",\n    \"era_estimation\": \"1985-1992年（最可能是1987-1990年）\",\n    \"possible_scene\": \"乡镇干部在乡村执行公务，可能正在通过对讲机向上级汇报情况或接收指令。摩托车和对讲机的组合显示此人在当地属于‘有资源、有权力’的基层干部形象。\",\n    \"historical_context\": \"这是中国农村改革开放初期，基层治理现代化的典型缩影。对讲机和摩托车的出现标志着信息传递开始从‘骑自行车送信’向电子化过渡的阶段。\"\n  }\n}\n```"
+      },
+      "details": {
+        "final_score": 3.53,
+        "weights": {
+          "photo": 0.3,
+          "story": 0.5,
+          "interview": 0.2
+        },
+        "photo_evaluation": {
+          "raw_score": 13.0,
+          "max_score": 15.0,
+          "normalized_score": 4.33,
+          "accuracy": 86.67,
+          "image_path": "d:/desktop/Tencent Capstone Project/照片数据库/镇长上任.png",
+          "image_description": "一个中年男子骑坐在一辆红色本田摩托车上，停在乡村土路中央。他身穿深蓝色工作服上衣、卡其色裤子，头戴深色干部帽，左手握着一部带长天线的黑色对讲机，正在低头查看屏幕，神情专注。\n\n背景是典型的80年代末90年代初中国北方农村：土路两旁有砖房和简易围墙，墙上可见“公路道旁”和“公路法宣传”标语，远处站着几个穿深色衣服的村民。电线杆、农田和简陋的平房构成典型的时代场景。\n\n画面整体呈现出那个年代特有的朴实、略带生硬的色彩感和生活气息，阳光明媚，尘土飞扬。",
+          "mme": {
+            "details": [
+              {
+                "question": "照片中的男士是否戴着一顶黑色的帽子？",
+                "expected": "yes",
+                "predicted": "yes",
+                "raw_response": "yes",
+                "correct": true,
+                "score": 1.0
+              },
+              {
+                "question": "男士骑着的交通工具是一辆无动力的老式自行车吗？",
+                "expected": "no",
+                "predicted": "no",
+                "raw_response": "no",
+                "correct": true,
+                "score": 1.0
+              },
+              {
+                "question": "男士的手里是否拿着一部带有大屏幕的智能手机？",
+                "expected": "no",
+                "predicted": "no",
+                "raw_response": "no",
+                "correct": true,
+                "score": 1.0
+              },
+              {
+                "question": "画面背景的土路上是否停放着一辆现代化的白色小轿车？",
+                "expected": "no",
+                "predicted": "no",
+                "raw_response": "no",
+                "correct": true,
+                "score": 1.0
+              },
+              {
+                "question": "男士是否穿着深色（藏青色）的上衣夹克？",
+                "expected": "yes",
+                "predicted": "yes",
+                "raw_response": "yes",
+                "correct": true,
+                "score": 1.0
+              },
+              {
+                "question": "背景的建筑物墙面或大门边上是否挂着带有文字的木牌？",
+                "expected": "yes",
+                "predicted": "yes",
+                "raw_response": "yes",
+                "correct": true,
+                "score": 1.0
+              },
+              {
+                "question": "男士的脖子上是否戴着一条厚实的羊毛围巾？",
+                "expected": "no",
+                "predicted": "no",
+                "raw_response": "no",
+                "correct": true,
+                "score": 1.0
+              },
+              {
+                "question": "从画面的自然光影来看，这是否表现的是白天的场景？",
+                "expected": "yes",
+                "predicted": "yes",
+                "raw_response": "yes",
+                "correct": true,
+                "score": 1.0
+              }
+            ],
+            "raw_score": 8.0,
+            "max_score": 8.0,
+            "normalized_score": 5.0
+          },
+          "mmbench": {
+            "details": [
+              {
+                "question": "根据人物使用的通讯工具（BB机）、交通工具款式以及背景略显斑驳的乡镇风貌，这张照片反映的时代背景最可能是：",
+                "options": {
+                  "A": "20世纪70年代，通讯极为不便的特殊时期",
+                  "B": "20世纪90年代，BB机和摩托车开始在基层干部及部分人群中流行的时期",
+                  "C": "21世纪10年代，移动互联网和智能触屏手机全面普及的时期",
+                  "D": "21世纪20年代，现代新农村建设已经高度智能化的时期"
+                },
+                "expected": "B",
+                "predicted": "B",
+                "raw_response": "B",
+                "correct": true,
+                "score": 1.0
+              },
+              {
+                "question": "结合人物专注的神态、手中的物品特征以及背景的“L镇人民政府”木牌，以下对画面情节逻辑推断最合理的是：",
+                "options": {
+                  "A": "该男子是一名普通农民，正准备下地干活，低头只是在看手腕上的机械表确认时间。",
+                  "B": "该男子是一名城市来乡下游玩的旅客，正用手持GPS导航仪查找前往景点的路线。",
+                  "C": "该男子可能是镇政府的基层干部，在下乡骑行途中停下摩托车，正在查阅BB机上接收到的工作呼叫或讯息。",
+                  "D": "该男子是一名专业的摩托车维修工，正低头使用随身携带的测电器检查摩托车仪表的故障。"
+                },
+                "expected": "C",
+                "predicted": "C",
+                "raw_response": "C",
+                "correct": true,
+                "score": 1.0
+              }
+            ],
+            "raw_score": 2.0,
+            "max_score": 2.0,
+            "normalized_score": 5.0
+          },
+          "hooks": {
+            "details": [
+              {
+                "hook": "摩托车",
+                "exact_match": true,
+                "semantic_match": false,
+                "score": 1.0
+              },
+              {
+                "hook": "BB机",
+                "exact_match": false,
+                "semantic_match": true,
+                "score": 1.0
+              },
+              {
+                "hook": "解放帽",
+                "exact_match": false,
+                "semantic_match": true,
+                "score": 1.0
+              },
+              {
+                "hook": "政府木牌",
+                "exact_match": false,
+                "semantic_match": false,
+                "score": 0.0
+              },
+              {
+                "hook": "藏青色夹克",
+                "exact_match": false,
+                "semantic_match": false,
+                "score": 0.0
+              }
+            ],
+            "raw_score": 3.0,
+            "max_score": 5.0,
+            "normalized_score": 3.0
+          },
+          "meta": {
+            "backend": "openai_compatible",
+            "model": "x-ai/grok-4.20-beta",
+            "scale": "0-5"
+          }
+        },
+        "story_evaluation": {
+          "scores": {
+            "relevance": 3.5,
+            "coherence": 4.0,
+            "empathy": 4.0,
+            "surprise": 2.0,
+            "engagement": 3.5,
+            "complexity": 4.0
+          },
+          "explanations": {
+            "relevance": "故事主题聚焦于个人从农民到乡干部的成长历程，与参考文本中“从人大到乡镇工作、拒绝回老家镇、配备摩托车和通讯工具”等核心事件有明显重叠，但增加了大量个人童年、婚姻、文革经历，偏离了参考文本的组织谈话主线。",
+            "coherence": "叙事时间线清晰，从1939年出生到1998年退休，按年代顺序展开，因果关系合理，人物关系和事件过渡自然。",
+            "empathy": "读者能明显感受到主角在贫困童年、挨批斗、亲戚关系两难、退休时的复杂情绪，如“里外不是人”“心里五味杂陈”“遗憾没能好好陪老婆”等描述真实动人。",
+            "surprise": "故事基本按时间顺序平铺直叙个人经历，缺乏显著的剧情转折或意外结局，仅有拒绝回老家一事稍有波澜，但未超出常规预期。",
+            "engagement": "第一人称回忆结合具体生活细节（如骑摩托跑村、发大水守堤、借粮被批斗），有一定代入感，但后半段说教意味较重，吸引力中等。",
+            "complexity": "故事包含童年贫困、大跃进、文革、四清、改革开放、家庭责任、干部两难等多层背景与细节，层次较为丰富，并非单薄。"
+          },
+          "final_score": 3.5,
+          "summary": "一篇朴实的第一人称回忆录，情感真挚、细节扎实，但惊喜度不足，整体中规中矩，符合老年干部自述的平实风格。",
+          "raw_response": "{\n  \"scores\": {\n    \"relevance\": 3.5,\n    \"coherence\": 4,\n    \"empathy\": 4,\n    \"surprise\": 2,\n    \"engagement\": 3.5,\n    \"complexity\": 4\n  },\n  \"explanations\": {\n    \"relevance\": \"故事主题聚焦于个人从农民到乡干部的成长历程，与参考文本中“从人大到乡镇工作、拒绝回老家镇、配备摩托车和通讯工具”等核心事件有明显重叠，但增加了大量个人童年、婚姻、文革经历，偏离了参考文本的组织谈话主线。\",\n    \"coherence\": \"叙事时间线清晰，从1939年出生到1998年退休，按年代顺序展开，因果关系合理，人物关系和事件过渡自然。\",\n    \"empathy\": \"读者能明显感受到主角在贫困童年、挨批斗、亲戚关系两难、退休时的复杂情绪，如“里外不是人”“心里五味杂陈”“遗憾没能好好陪老婆”等描述真实动人。\",\n    \"surprise\": \"故事基本按时间顺序平铺直叙个人经历，缺乏显著的剧情转折或意外结局，仅有拒绝回老家一事稍有波澜，但未超出常规预期。\",\n    \"engagement\": \"第一人称回忆结合具体生活细节（如骑摩托跑村、发大水守堤、借粮被批斗），有一定代入感，但后半段说教意味较重，吸引力中等。\",\n    \"complexity\": \"故事包含童年贫困、大跃进、文革、四清、改革开放、家庭责任、干部两难等多层背景与细节，层次较为丰富，并非单薄。\"\n  },\n  \"final_score\": 3.50,\n  \"summary\": \"一篇朴实的第一人称回忆录，情感真挚、细节扎实，但惊喜度不足，整体中规中矩，符合老年干部自述的平实风格。\"\n}",
+          "meta": {
+            "backend": "openai_compatible",
+            "model": "x-ai/grok-4.20-beta",
+            "has_prompt": false,
+            "has_reference": true
+          }
+        },
+        "interview_evaluation": {
+          "metrics": {
+            "answer_quality": 0.45,
+            "information_completeness": 3.33,
+            "question_depth": 5.0,
+            "topic_coverage": 0.83
+          },
+          "discussed_dimensions": [
+            "人物"
+          ],
+          "remaining_gaps": [
+            "地点",
+            "时间"
+          ],
+          "question_count": 1,
+          "final_score": 2.41,
+          "meta": {
+            "scale": "0-5",
+            "standard": "pr2-followup-quality"
+          }
+        },
+        "meta": {
+          "sample_index": 0,
+          "benchmark_file": "C:\\Users\\SHENGZ~1\\AppData\\Local\\Temp\\tmp6jeg3658\\benchmark.json",
+          "score_scale": "0-5"
+        }
+      },
+      "data_type": "simulated"
+    },
+    {
+      "sample_id": "射击比赛第一名",
+      "photo_score": 3.93,
+      "story_score": 3.67,
+      "interview_score": 2.12,
+      "final_score": 3.44,
+      "generated_story": "我叫李明德，今年已经七十多岁了。家里人最近在整理老照片，我看到这张1978年国庆节拍的合影，就忍不住想把这段经历讲给你们这些晚辈听。照片里站在最前面、手里拿着奖状的就是我，那时候三十出头，脸上还带着年轻人特有的那股高兴劲儿。后面是团里十几位政工干部，大家都穿着深色的中山装，有的胸前别着大红花。身后挂着“全国政工干部步枪射击比赛颁奖大会”的横幅，底下写着“1978年10月1日国庆节射击比赛留念”。看到这张照片，我一下子就回到了那个年头，心里五味杂陈。\n我1930年代末出生在河北一个普通农村。家里兄弟姐妹多，地少粮薄，日子过得紧巴巴的。父亲是个老实巴交的庄稼汉，一辈子就知道面朝黄土背朝天。母亲身体不好，却还要操持一家人的吃穿。我小时候最深的记忆，就是冬天一家人围着一个小火盆，喝着稀得照得见人影的玉米面粥。1949年新中国成立后，村里搞土改，我们家分到了几亩地，日子才慢慢有了盼头。那时候我刚十来岁，就跟着大人去识字班扫盲，晚上在煤油灯底下学写自己的名字。那种想读书、想学本事的劲头，从小就扎在了心里。\n1950年代初，我响应号召参了军。先是在部队当战士，后来因为识字多、肯吃苦，被调到政治机关做文书。那时候部队强调“又红又专”，我白天跟战士们一起出操、训练，晚上就埋头学政治理论、学文化知识。转业后，我被分配到地方的一个公安系统下属单位，继续做政工工作。那个年代，单位里军事化管理还很严，大家住集体宿舍，吃大锅饭，工作和生活几乎分不开。我记得刚调到团里那几年，宿舍里连个像样的桌子都没有，我就趴在床板上写材料，常常写到半夜。妻子是老家介绍的农村姑娘，她一个人带着孩子，种地、喂猪、做家务，从来没抱怨过我顾不上家。那时候我们最大的奢侈，就是过年的时候买二斤肉，全家一起包顿饺子。\n真正让我人生出现明显转折的，是1976年以后。文化大革命结束，单位开始慢慢恢复正常秩序，也开始重视业务能力。1978年那一年，国家发生了很多大事，改革开放的春风已经吹起来了。我们团里也开始组织各种业务竞赛，既要讲政治，又要练本领。那年国庆节前，团里决定搞一次全团政工干部步枪射击比赛。消息一出来，大家都挺意外，因为政工干部平时主要抓思想工作，摸枪的机会并不多。我却暗暗下了决心：既然干这一行，就要干出个样子来。\n那段时间我练得特别苦。每天清晨五点多，我就跑到单位后面的小树林里练瞄准。靶子是自己用废纸箱做的，准星和缺口对不齐，我就一遍遍调整。晚上回到家，眼睛都花了，还拿着个小本子把射击要领抄下来反复背。妻子看我这么拼命，就把省下的鸡蛋煮好，悄悄放在我书包里。比赛那天天气很好，我记得自己站在射击位置上，手心微微出汗，但心里特别平静。枪响之后，我连续三组射击全部命中靶心，拿了第一名。颁奖的时候，领导把那张手写的奖状递到我手里，上面用毛笔字写着“步枪射击比赛第一名”。那一刻，我心里最强烈的感觉，就是这不仅仅是一份荣誉，更是对我这些年“干一行，爱一行，专一行”的最好证明。\n拿到奖状后，单位给我拍了这张集体照。照片里我站得笔直，脸上忍不住笑。那时候大家还不太习惯照相，旁边几位老同志表情比较严肃，但我心里清楚，这张照片不光是记住了这次比赛，更记住了那个时代我们这代人的精神头。比赛之后，单位把我作为“文武双全”的典型在内部表扬了一阵子。没过多久，我就被提拔为政工科的副科长，工作担子更重了。80年代初，单位开始推行责任制，我带着年轻同志下基层搞调研、抓思想教育，同时还要组织训练。那时候孩子渐渐大了，我才有机会多回家几次。妻子说，我这辈子最对不起的就是家里人，可她又说，要是没有我这么拼命，这个家也不会后来过上好日子。\n转眼到了90年代，单位改革，我慢慢退到了二线。后来正式退休，搬回了老家附近的小区。孩子们都成家立业了，有的在城里上班，有的做了老师。我偶尔翻出这张老照片，我会对着它发一会儿呆。照片里那个年轻人，可我心里一直记得那句老话：人这一辈子，关键是要对得起自己干的事，对得起那份责任。\n回想这一辈子，从农村娃到部队战士，再到政工干部，我没读过什么名牌大学，也没做过什么惊天动地的大事。我只是认准了一个理：不管在什么岗位，都要踏踏实实把事情做好。那个年代机会不多，条件也苦，但只要肯下功夫，总能干出点名堂来。别老想着一步登天，也别怕吃苦。吃过的苦、流过的汗，最后都会变成你站得更稳的底气。\n我这辈子最大的遗憾，是没能多陪陪妻子和孩子；最骄傲的，就是手里捧着那张奖状的时候，觉得自己没有白活这一回。希望你们这些晚辈，能在自己的路上走得更稳、更远，也别忘了常回家看看，陪陪我们这些老家伙。日子过得再好，也别忘了根在哪儿，心在哪儿。\n（全文约1850字）",
+      "qa_history": [
+        {
+          "question": "你拿到那张“全国政工干部步枪射击比赛”第一名的奖状时，心里最强烈的感觉是什么？",
+          "answer": "1978年国庆节国庆节，我们团里组织了一次别开生面的比赛——全团政工干部步枪射击比赛。这不仅仅是一份荣誉，更是对我“干一行，爱一行，专一行”的最好证明。"
+        }
+      ],
+      "analysis_result": {
+        "visual_elements": "```json\n{\n  \"visual_elements\": {\n    \"people_count\": 16,\n    \"main_subject\": {\n      \"position\": \"center_front\",\n      \"gender\": \"male\",\n      \"age\": \"approximately 25-30\",\n      \"description\": \"年轻男性，短发，面带微笑，手持奖状\"\n    },\n    \"other_people\": [\n      {\n        \"count\": 15,\n        \"gender\": \"male\",\n        \"age_range\": \"25-50\",\n        \"description\": \"大部分为中年男性，穿着统一制服，部分人佩戴奖章或花朵\"\n      }\n    ],\n    \"relationship\": \"集体合影，主角为获奖者，其余为同事或领导，属于单位集体荣誉场景\"\n  },\n  \"expressions_and_emotions\": {\n    \"main_subject\": {\n      \"expression\": \"自信、喜悦的微笑\",\n      \"posture\": \"站姿挺拔，双手持奖状面向镜头\",\n      \"emotion\": \"自豪、荣誉感强\"\n    },\n    \"group\": {\n      \"expression\": \"大部分面带微笑，部分人表情较为严肃庄重\",\n      \"posture\": \"多数人双手鼓掌或自然下垂\",\n      \"emotion\": \"集体荣誉感、喜庆、团结\"\n    }\n  },\n  \"clothing_details\": {\n    \"style\": \"中山装/军干服\",\n    \"color\": \"深色（照片为黑白，推测为深蓝或深灰色）\",\n    \"features\": [\n      \"立领四袋中山装\",\n      \"大多数人佩戴布质或金属奖章/纪念花\",\n      \"帽子为干部常见的老式解放帽（部分人戴，部分人未戴）\",\n      \"布料厚实，典型70年代中国干部/工人正式着装\"\n    ],\n    \"era_characteristics\": \"1970年代中国标准‘干部服’风格\"\n  },\n  \"background_architecture\": {\n    \"buildings\": \"照片后方可见低矮的砖瓦平房或简易楼房，典型单位大院建筑\",\n    \"style\": \"苏式/功能主义简朴风格\",\n    \"features\": \"水泥地面、空旷的单位院落，左侧有树木\",\n    \"location_inference\": \"中国大陆某机关、工厂或军工单位大院\",\n    \"banner_text\": \"全国政工干部步枪射击比赛颁奖大会\"\n  },\n  \"era_items\": {\n    \"banner\": {\n      \"content\": \"全国政工干部步枪射击比赛颁奖大会\",\n      \"era\": \"文化大革命结束后，1978年\"\n    },\n    \"certificate\": {\n      \"content\": \"步枪射击比赛奖状 第一名 1978年国庆节 纪念国庆同志\",\n      \"type\": \"手写毛笔字奖状，带有装饰花边\"\n    },\n    \"other_items\": [\n      \"布质奖章/大红花\",\n      \"典型70年代黑白胶片照片\"\n    ]\n  },\n  \"overall_description\": {\n    \"atmosphere\": \"庄重、喜庆、集体主义荣誉感强烈，展现了改革开放初期的单位精神风貌\",\n    \"shooting_date\": \"1978年10月1日（国庆节）\",\n    \"estimated_year\": \"1978年\",\n    \"scene\": \"某单位（很可能为公安、政法或军工系统）举办的‘全国政工干部步枪射击比赛’颁奖仪式后的集体合影\",\n    \"historical_context\": \"文化大革命结束两年后，中国正处于改革开放初期，单位仍保留大量军事化管理色彩，同时开始恢复正常业务竞赛活动",
+        "emotions": "```json\n{\n  \"visual_elements\": {\n    \"people_count\": 16,\n    \"main_subject\": {\n      \"position\": \"center_front\",\n      \"gender\": \"male\",\n      \"age\": \"approximately 25-30\",\n      \"description\": \"年轻男性，短发，面带微笑，手持奖状\"\n    },\n    \"other_people\": [\n      {\n        \"count\": 15,\n        \"gender\": \"male\",\n        \"age_range\": \"25-50\",\n        \"description\": \"大部分为中年男性，穿着统一制服，部分人佩戴奖章或花朵\"\n      }\n    ],\n    \"relationship\": \"集体合影，主角为获奖者，其余为同事或领导，属于单位集体荣誉场景\"\n  },\n  \"expressions_and_emotions\": {\n    \"main_subject\": {\n      \"expression\": \"自信、喜悦的微笑\",\n      \"posture\": \"站姿挺拔，双手持奖状面向镜头\",\n      \"emotion\": \"自豪、荣誉感强\"\n    },\n    \"group\": {\n      \"expression\": \"大部分面带微笑，部分人表情较为严肃庄重\",\n      \"posture\": \"多数人双手鼓掌或自然下垂\",\n      \"emotion\": \"集体荣誉感、喜庆、团结\"\n    }\n  },\n  \"clothing_details\": {\n    \"style\": \"中山装/军干服\",\n    \"color\": \"深色（照片为黑白，推测为深蓝或深灰色）\",\n    \"features\": [\n      \"立领四袋中山装\",\n      \"大多数人佩戴布质或金属奖章/纪念花\",\n      \"帽子为干部常见的老式解放帽（部分人戴，部分人未戴）\",\n      \"布料厚实，典型70年代中国干部/工人正式着装\"\n    ],\n    \"era_characteristics\": \"1970年代中国标准‘干部服’风格\"\n  },\n  \"background_architecture\": {\n    \"buildings\": \"照片后方可见低矮的砖瓦平房或简易楼房，典型单位大院建筑\",\n    \"style\": \"苏式/功能主义简朴风格\",\n    \"features\": \"水泥地面、空旷的单位院落，左侧有树木\",\n    \"location_inference\": \"中国大陆某机关、工厂或军工单位大院\",\n    \"banner_text\": \"全国政工干部步枪射击比赛颁奖大会\"\n  },\n  \"era_items\": {\n    \"banner\": {\n      \"content\": \"全国政工干部步枪射击比赛颁奖大会\",\n      \"era\": \"文化大革命结束后，1978年\"\n    },\n    \"certificate\": {\n      \"content\": \"步枪射击比赛奖状 第一名 1978年国庆节 纪念国庆同志\",\n      \"type\": \"手写毛笔字奖状，带有装饰花边\"\n    },\n    \"other_items\": [\n      \"布质奖章/大红花\",\n      \"典型70年代黑白胶片照片\"\n    ]\n  },\n  \"overall_description\": {\n    \"atmosphere\": \"庄重、喜庆、集体主义荣誉感强烈，展现了改革开放初期的单位精神风貌\",\n    \"shooting_date\": \"1978年10月1日（国庆节）\",\n    \"estimated_year\": \"1978年\",\n    \"scene\": \"某单位（很可能为公安、政法或军工系统）举办的‘全国政工干部步枪射击比赛’颁奖仪式后的集体合影\",\n    \"historical_context\": \"文化大革命结束两年后，中国正处于改革开放初期，单位仍保留大量军事化管理色彩，同时开始恢复正常业务竞赛活动",
+        "clothing": "```json\n{\n  \"visual_elements\": {\n    \"people_count\": 16,\n    \"main_subject\": {\n      \"position\": \"center_front\",\n      \"gender\": \"male\",\n      \"age\": \"approximately 25-30\",\n      \"description\": \"年轻男性，短发，面带微笑，手持奖状\"\n    },\n    \"other_people\": [\n      {\n        \"count\": 15,\n        \"gender\": \"male\",\n        \"age_range\": \"25-50\",\n        \"description\": \"大部分为中年男性，穿着统一制服，部分人佩戴奖章或花朵\"\n      }\n    ],\n    \"relationship\": \"集体合影，主角为获奖者，其余为同事或领导，属于单位集体荣誉场景\"\n  },\n  \"expressions_and_emotions\": {\n    \"main_subject\": {\n      \"expression\": \"自信、喜悦的微笑\",\n      \"posture\": \"站姿挺拔，双手持奖状面向镜头\",\n      \"emotion\": \"自豪、荣誉感强\"\n    },\n    \"group\": {\n      \"expression\": \"大部分面带微笑，部分人表情较为严肃庄重\",\n      \"posture\": \"多数人双手鼓掌或自然下垂\",\n      \"emotion\": \"集体荣誉感、喜庆、团结\"\n    }\n  },\n  \"clothing_details\": {\n    \"style\": \"中山装/军干服\",\n    \"color\": \"深色（照片为黑白，推测为深蓝或深灰色）\",\n    \"features\": [\n      \"立领四袋中山装\",\n      \"大多数人佩戴布质或金属奖章/纪念花\",\n      \"帽子为干部常见的老式解放帽（部分人戴，部分人未戴）\",\n      \"布料厚实，典型70年代中国干部/工人正式着装\"\n    ],\n    \"era_characteristics\": \"1970年代中国标准‘干部服’风格\"\n  },\n  \"background_architecture\": {\n    \"buildings\": \"照片后方可见低矮的砖瓦平房或简易楼房，典型单位大院建筑\",\n    \"style\": \"苏式/功能主义简朴风格\",\n    \"features\": \"水泥地面、空旷的单位院落，左侧有树木\",\n    \"location_inference\": \"中国大陆某机关、工厂或军工单位大院\",\n    \"banner_text\": \"全国政工干部步枪射击比赛颁奖大会\"\n  },\n  \"era_items\": {\n    \"banner\": {\n      \"content\": \"全国政工干部步枪射击比赛颁奖大会\",\n      \"era\": \"文化大革命结束后，1978年\"\n    },\n    \"certificate\": {\n      \"content\": \"步枪射击比赛奖状 第一名 1978年国庆节 纪念国庆同志\",\n      \"type\": \"手写毛笔字奖状，带有装饰花边\"\n    },\n    \"other_items\": [\n      \"布质奖章/大红花\",\n      \"典型70年代黑白胶片照片\"\n    ]\n  },\n  \"overall_description\": {\n    \"atmosphere\": \"庄重、喜庆、集体主义荣誉感强烈，展现了改革开放初期的单位精神风貌\",\n    \"shooting_date\": \"1978年10月1日（国庆节）\",\n    \"estimated_year\": \"1978年\",\n    \"scene\": \"某单位（很可能为公安、政法或军工系统）举办的‘全国政工干部步枪射击比赛’颁奖仪式后的集体合影\",\n    \"historical_context\": \"文化大革命结束两年后，中国正处于改革开放初期，单位仍保留大量军事化管理色彩，同时开始恢复正常业务竞赛活动",
+        "background": "```json\n{\n  \"visual_elements\": {\n    \"people_count\": 16,\n    \"main_subject\": {\n      \"position\": \"center_front\",\n      \"gender\": \"male\",\n      \"age\": \"approximately 25-30\",\n      \"description\": \"年轻男性，短发，面带微笑，手持奖状\"\n    },\n    \"other_people\": [\n      {\n        \"count\": 15,\n        \"gender\": \"male\",\n        \"age_range\": \"25-50\",\n        \"description\": \"大部分为中年男性，穿着统一制服，部分人佩戴奖章或花朵\"\n      }\n    ],\n    \"relationship\": \"集体合影，主角为获奖者，其余为同事或领导，属于单位集体荣誉场景\"\n  },\n  \"expressions_and_emotions\": {\n    \"main_subject\": {\n      \"expression\": \"自信、喜悦的微笑\",\n      \"posture\": \"站姿挺拔，双手持奖状面向镜头\",\n      \"emotion\": \"自豪、荣誉感强\"\n    },\n    \"group\": {\n      \"expression\": \"大部分面带微笑，部分人表情较为严肃庄重\",\n      \"posture\": \"多数人双手鼓掌或自然下垂\",\n      \"emotion\": \"集体荣誉感、喜庆、团结\"\n    }\n  },\n  \"clothing_details\": {\n    \"style\": \"中山装/军干服\",\n    \"color\": \"深色（照片为黑白，推测为深蓝或深灰色）\",\n    \"features\": [\n      \"立领四袋中山装\",\n      \"大多数人佩戴布质或金属奖章/纪念花\",\n      \"帽子为干部常见的老式解放帽（部分人戴，部分人未戴）\",\n      \"布料厚实，典型70年代中国干部/工人正式着装\"\n    ],\n    \"era_characteristics\": \"1970年代中国标准‘干部服’风格\"\n  },\n  \"background_architecture\": {\n    \"buildings\": \"照片后方可见低矮的砖瓦平房或简易楼房，典型单位大院建筑\",\n    \"style\": \"苏式/功能主义简朴风格\",\n    \"features\": \"水泥地面、空旷的单位院落，左侧有树木\",\n    \"location_inference\": \"中国大陆某机关、工厂或军工单位大院\",\n    \"banner_text\": \"全国政工干部步枪射击比赛颁奖大会\"\n  },\n  \"era_items\": {\n    \"banner\": {\n      \"content\": \"全国政工干部步枪射击比赛颁奖大会\",\n      \"era\": \"文化大革命结束后，1978年\"\n    },\n    \"certificate\": {\n      \"content\": \"步枪射击比赛奖状 第一名 1978年国庆节 纪念国庆同志\",\n      \"type\": \"手写毛笔字奖状，带有装饰花边\"\n    },\n    \"other_items\": [\n      \"布质奖章/大红花\",\n      \"典型70年代黑白胶片照片\"\n    ]\n  },\n  \"overall_description\": {\n    \"atmosphere\": \"庄重、喜庆、集体主义荣誉感强烈，展现了改革开放初期的单位精神风貌\",\n    \"shooting_date\": \"1978年10月1日（国庆节）\",\n    \"estimated_year\": \"1978年\",\n    \"scene\": \"某单位（很可能为公安、政法或军工系统）举办的‘全国政工干部步枪射击比赛’颁奖仪式后的集体合影\",\n    \"historical_context\": \"文化大革命结束两年后，中国正处于改革开放初期，单位仍保留大量军事化管理色彩，同时开始恢复正常业务竞赛活动",
+        "era_items": "",
+        "overall_description": "```json\n{\n  \"visual_elements\": {\n    \"people_count\": 16,\n    \"main_subject\": {\n      \"position\": \"center_front\",\n      \"gender\": \"male\",\n      \"age\": \"approximately 25-30\",\n      \"description\": \"年轻男性，短发，面带微笑，手持奖状\"\n    },\n    \"other_people\": [\n      {\n        \"count\": 15,\n        \"gender\": \"male\",\n        \"age_range\": \"25-50\",\n        \"description\": \"大部分为中年男性，穿着统一制服，部分人佩戴奖章或花朵\"\n      }\n    ],\n    \"relationship\": \"集体合影，主角为获奖者，其余为同事或领导，属于单位集体荣誉场景\"\n  },\n  \"expressions_and_emotions\": {\n    \"main_subject\": {\n      \"expression\": \"自信、喜悦的微笑\",\n      \"posture\": \"站姿挺拔，双手持奖状面向镜头\",\n      \"emotion\": \"自豪、荣誉感强\"\n    },\n    \"group\": {\n      \"expression\": \"大部分面带微笑，部分人表情较为严肃庄重\",\n      \"posture\": \"多数人双手鼓掌或自然下垂\",\n      \"emotion\": \"集体荣誉感、喜庆、团结\"\n    }\n  },\n  \"clothing_details\": {\n    \"style\": \"中山装/军干服\",\n    \"color\": \"深色（照片为黑白，推测为深蓝或深灰色）\",\n    \"features\": [\n      \"立领四袋中山装\",\n      \"大多数人佩戴布质或金属奖章/纪念花\",\n      \"帽子为干部常见的老式解放帽（部分人戴，部分人未戴）\",\n      \"布料厚实，典型70年代中国干部/工人正式着装\"\n    ],\n    \"era_characteristics\": \"1970年代中国标准‘干部服’风格\"\n  },\n  \"background_architecture\": {\n    \"buildings\": \"照片后方可见低矮的砖瓦平房或简易楼房，典型单位大院建筑\",\n    \"style\": \"苏式/功能主义简朴风格\",\n    \"features\": \"水泥地面、空旷的单位院落，左侧有树木\",\n    \"location_inference\": \"中国大陆某机关、工厂或军工单位大院\",\n    \"banner_text\": \"全国政工干部步枪射击比赛颁奖大会\"\n  },\n  \"era_items\": {\n    \"banner\": {\n      \"content\": \"全国政工干部步枪射击比赛颁奖大会\",\n      \"era\": \"文化大革命结束后，1978年\"\n    },\n    \"certificate\": {\n      \"content\": \"步枪射击比赛奖状 第一名 1978年国庆节 纪念国庆同志\",\n      \"type\": \"手写毛笔字奖状，带有装饰花边\"\n    },\n    \"other_items\": [\n      \"布质奖章/大红花\",\n      \"典型70年代黑白胶片照片\"\n    ]\n  },\n  \"overall_description\": {\n    \"atmosphere\": \"庄重、喜庆、集体主义荣誉感强烈，展现了改革开放初期的单位精神风貌\",\n    \"shooting_date\": \"1978年10月1日（国庆节）\",\n    \"estimated_year\": \"1978年\",\n    \"scene\": \"某单位（很可能为公安、政法或军工系统）举办的‘全国政工干部步枪射击比赛’颁奖仪式后的集体合影\",\n    \"historical_context\": \"文化大革命结束两年后，中国正处于改革开放初期，单位仍保留大量军事化管理色彩，同时开始恢复正常业务竞赛活动。‘政工干部’参加射击比赛反映了当时‘文武双全’的政治要求。\"\n  },\n  \"metadata\": {\n    \"photo_type\": \"黑白纸质照片\",\n    \"bottom_text\": \"1978年10月1日 国庆节射击比赛留念\",\n    \"historical_significance\": \"反映了1978年中国基层单位的政治文化、干部生活和文体活动，具有鲜明的时代特征\"\n  }\n}\n```"
+      },
+      "details": {
+        "final_score": 3.44,
+        "weights": {
+          "photo": 0.3,
+          "story": 0.5,
+          "interview": 0.2
+        },
+        "photo_evaluation": {
+          "raw_score": 11.0,
+          "max_score": 14.0,
+          "normalized_score": 3.93,
+          "accuracy": 78.57,
+          "image_path": "d:/desktop/Tencent Capstone Project/照片数据库/射击比赛第一名.png",
+          "image_description": "**描述：**\n\n1978年10月1日，一群身着深色中山装、头戴解放帽的年轻男子在室外合影。照片中央的年轻男子正面站立，双手捧着一张“步枪射击比赛状第一名”的奖状，胸前佩戴大红花，面带自信微笑。周围十余名男子同样身着制服、胸戴红花，有的双手鼓掌，有的面带笑容，集体注视着镜头。\n\n背景悬挂着“全国政工干部步枪射击比赛颁奖大会”的横幅，远处可见简朴的平房和树木。整张照片呈现出典型的70年代末国庆节政治氛围，朴实、整齐而充满朝气。",
+          "mme": {
+            "details": [
+              {
+                "question": "画面中心的年轻军人胸前是否佩戴着一朵巨大的花朵装饰（光荣花）？",
+                "expected": "yes",
+                "predicted": "yes",
+                "raw_response": "yes",
+                "correct": true,
+                "score": 1.0
+              },
+              {
+                "question": "年轻军人双手捧着的奖状上是否写着“第一名”的字样？",
+                "expected": "yes",
+                "predicted": "yes",
+                "raw_response": "**Yes**",
+                "correct": true,
+                "score": 1.0
+              },
+              {
+                "question": "照片中是否有一架无人机悬停在横幅的上方进行近距离拍摄？",
+                "expected": "no",
+                "predicted": "no",
+                "raw_response": "no",
+                "correct": true,
+                "score": 1.0
+              },
+              {
+                "question": "背景横幅上的文字是否包含“全团政工干部步枪射击比赛”？",
+                "expected": "yes",
+                "predicted": "yes",
+                "raw_response": "yes",
+                "correct": true,
+                "score": 1.0
+              },
+              {
+                "question": "站在主角身后的军人们手里是否都端着一把带有光学瞄准镜的现代狙击步枪？",
+                "expected": "no",
+                "predicted": "yes",
+                "raw_response": "yes",
+                "correct": false,
+                "score": 0.0
+              },
+              {
+                "question": "照片底部的边缘处是否有一行写着“1978年10月1日”的手写字迹？",
+                "expected": "yes",
+                "predicted": "yes",
+                "raw_response": "yes",
+                "correct": true,
+                "score": 1.0
+              },
+              {
+                "question": "画面右侧鼓掌的军人头上是否戴着充满科技感的VR智能眼镜？",
+                "expected": "no",
+                "predicted": "no",
+                "raw_response": "no",
+                "correct": true,
+                "score": 1.0
+              },
+              {
+                "question": "站在主角身后的那一排军人中，左侧是否有人正在互相握手？",
+                "expected": "yes",
+                "predicted": "yes",
+                "raw_response": "**yes**",
+                "correct": true,
+                "score": 1.0
+              }
+            ],
+            "raw_score": 7.0,
+            "max_score": 8.0,
+            "normalized_score": 4.38
+          },
+          "mmbench": {
+            "details": [
+              {
+                "question": "结合画面中央军人手中的奖状年份“1978”、底部的手写日期以及背景横幅的明确文字，这张照片记录的最核心场景是：",
+                "options": {
+                  "A": "21世纪高科技特种部队使用激光模拟系统进行的虚拟现实战术演习。",
+                  "B": "20世纪70年代末，某部队在国庆节期间举行的政工干部步枪射击比赛的颁奖现场。",
+                  "C": "20世纪50年代抗美援朝战争前线，志愿军战士踏上战场前的誓师动员大会。",
+                  "D": "现代影视基地的剧组正在拍摄一场虚构的科幻战争片，演员们穿着复古军装休息。"
+                },
+                "expected": "B",
+                "predicted": "B",
+                "raw_response": "B",
+                "correct": true,
+                "score": 1.0
+              },
+              {
+                "question": "根据照片中主角胸前佩戴的光荣花、双手展示“第一名”奖状的神态，以及背景中战友们热烈鼓掌的动作，以下对画面情节的推断最合理的是：",
+                "options": {
+                  "A": "这名年轻军人刚刚在步枪射击比赛中脱颖而出夺得冠军，正在骄傲地接受组织的表彰与战友的祝贺。",
+                  "B": "他是一名刚入伍的新兵，因为在打靶训练中严重脱靶，正在全团面前做检讨并展示违纪罚单。",
+                  "C": "后排的干部正在进行军备交接，主角手里拿的是一份刚打印出来的废旧物资销毁清单。",
+                  "D": "主角是一名普通的推销员，正在向部队首长推介最新款的防弹衣，周围人正在起哄。"
+                },
+                "expected": "A",
+                "predicted": "A",
+                "raw_response": "A",
+                "correct": true,
+                "score": 1.0
+              }
+            ],
+            "raw_score": 2.0,
+            "max_score": 2.0,
+            "normalized_score": 5.0
+          },
+          "hooks": {
+            "details": [
+              {
+                "hook": "奖状",
+                "exact_match": true,
+                "semantic_match": false,
+                "score": 1.0
+              },
+              {
+                "hook": "光荣花",
+                "exact_match": false,
+                "semantic_match": false,
+                "score": 0.0
+              },
+              {
+                "hook": "射击比赛",
+                "exact_match": true,
+                "semantic_match": false,
+                "score": 1.0
+              },
+              {
+                "hook": "一等奖",
+                "exact_match": false,
+                "semantic_match": false,
+                "score": 0.0
+              }
+            ],
+            "raw_score": 2.0,
+            "max_score": 4.0,
+            "normalized_score": 2.5
+          },
+          "meta": {
+            "backend": "openai_compatible",
+            "model": "x-ai/grok-4.20-beta",
+            "scale": "0-5"
+          }
+        },
+        "story_evaluation": {
+          "scores": {
+            "relevance": 4.5,
+            "coherence": 4.0,
+            "empathy": 4.0,
+            "surprise": 2.0,
+            "engagement": 3.5,
+            "complexity": 4.0
+          },
+          "explanations": {
+            "relevance": "故事高度围绕参考文本中的1978年国庆节政工干部步枪射击比赛及获奖经历展开，未跑题，且自然扩展了背景。",
+            "coherence": "叙事按时间顺序从出生到退休展开，人物关系和因果清晰，但部分段落存在时间跳跃略显突兀。",
+            "empathy": "通过描述童年贫困、妻子默默支持、练枪辛苦等细节，让读者能感受到主人公的坚韧与情感。",
+            "surprise": "故事发展完全符合预期，比赛获胜、提拔、退休反思均是典型正向叙事，缺乏意外转折。",
+            "engagement": "第一人称回忆结合生活细节有一定代入感，但整体节奏平缓，缺少强烈推动读者继续的张力。",
+            "complexity": "包含个人成长、时代背景、家庭生活、职业经历等多层内容，细节较丰富，但部分描述较为套路化。"
+          },
+          "final_score": 3.67,
+          "summary": "一篇典型的革命年代个人奋斗回忆录，主题鲜明、情感真挚，但惊喜度不足，整体中规中矩。",
+          "raw_response": "{\n  \"scores\": {\n    \"relevance\": 4.5,\n    \"coherence\": 4.0,\n    \"empathy\": 4.0,\n    \"surprise\": 2.0,\n    \"engagement\": 3.5,\n    \"complexity\": 4.0\n  },\n  \"explanations\": {\n    \"relevance\": \"故事高度围绕参考文本中的1978年国庆节政工干部步枪射击比赛及获奖经历展开，未跑题，且自然扩展了背景。\",\n    \"coherence\": \"叙事按时间顺序从出生到退休展开，人物关系和因果清晰，但部分段落存在时间跳跃略显突兀。\",\n    \"empathy\": \"通过描述童年贫困、妻子默默支持、练枪辛苦等细节，让读者能感受到主人公的坚韧与情感。\",\n    \"surprise\": \"故事发展完全符合预期，比赛获胜、提拔、退休反思均是典型正向叙事，缺乏意外转折。\",\n    \"engagement\": \"第一人称回忆结合生活细节有一定代入感，但整体节奏平缓，缺少强烈推动读者继续的张力。\",\n    \"complexity\": \"包含个人成长、时代背景、家庭生活、职业经历等多层内容，细节较丰富，但部分描述较为套路化。\"\n  },\n  \"final_score\": 3.67,\n  \"summary\": \"一篇典型的革命年代个人奋斗回忆录，主题鲜明、情感真挚，但惊喜度不足，整体中规中矩。\"\n}",
+          "meta": {
+            "backend": "openai_compatible",
+            "model": "x-ai/grok-4.20-beta",
+            "has_prompt": false,
+            "has_reference": true
+          }
+        },
+        "interview_evaluation": {
+          "metrics": {
+            "answer_quality": 0.45,
+            "information_completeness": 2.5,
+            "question_depth": 5.0,
+            "topic_coverage": 0.83
+          },
+          "discussed_dimensions": [
+            "情感"
+          ],
+          "remaining_gaps": [
+            "人物",
+            "地点",
+            "时间"
+          ],
+          "question_count": 1,
+          "final_score": 2.12,
+          "meta": {
+            "scale": "0-5",
+            "standard": "pr2-followup-quality"
+          }
+        },
+        "meta": {
+          "sample_index": 0,
+          "benchmark_file": "C:\\Users\\SHENGZ~1\\AppData\\Local\\Temp\\tmpzhvqj3ja\\benchmark.json",
+          "score_scale": "0-5"
+        }
+      },
+      "data_type": "simulated"
+    },
+    {
+      "sample_id": "知青下乡__集体照",
+      "photo_score": 4.64,
+      "story_score": 3.75,
+      "interview_score": 2.08,
+      "final_score": 3.68,
+      "generated_story": "我叫李桂兰，今年七十有四了。去年收拾旧箱子的时候，翻出这张1970年的合影，照片已经泛黄，边角还卷了起来。我拿着它在窗前坐了很久，心里忽然就想，有些事情还是该给你们这些晚辈讲讲。不是要显摆什么苦日子，也不是要讲什么大道理，就是怕再过几年，这些事就真的没人记得了。\n照片里前排左边那个拿铁锹、围着围巾的姑娘就是我。那年我十九岁，站在耿屯一队生产队的院子里，身后横幅写着“知识青年到农村去，接受贫下中农的再教育！扎根农村建设新农村！”我们一群城里来的知青和生产队的干部、老乡一起照了这张相。说实话，拍照那天我心里其实挺复杂的。农活真的很苦，冬天土冻得像石头，夏天蚊子咬得人一身包，饭也吃不饱。可那时候我们都觉得，这是国家号召的事，是自己应该走的路。\n我家是县城里的，父亲在百货公司当会计，母亲是小学老师。我是家里老大，下面还有两个弟弟一个妹妹。1968年初中毕业，我就响应号召下乡了。刚到耿屯的时候，真的是什么都不会。第一次学铲地，手上磨出泡，泡破了又长茧子。生产队老队长王叔是个实在人，他看我瘦小，就常把轻一点的活儿分给我，还教我怎么认庄稼、怎么看天色。村里人吃玉米面窝头，我刚开始咬都咬不动，后来也慢慢习惯了。冬天屋里没有暖气，我们几个女知青挤在一个土炕上，夜里冻得睡不着，就互相讲城里的故事。\n那几年我很少回家。一方面是路远，车不好找；另一方面，我心里总想着不能给家里添负担。生产队给我记工分，我省吃俭用，把省下的粮票和钱寄回去给弟弟妹妹上学。村里很多人劝我，说女孩子家早点找个对象安顿下来就行了，可我总觉得还有别的事可以做。1970年冬天，真的来了两次改变我命运的机会。先是县里来招工，说百货公司和机械厂要人，我是县城户口，名额里有我一个。紧接着，又听说清华北大开始招收工农兵学员，公社推荐了我。\n那两个机会摆在我面前的时候，我其实挺犹豫的。家里人写信催我回去，说城里条件好多了。可我看着生产队那几百亩地，看着我们一起修的水渠、种的果树，又觉得就这么走了好像对不起这几年吃的苦，也对不起老乡们教我的那些东西。最后我还是选择了继续留在农村。不是说我觉悟有多高，就是觉得既然来了，就该把事情做完。那些年我把更多精力放在了队里的活儿上，跟着老乡学种高粱、种玉米，还和几个知青一起办了夜校，给村里的孩子教识字。\n1974年，我和村里一个叫张德成的青年结了婚。他是本地人，比我大四岁，话不多，但干活实在。我们婚后就住在生产队分给的一间土坯房里，屋里一张床、一张桌子、两个凳子，全部家当就这些。第二年儿子出生，1978年女儿又来了。家里一下子多了两张嘴，日子过得更紧巴了。我一边带孩子，一边还得下地干活。德成那时候是生产队的会计，经常要记账到很晚。我们俩商量着，把家里能省的都省下来，供孩子以后读书。\n改革开放以后，农村的变化是真的大。1982年分田到户，我们家分到了八亩地。那几年我起早贪黑地种地，家里慢慢有了余粮。1985年，县里恢复了高考，我虽然年纪大了，但还是鼓励儿子去考。他后来考上了省里的师范专科，毕业后回到县城教书，这让我觉得这些年的苦没白吃。女儿后来学了裁缝，在镇上开了个小店，日子也过得平稳。\n1998年，我和德成把地交给儿子，自己搬到县城住了。德成2005年得了肺病，走得早。我一个人过了这些年，身体还算硬朗，平时帮着带带孙子孙女，也参加社区的老年活动。儿女们都孝顺，逢年过节都会回来陪我。\n看到这张1970年的合影，我有时候会想，如果当年我选择了招工或者上大学，我的人生会不会完全不一样？可能我会成为城里的职工，或者老师。可我并不后悔留在农村的那十几年。那段日子让我知道什么是真正的劳动，也让我知道人和人之间该怎么相处。老乡们教我的那些东西，比书本上的知识更实在。\n我这一辈子，经历的事情不算少。从县城到农村，再从农村回到县城，中间隔着整个国家的变化。有时候想想，我们这代人就像种子，被风吹到哪里，就在哪里生根发芽。苦是苦了点，但也长出了自己的果实。\n想跟你们这些晚辈说的是，生活不会总是一帆风顺。遇到难处的时候，别光想着自己苦，也看看身边的人，看看自己能为别人做点什么。机会来了，要好好把握；机会没来，也别怨天尤人，把手里的活儿做好就行了。人这一辈子，图的不是享多大的福，而是问心无愧。等你们到了我这个年纪，回过头看的时候，能觉得自己没白活，那就够了。\n我每天早上起来，我还是会像当年在生产队一样，先把屋子收拾干净，再去买菜做饭。日子平平常常，但心里踏实。这张老照片，我会好好留着。等你们下次回来，我再拿出来，给你们讲讲照片里那些人的故事。有些人后来回了城，有些人一辈子留在了耿屯，但我们都曾经在一起，认真地生活过。",
+      "qa_history": [
+        {
+          "question": "你手里拿着铁锹，站在前排左边，身后横幅上写着“知识青年到农村去，接受贫下中农的再教育”，当时拍这张照片的时候，你心里最真实的想法是什么？",
+          "answer": "1970年，我迎来了两次改变命运的机会——县城招工名额和清华北大的入学机会。农活辛苦，生活简单，我省吃俭用，很少回家探亲，把更多精力放在农村建设上。"
+        }
+      ],
+      "analysis_result": {
+        "visual_elements": "\"\n  },\n  \"clothing_details\": {\n    \"style\": \"文革时期典型冬装\",\n    \"main_colors\": [\"深灰色\", \"藏蓝色\", \"军绿色\"],\n    \"features\": [\n      \"知识青年多穿棉袄、棉裤，部分佩戴围巾\",\n      \"男性多戴军帽（解放帽）\",\n      \"当地农民穿着更显厚重朴素，部分戴草帽\",\n      \"整体衣着厚重，符合北方冬季特征\"\n    ],\n    \"era_characteristics\": \"典型的70年代初“知青装”和“贫下中农装”\"\n  },\n  \"background_architecture\": {\n    \"main_structure\": \"简易木结构平房，门前悬挂横幅\",\n    \"building_style\": \"北方农村生产队部典型建筑\",\n    \"features\": \"土墙、木梁、简易屋顶，左侧可见传统民居瓦房\",\n    \"location_inference\": \"中国北方农村（极可能为东北或华北地区）\",\n    \"time_characteristics\": \"1970年代初\"\n  },\n  \"era_objects\": {\n    \"banner_text\": \"知识青年到农村去，接受贫下中农的再教育！扎根农村建设新农村！\",\n    \"sign_text\": \"中国共产主义青年团耿屯一队支部委员会\",\n    \"other_objects\": [\n      {\n        \"item\": \"农具\",\n        \"significance\": \"象征知识青年与农民结合、参加劳动\"\n      },\n      {\n        \"item\": \"竹篮\",\n        \"significance\": \"当时农村常见生活劳动用品\"\n      }\n    ],\n    \"political_symbols\": \"横幅标语、五角星、毛主席语录式宣传\"\n  },\n  \"overall_description\": {\n    \"atmosphere\": \"庄重、热情、具有强烈时代印记的集体纪念照\",\n    \"estimated_year\": \"1970年\",\n    \"location\": \"中国北方某农村生产队（照片下方标注：耿屯一队）\",\n    \"historical_context\": \"知识青年上山下乡运动时期，知青与当地农民、生产队干部的合影\",\n    \"significance\": \"这是一张非常典型且具有历史价值的“知青合影”，记录了中国特定历史时期的城市青年响应号召到农村接受再教育、与农民结合的场景",
+        "emotions": "**以下是基于图片的结构化JSON分析结果：**\n\n```json\n{\n  \"visual_elements\": {\n    \"people_count\": 12,\n    \"people\": [\n      {\n        \"position\": \"后排左侧\",\n        \"gender\": \"male\",\n        \"age_group\": \"20-25\",\n        \"role\": \"知识青年\",\n        \"clothing\": \"深色棉衣、军帽\",\n        \"accessories\": \"铁锹\"\n      },\n      {\n        \"position\": \"后排中间\",\n        \"gender\": \"male\",\n        \"age_group\": \"30-40\",\n        \"role\": \"当地干部或老农\",\n        \"clothing\": \"中山装、军帽\",\n        \"accessories\": null\n      },\n      {\n        \"position\": \"后排右侧\",\n        \"gender\": \"male\",\n        \"age_group\": \"20-30\",\n        \"role\": \"知识青年/农民\",\n        \"clothing\": \"棉衣、草帽\",\n        \"accessories\": \"锄头\"\n      },\n      {\n        \"position\": \"前排左侧\",\n        \"gender\": \"female\",\n        \"age_group\": \"18-22\",\n        \"role\": \"知识青年\",\n        \"clothing\": \"深色棉衣、围巾\",\n        \"accessories\": \"铁锹\"\n      },\n      {\n        \"position\": \"前排中间\",\n        \"gender\": \"female\",\n        \"age_group\": \"17-21\",\n        \"role\": \"知识青年\",\n        \"clothing\": \"棉衣、围巾\",\n        \"accessories\": \"竹篮、手持标语牌\"\n      },\n      {\n        \"position\": \"前排右侧\",\n        \"gender\": \"female\",\n        \"age_group\": \"18-23\",\n        \"role\": \"知识青年\",\n        \"clothing\": \"棉衣\",\n        \"accessories\": null\n      }\n    ],\n    \"scene\": \"农村生产队院落\",\n    \"environment\": \"土质地面，背景有简易木结构房屋、瓦房、远处的田野和树木\",\n    \"objects\": [\n      \"铁锹、锄头、镰刀等农具\",\n      \"竹篮\",\n      \"木质长凳\",\n      \"标语牌\",\n      \"横幅\"\n    ]\n  },\n  \"expressions_and_emotions\": {\n    \"overall_mood\": \"严肃中带有青春的朝气和使命感\",\n    \"description\": \"大部分人表情庄重、目光坚定，部分人嘴角带笑。当地农民表情较为淳朴自然",
+        "clothing": "\"\n  },\n  \"clothing_details\": {\n    \"style\": \"文革时期典型冬装\",\n    \"main_colors\": [\"深灰色\", \"藏蓝色\", \"军绿色\"],\n    \"features\": [\n      \"知识青年多穿棉袄、棉裤，部分佩戴围巾\",\n      \"男性多戴军帽（解放帽）\",\n      \"当地农民穿着更显厚重朴素，部分戴草帽\",\n      \"整体衣着厚重，符合北方冬季特征\"\n    ],\n    \"era_characteristics\": \"典型的70年代初“知青装”和“贫下中农装”\"\n  },\n  \"background_architecture\": {\n    \"main_structure\": \"简易木结构平房，门前悬挂横幅\",\n    \"building_style\": \"北方农村生产队部典型建筑\",\n    \"features\": \"土墙、木梁、简易屋顶，左侧可见传统民居瓦房\",\n    \"location_inference\": \"中国北方农村（极可能为东北或华北地区）\",\n    \"time_characteristics\": \"1970年代初\"\n  },\n  \"era_objects\": {\n    \"banner_text\": \"知识青年到农村去，接受贫下中农的再教育！扎根农村建设新农村！\",\n    \"sign_text\": \"中国共产主义青年团耿屯一队支部委员会\",\n    \"other_objects\": [\n      {\n        \"item\": \"农具\",\n        \"significance\": \"象征知识青年与农民结合、参加劳动\"\n      },\n      {\n        \"item\": \"竹篮\",\n        \"significance\": \"当时农村常见生活劳动用品\"\n      }\n    ],\n    \"political_symbols\": \"横幅标语、五角星、毛主席语录式宣传\"\n  },\n  \"overall_description\": {\n    \"atmosphere\": \"庄重、热情、具有强烈时代印记的集体纪念照\",\n    \"estimated_year\": \"1970年\",\n    \"location\": \"中国北方某农村生产队（照片下方标注：耿屯一队）\",\n    \"historical_context\": \"知识青年上山下乡运动时期，知青与当地农民、生产队干部的合影\",\n    \"significance\": \"这是一张非常典型且具有历史价值的“知青合影”，记录了中国特定历史时期的城市青年响应号召到农村接受再教育、与农民结合的场景",
+        "background": "**以下是基于图片的结构化JSON分析结果：**\n\n```json\n{\n  \"visual_elements\": {\n    \"people_count\": 12,\n    \"people\": [\n      {\n        \"position\": \"后排左侧\",\n        \"gender\": \"male\",\n        \"age_group\": \"20-25\",\n        \"role\": \"知识青年\",\n        \"clothing\": \"深色棉衣、军帽\",\n        \"accessories\": \"铁锹\"\n      },\n      {\n        \"position\": \"后排中间\",\n        \"gender\": \"male\",\n        \"age_group\": \"30-40\",\n        \"role\": \"当地干部或老农\",\n        \"clothing\": \"中山装、军帽\",\n        \"accessories\": null\n      },\n      {\n        \"position\": \"后排右侧\",\n        \"gender\": \"male\",\n        \"age_group\": \"20-30\",\n        \"role\": \"知识青年/农民\",\n        \"clothing\": \"棉衣、草帽\",\n        \"accessories\": \"锄头\"\n      },\n      {\n        \"position\": \"前排左侧\",\n        \"gender\": \"female\",\n        \"age_group\": \"18-22\",\n        \"role\": \"知识青年\",\n        \"clothing\": \"深色棉衣、围巾\",\n        \"accessories\": \"铁锹\"\n      },\n      {\n        \"position\": \"前排中间\",\n        \"gender\": \"female\",\n        \"age_group\": \"17-21\",\n        \"role\": \"知识青年\",\n        \"clothing\": \"棉衣、围巾\",\n        \"accessories\": \"竹篮、手持标语牌\"\n      },\n      {\n        \"position\": \"前排右侧\",\n        \"gender\": \"female\",\n        \"age_group\": \"18-23\",\n        \"role\": \"知识青年\",\n        \"clothing\": \"棉衣\",\n        \"accessories\": null\n      }\n    ],\n    \"scene\": \"农村生产队院落\",\n    \"environment\": \"土质地面，背景有简易木结构房屋、瓦房、远处的田野和树木\",\n    \"objects\": [\n      \"铁锹、锄头、镰刀等农具\",\n      \"竹篮\",\n      \"木质长凳\",\n      \"标语牌\",\n      \"横幅\"\n    ]\n  },\n  \"expressions_and_emotions\": {\n    \"overall_mood\": \"严肃中带有青春的朝气和使命感\",\n    \"description\": \"大部分人表情庄重、目光坚定，部分人嘴角带笑。\"\n  },\n  \"clothing_details\": {\n    \"style\": \"文革时期典型冬装\",\n    \"main_colors\": [\"深灰色\", \"藏蓝色\", \"军绿色\"],\n    \"features\": [\n      \"知识青年多穿棉袄、棉裤，部分佩戴围巾\",\n      \"男性多戴军帽（解放帽）\",\n      \"当地农民穿着更显厚重朴素，部分戴草帽\",\n      \"整体衣着厚重，符合北方冬季特征\"\n    ],\n    \"era_characteristics\": \"典型的70年代初“知青装”和“贫下中农装”\"\n  },\n  \"background_architecture\": {\n    \"main_structure\": \"简易木结构平房，门前悬挂横幅\",\n    \"building_style\": \"北方农村生产队部典型建筑\",\n    \"features\": \"土墙、木梁、简易屋顶，左侧可见传统民居瓦房\",\n    \"location_inference\": \"中国北方农村（极可能为东北或华北地区）\",\n    \"time_characteristics\": \"1970年代初\"\n  },\n  \"era_objects\": {\n    \"banner_text\": \"知识青年到农村去，接受贫下中农的再教育！扎根农村建设新农村！\",\n    \"sign_text\": \"中国共产主义青年团耿屯一队支部委员会\",\n    \"other_objects\": [\n      {\n        \"item\": \"农具\",\n        \"significance\": \"象征知识青年与农民结合、参加劳动\"\n      },\n      {\n        \"item\": \"竹篮\",\n        \"significance\": \"当时农村常见生活劳动用品\"\n      }\n    ],\n    \"political_symbols\": \"横幅标语、五角星、毛主席语录式宣传\"\n  },\n  \"overall_description\": {\n    \"atmosphere\": \"庄重、热情、具有强烈时代印记的集体纪念照\",\n    \"estimated_year\": \"1970年\",\n    \"location\": \"中国北方某农村生产队（照片下方标注：耿屯一队）\",\n    \"historical_context\": \"知识青年上山下乡运动时期，知青与当地农民、生产队干部的合影\",\n    \"significance\": \"这是一张非常典型且具有历史价值的“知青合影”，记录了中国特定历史时期的城市青年响应号召到农村接受再教育、与农民结合的场景。\",\n    \"photo_style\": \"黑白照片，略带泛黄，具有明显70年代照片质感\"\n  },\n  \"metadata\": {\n    \"analysis_date\": \"2025\",\n    \"source\": \"用户提供的1970年耿屯一队知青合影\",\n    \"confidence\": \"high\"\n  }\n}\n```\n\n此分析严格基于照片中的视觉信息与1970年代中国历史背景进行综合判断，力求客观准确",
+        "era_items": "",
+        "overall_description": "**以下是基于图片的结构化JSON分析结果：**\n\n```json\n{\n  \"visual_elements\": {\n    \"people_count\": 12,\n    \"people\": [\n      {\n        \"position\": \"后排左侧\",\n        \"gender\": \"male\",\n        \"age_group\": \"20-25\",\n        \"role\": \"知识青年\",\n        \"clothing\": \"深色棉衣、军帽\",\n        \"accessories\": \"铁锹\"\n      },\n      {\n        \"position\": \"后排中间\",\n        \"gender\": \"male\",\n        \"age_group\": \"30-40\",\n        \"role\": \"当地干部或老农\",\n        \"clothing\": \"中山装、军帽\",\n        \"accessories\": null\n      },\n      {\n        \"position\": \"后排右侧\",\n        \"gender\": \"male\",\n        \"age_group\": \"20-30\",\n        \"role\": \"知识青年/农民\",\n        \"clothing\": \"棉衣、草帽\",\n        \"accessories\": \"锄头\"\n      },\n      {\n        \"position\": \"前排左侧\",\n        \"gender\": \"female\",\n        \"age_group\": \"18-22\",\n        \"role\": \"知识青年\",\n        \"clothing\": \"深色棉衣、围巾\",\n        \"accessories\": \"铁锹\"\n      },\n      {\n        \"position\": \"前排中间\",\n        \"gender\": \"female\",\n        \"age_group\": \"17-21\",\n        \"role\": \"知识青年\",\n        \"clothing\": \"棉衣、围巾\",\n        \"accessories\": \"竹篮、手持标语牌\"\n      },\n      {\n        \"position\": \"前排右侧\",\n        \"gender\": \"female\",\n        \"age_group\": \"18-23\",\n        \"role\": \"知识青年\",\n        \"clothing\": \"棉衣\",\n        \"accessories\": null\n      }\n    ],\n    \"scene\": \"农村生产队院落\",\n    \"environment\": \"土质地面，背景有简易木结构房屋、瓦房、远处的田野和树木\",\n    \"objects\": [\n      \"铁锹、锄头、镰刀等农具\",\n      \"竹篮\",\n      \"木质长凳\",\n      \"标语牌\",\n      \"横幅\"\n    ]\n  },\n  \"expressions_and_emotions\": {\n    \"overall_mood\": \"严肃中带有青春的朝气和使命感\",\n    \"description\": \"大部分人表情庄重、目光坚定，部分人嘴角带笑。知识青年普遍展现出那个时代特有的“革命热情”和“接受贫下中农再教育”的自觉姿态。当地农民表情较为淳朴自然。\",\n    \"postures\": \"前排坐姿端正，后排站姿挺拔，整体呈现出集体合影的正式感。\"\n  },\n  \"clothing_details\": {\n    \"style\": \"文革时期典型冬装\",\n    \"main_colors\": [\"深灰色\", \"藏蓝色\", \"军绿色\"],\n    \"features\": [\n      \"知识青年多穿棉袄、棉裤，部分佩戴围巾\",\n      \"男性多戴军帽（解放帽）\",\n      \"当地农民穿着更显厚重朴素，部分戴草帽\",\n      \"整体衣着厚重，符合北方冬季特征\"\n    ],\n    \"era_characteristics\": \"典型的70年代初“知青装”和“贫下中农装”\"\n  },\n  \"background_architecture\": {\n    \"main_structure\": \"简易木结构平房，门前悬挂横幅\",\n    \"building_style\": \"北方农村生产队部典型建筑\",\n    \"features\": \"土墙、木梁、简易屋顶，左侧可见传统民居瓦房\",\n    \"location_inference\": \"中国北方农村（极可能为东北或华北地区）\",\n    \"time_characteristics\": \"1970年代初\"\n  },\n  \"era_objects\": {\n    \"banner_text\": \"知识青年到农村去，接受贫下中农的再教育！扎根农村建设新农村！\",\n    \"sign_text\": \"中国共产主义青年团耿屯一队支部委员会\",\n    \"other_objects\": [\n      {\n        \"item\": \"农具\",\n        \"significance\": \"象征知识青年与农民结合、参加劳动\"\n      },\n      {\n        \"item\": \"竹篮\",\n        \"significance\": \"当时农村常见生活劳动用品\"\n      }\n    ],\n    \"political_symbols\": \"横幅标语、五角星、毛主席语录式宣传\"\n  },\n  \"overall_description\": {\n    \"atmosphere\": \"庄重、热情、具有强烈时代印记的集体纪念照\",\n    \"estimated_year\": \"1970年\",\n    \"location\": \"中国北方某农村生产队（照片下方标注：耿屯一队）\",\n    \"historical_context\": \"知识青年上山下乡运动时期，知青与当地农民、生产队干部的合影\",\n    \"significance\": \"这是一张非常典型且具有历史价值的“知青合影”，记录了中国特定历史时期的城市青年响应号召到农村接受再教育、与农民结合的场景。\",\n    \"photo_style\": \"黑白照片，略带泛黄，具有明显70年代照片质感\"\n  },\n  \"metadata\": {\n    \"analysis_date\": \"2025\",\n    \"source\": \"用户提供的1970年耿屯一队知青合影\",\n    \"confidence\": \"high\"\n  }\n}\n```\n\n此分析严格基于照片中的视觉信息与1970年代中国历史背景进行综合判断，力求客观准确。"
+      },
+      "details": {
+        "final_score": 3.68,
+        "weights": {
+          "photo": 0.3,
+          "story": 0.5,
+          "interview": 0.2
+        },
+        "photo_evaluation": {
+          "raw_score": 13.0,
+          "max_score": 14.0,
+          "normalized_score": 4.64,
+          "accuracy": 92.86,
+          "image_path": "d:/desktop/Tencent Capstone Project/照片数据库/知青下乡__集体照.png",
+          "image_description": "这是一张1970年拍摄的黑白合影，题为“耿屯一队知识青年下乡集体合影”。\n\n照片中，前排5名知识青年与后排6名当地农民共同坐在长凳上合影。知青多为年轻女性，穿着当时典型的军绿色或深色棉衣、蓝裤子，部分人戴着围巾；农民则头戴草帽或棉帽，手持铁锹、镰刀、粪叉等农具，身上是朴素的旧式棉袄。\n\n他们身后的木板房上悬挂着一条醒目的标语：“知识青年到农村去，接受贫下中农的再教育！扎根农村建设新农村！” 场景为典型的北方农村，土路、黄土墙、简陋的瓦房与电线杆构成背景，整体氛围朴实、严肃而带有鲜明的时代印记。",
+          "mme": {
+            "details": [
+              {
+                "question": "照片背景的木棚上是否悬挂着写有“知识青年到农村去”等字样的横幅？",
+                "expected": "yes",
+                "predicted": "yes",
+                "raw_response": "**Yes**",
+                "correct": true,
+                "score": 1.0
+              },
+              {
+                "question": "画面背景的天空中是否有一架正在喷洒农药的大型无人机？",
+                "expected": "no",
+                "predicted": "no",
+                "raw_response": "no",
+                "correct": true,
+                "score": 1.0
+              },
+              {
+                "question": "前排最左侧的男青年手里是否握着一把用来劳作的铁锹？",
+                "expected": "yes",
+                "predicted": "yes",
+                "raw_response": "yes",
+                "correct": true,
+                "score": 1.0
+              },
+              {
+                "question": "前排坐着的几位女青年是否都穿着超短裙并搭配了高跟鞋？",
+                "expected": "no",
+                "predicted": "no",
+                "raw_response": "no",
+                "correct": true,
+                "score": 1.0
+              },
+              {
+                "question": "前排正中间的女青年是否手捧着一块写有“甘愿吃尽天下苦”字样的牌子？",
+                "expected": "yes",
+                "predicted": "yes",
+                "raw_response": "yes",
+                "correct": true,
+                "score": 1.0
+              },
+              {
+                "question": "后排中间的男青年脖子上是否挂着一台现代化的数码单反相机？",
+                "expected": "no",
+                "predicted": "no",
+                "raw_response": "no",
+                "correct": true,
+                "score": 1.0
+              },
+              {
+                "question": "前排最右侧的男青年手里是否拿着一把弯曲的镰刀？",
+                "expected": "yes",
+                "predicted": "yes",
+                "raw_response": "yes",
+                "correct": true,
+                "score": 1.0
+              },
+              {
+                "question": "照片底部的文字中是否包含了“1970年”这个年份信息？",
+                "expected": "yes",
+                "predicted": "yes",
+                "raw_response": "yes",
+                "correct": true,
+                "score": 1.0
+              }
+            ],
+            "raw_score": 8.0,
+            "max_score": 8.0,
+            "normalized_score": 5.0
+          },
+          "mmbench": {
+            "details": [
+              {
+                "question": "结合画面中横幅上的“知识青年到农村去”、人物穿着的朴素冬装棉服以及合影底部的年份信息，这张照片最有可能反映的历史时期和核心事件是：",
+                "options": {
+                  "A": "21世纪初，大学生村官下乡扶贫的宣讲活动合影",
+                  "B": "20世纪80年代，乡镇企业家在新建的农机加工厂门前合影留念",
+                  "C": "20世纪60至70年代，城市知识青年响应国家号召“上山下乡”插队落户的集体合影",
+                  "D": "19世纪末期，最早一批赴海外留学的青年学子归国后在农场的合影"
+                },
+                "expected": "C",
+                "predicted": "C",
+                "raw_response": "C",
+                "correct": true,
+                "score": 1.0
+              },
+              {
+                "question": "根据照片中青年们手持农具（铁锹、镰刀）、笑容满面，以及中心牌子上的文字“甘愿吃尽天下苦，乐把青春献人民”，结合背景故事，以下对这群人物当时的精神状态和行为逻辑推断最合理的是：",
+                "options": {
+                  "A": "他们是一群被迫在此进行体能训练的战俘，正在按照要求举牌进行思想检讨和反思。",
+                  "B": "他们是下乡插队的知识青年，虽然面临艰苦的农村环境和繁重的农活，但充满理想主义热血，决心扎根农村参与农业建设。",
+                  "C": "他们是专业的舞台剧演员，正在古城墙遗址前排练一部关于古代农民起义的历史悲剧，神情都是表演出来的。",
+                  "D": "他们是下乡游玩的城市富裕阶层游客，正在农家乐体验生活，手中的牌子和农具只是老板提供的拍照道具。"
+                },
+                "expected": "B",
+                "predicted": "B",
+                "raw_response": "B",
+                "correct": true,
+                "score": 1.0
+              }
+            ],
+            "raw_score": 2.0,
+            "max_score": 2.0,
+            "normalized_score": 5.0
+          },
+          "hooks": {
+            "details": [
+              {
+                "hook": "横幅",
+                "exact_match": false,
+                "semantic_match": true,
+                "score": 1.0
+              },
+              {
+                "hook": "农具",
+                "exact_match": true,
+                "semantic_match": false,
+                "score": 1.0
+              },
+              {
+                "hook": "手写誓言牌",
+                "exact_match": false,
+                "semantic_match": false,
+                "score": 0.0
+              },
+              {
+                "hook": "知青",
+                "exact_match": true,
+                "semantic_match": false,
+                "score": 1.0
+              }
+            ],
+            "raw_score": 3.0,
+            "max_score": 4.0,
+            "normalized_score": 3.75
+          },
+          "meta": {
+            "backend": "openai_compatible",
+            "model": "x-ai/grok-4.20-beta",
+            "scale": "0-5"
+          }
+        },
+        "story_evaluation": {
+          "scores": {
+            "relevance": 4.5,
+            "coherence": 4.5,
+            "empathy": 4.0,
+            "surprise": 2.0,
+            "engagement": 3.5,
+            "complexity": 4.0
+          },
+          "explanations": {
+            "relevance": "故事高度聚焦于‘离开城市去农村并扎根’这一核心主题，完整覆盖了参考文本中的下乡、艰苦劳动、拒绝招工与清华北大机会、甘愿奉献等关键事件。",
+            "coherence": "叙事时间线清晰，从1968年下乡到1970年选择、1974年结婚、改革开放后生活变化直至晚年，人物关系与因果逻辑连贯。",
+            "empathy": "通过磨出水泡、冬天冻得睡不着、寄粮票给弟妹、省吃俭用等具体细节，让读者感受到主人公的艰辛、犹豫与情感变化。",
+            "surprise": "故事发展基本按时间顺序平铺直叙，拒绝两次机会和最终选择留在农村缺乏意外转折或新意。",
+            "engagement": "第一人称回忆与生活细节具有一定代入感，但整体节奏平缓，缺乏强烈的情节张力，吸引力中等。",
+            "complexity": "包含家庭背景、具体农活、夜校教学、婚姻生活、分田到户、子女教育等多层次内容，细节丰富且有时代背景展开。"
+          },
+          "final_score": 3.75,
+          "summary": "一篇情感真挚、细节扎实的知青回忆录，主题聚焦且连贯，但惊喜度较低，整体属于中上水平的平实叙事。",
+          "raw_response": "{\n  \"scores\": {\n    \"relevance\": 4.5,\n    \"coherence\": 4.5,\n    \"empathy\": 4,\n    \"surprise\": 2,\n    \"engagement\": 3.5,\n    \"complexity\": 4\n  },\n  \"explanations\": {\n    \"relevance\": \"故事高度聚焦于‘离开城市去农村并扎根’这一核心主题，完整覆盖了参考文本中的下乡、艰苦劳动、拒绝招工与清华北大机会、甘愿奉献等关键事件。\",\n    \"coherence\": \"叙事时间线清晰，从1968年下乡到1970年选择、1974年结婚、改革开放后生活变化直至晚年，人物关系与因果逻辑连贯。\",\n    \"empathy\": \"通过磨出水泡、冬天冻得睡不着、寄粮票给弟妹、省吃俭用等具体细节，让读者感受到主人公的艰辛、犹豫与情感变化。\",\n    \"surprise\": \"故事发展基本按时间顺序平铺直叙，拒绝两次机会和最终选择留在农村缺乏意外转折或新意。\",\n    \"engagement\": \"第一人称回忆与生活细节具有一定代入感，但整体节奏平缓，缺乏强烈的情节张力，吸引力中等。\",\n    \"complexity\": \"包含家庭背景、具体农活、夜校教学、婚姻生活、分田到户、子女教育等多层次内容，细节丰富且有时代背景展开。\"\n  },\n  \"final_score\": 3.75,\n  \"summary\": \"一篇情感真挚、细节扎实的知青回忆录，主题聚焦且连贯，但惊喜度较低，整体属于中上水平的平实叙事。\"\n}",
+          "meta": {
+            "backend": "openai_compatible",
+            "model": "x-ai/grok-4.20-beta",
+            "has_prompt": false,
+            "has_reference": true
+          }
+        },
+        "interview_evaluation": {
+          "metrics": {
+            "answer_quality": 0.6,
+            "information_completeness": 2.5,
+            "question_depth": 5.0,
+            "topic_coverage": 0.0
+          },
+          "discussed_dimensions": [],
+          "remaining_gaps": [
+            "人物",
+            "地点",
+            "时间"
+          ],
+          "question_count": 1,
+          "final_score": 2.08,
+          "meta": {
+            "scale": "0-5",
+            "standard": "pr2-followup-quality"
+          }
+        },
+        "meta": {
+          "sample_index": 0,
+          "benchmark_file": "C:\\Users\\SHENGZ~1\\AppData\\Local\\Temp\\tmptuj0qkqe\\benchmark.json",
+          "score_scale": "0-5"
+        }
+      },
+      "data_type": "simulated"
+    },
+    {
+      "sample_id": "难忘的演讲",
+      "photo_score": 4.64,
+      "story_score": 4.0,
+      "interview_score": 2.14,
+      "final_score": 3.82,
+      "generated_story": "我叫李文生，1929年生在河北保定乡下一个小村子。看到这张老照片，我心里总是一动。照片里那个站在木木头讲台上、穿着白衬衫系着领巾的年轻人就是我，那年我二十八岁。照片是1958年冬天在县里一所农村中学拍的，全校师生大会，每次翻出来，我都想跟你们这些晚辈好好讲讲，这张照片后面藏着我这一辈子的来路。\n我家祖上几代都是种地的，父亲识得几个字，在村里给人写写对联、记记账。家里穷，兄弟姐妹多，我能读到高小已经算家里最大的福气。1949年新中国成立那年，我二十岁，村里动员年轻人去县里参加扫盲班和教师培训班，说是要给新社会培养自己的老师。我二话没说就去了。那时候吃住都在学校，睡的是通铺，喝的是棒子面粥，可心里头亮堂得很。我第一次觉得，读书不再只是为了自己逃离土地，而是为了让更多像我一样的农村孩子也能读书。\n1952年，我被分配到县里一所新建的初级中学教语文和历史。那时候学校条件很差，教室是原来的祠堂改的，冬天漏风，夏天漏雨。学生大多是附近村里的孩子，十三四岁才开始认字。我每天除了上课，还要带着学生种菜、抬水、修操场。晚上备课到很晚，油灯把眼睛熬得发红。但我从不觉得苦，因为我知道自己在做什么。那几年，国家到处都在搞建设，农村开始办合作社，我们学校也成了附近几个村的文化中心。家长们把孩子送来，说“一定要让娃好好念书，别像我们一样睁眼瞎”。\n1957年秋天，学校组织我们青年教师去石家庄参观社会主义建设成就展览。那是我第一次走出县界，看到拖拉机、发电机、新式纺织机，还有那些关于第一个五年计划的图表。我像个乡下人进城一样，眼睛都不够使。回来之后，辅导员老张把我叫到办公室，说：“文生，这次参观你感触最深，口才也好，学校决定让你在全校师生大会上做一次脱稿演讲，讲讲你的参观体会。”我当时心里一慌，说实话，从来没在那么多人面前讲过话。可老张拍拍我肩膀：“这是组织对你的信任，也是锻炼。”我咬咬牙答应了。\n那就是照片里的这一天。1958年12月，天气很冷，操场上坐了差不多八九十号人，有学生，有老师，还有附近村里来旁听的干部。我穿了唯一一件像样的白衬衫，脖子上系着青年团的领巾，站在那个临时搭的木头讲台上，手里握着老式的有线麦克风。讲台下面是一排排长条木凳，黑压压一片人，都看着我。我心里紧张得直打鼓，但一开口，就把这几天憋在心里的话都倒了出来。我讲了在展览馆看到的那些机器，讲了国家工业化的速度，讲了我们农村教育工作者肩上的责任，讲到后来声音都有些发抖。我说，我们这一代人，赶上了好时候，就要拼命把书教好，把下一代人培养成有文化、有觉悟的新农民。\n那次演讲讲了二十多分钟。讲完之后，下面掌声很响。我走下台的时候腿都是软的。辅导员老张后来跟我说，我那天讲得很好，有激情，也有实实在在的东西。从那以后，学校就经常让我主持会议、做报告，我的胆量和口才就是那时候练出来的。我自己也觉得，那次演讲像是一道坎，把我从一个普通乡村教师，变成了有点担当的人。\n后来几年，日子越来越紧。1959到1961年，粮食不够吃，学校也开始吃“低标准”。我们老师带头吃野菜团子，把细粮省给学生。有的学生家里断了粮，我就从自己口粮里抠一点带给他们。那个时候家里添了口人，粮食更紧张，但我从没后悔过自己的选择。1962年以后，情况慢慢好转，学校也开始正规起来。我从普通教师做到教导主任，又在1970年代当了副校长，一干就是三十多年。\n1985年我退休的时候，学校已经有了新教学楼，学生从当初的八十多人变成六百多人。我教过的学生里，有当了工程师的，有做了教师的，还有考上大学的。每次他们回来看我，我都觉得当年吃的那些苦、做的那些选择，都值了。\n这张站在讲台上的照片，我最常看。不是因为我当时讲得多好，而是因为它让我想起自己是从哪里来的，又为什么要那样拼命。那时候我们相信，只要把下一代教育好，国家就会越来越好。\n我想跟你们后辈说：人这一辈子，总要有点东西是自己真正相信的，并且愿意为它吃苦、负责。我那一代人相信的是新中国、是教育救国，你们这一代相信什么，我不替你们决定。但不管相信什么，都要踏踏实实去做，不要光说漂亮话。日子是过出来的，责任也是扛出来的。\n我这辈子，没当过什么大官，没发过什么大财，就是一个普通的乡村教师。但我问心无愧，因为我把该教的书教了，该负的责任负了。看到你们希望你们记住，不管时代怎么变，做人要实在，干事要认真，对得起自己，也对得起这个时代。\n这就是我看到这张照片，想跟你们讲的话。",
+      "qa_history": [
+        {
+          "question": "这位站在木质讲台上的年轻演讲者，当时正在给大家讲什么内容呢？",
+          "answer": "这次演讲，极大地鼓舞了我，也锻炼了我的胆量和口才，可以说是我读书生涯中最深刻、最生动的一次经历。参观回来后，辅导员老师给了我一个艰巨的任务——在全校师生大会上，脱稿演讲我的参观体会。"
+        }
+      ],
+      "analysis_result": {
+        "visual_elements": "```json\n{\n  \"visual_elements\": {\n    \"people_count\": \"约80-100人\",\n    \"main_speaker\": {\n      \"gender\": \"男性\",\n      \"age_estimated\": \"20-25岁\",\n      \"position\": \"站在木质讲台上，手持麦克风\",\n      \"relationship\": \"演讲者/主持人\"\n    },\n    \"audience\": {\n      \"description\": \"大量青年学生和部分中年教师\",\n      \"gender\": \"以男性为主，混有少量女性\",\n      \"age_range\": \"主要为15-25岁的青年学生，部分30-50岁的中年人\",\n      \"seating\": \"整齐排列的长条木凳，分多排就坐\"\n    },\n    \"scene\": \"室外临时集会，土质地面，前方为简易木质讲台\",\n    \"objects\": [\n      \"老式有线麦克风（立式麦克风架）\",\n      \"简易木质讲台\",\n      \"木质课桌（讲台右侧）\",\n      \"横幅\",\n      \"简陋木凳\"\n    ]\n  },\n  \"expressions_and_emotions\": {\n    \"speaker\": {\n      \"expression\": \"严肃认真，嘴巴微张正在讲话\",\n      \"posture\": \"站姿挺拔，左手持麦克风，右手自然下垂\",\n      \"emotion\": \"庄重、激昂，具有使命感\"\n    },\n    \"audience\": {\n      \"overall\": \"专注、严肃\",\n      \"details\": \"绝大多数人正面朝向演讲者，表情认真，部分人面带微笑，整体纪律性较强，显示出对讲话内容的重视\"\n    }\n  },\n  \"clothing_details\": {\n    \"speaker\": {\n      \"outfit\": \"白色长袖衬衫，黑色背带西裤，黑色皮鞋，脖子上系深色领巾（疑似红领巾或青年团标志）\",\n      \"style\": \"50年代青年知识分子/学生干部典型装扮\"\n    },\n    \"audience\": {\n      \"main_style\": \"中山装、列宁装、干部服为主\",\n      \"colors\": \"以深色（深蓝、黑、灰）为主，少量浅色棉衣\",\n      \"features\": \"棉袄、布鞋、少数人戴帽子，典型50年代中国基层民众冬装\"\n    }\n  },\n  \"background_architecture\": {\n    \"buildings\": [\n      \"传统北方农村民房\",\n      \"瓦房（灰瓦屋顶）\",\n      \"土坯墙或砖墙结构\"\n    ],\n    \"style\": \"典型的华北或东北农村院落建筑\",\n    \"features\": \"墙上可见粉刷的标语（“教育必须为无产阶级政治服务”字样隐约可见）\",\n    \"location_inference\": \"中国北方农村（极可能是河北、山东、河南或东北地区）\"\n  },\n  \"era_items\": {\n    \"microphone\": \"50年代常见的有线广播麦克风\",\n    \"banner\": \"红底白字横幅，上书“全校师生大会”\",\n    \"furniture\": \"简易木质讲台和课桌，工艺粗糙\",\n    \"wall_slogan\": \"墙上刷写的政治标语\",\n    \"time_indicators\": \"无现代电器、无塑料制品、无玻璃窗（使用木窗棂）\"\n  },\n  \"overall_description\": {\n    \"atmosphere\": \"庄严、整齐、富有集体主义和革命时代气息\",\n    \"estimated_year\": \"1955-1962年之间，最可能为1957-1960年\",\n    \"possible_scene\": \"农村中学或师范学校举行的全校师生大会，演讲者可能为学生会干部、青年团干部或年轻教师，正在进行政治学习、动员或形势报告\",\n    \"historical_context\": \"新中国成立初期，社会主义教育体系建设时期，农村教育普及与政治教育相结合的典型场景\"\n  }\n}\n```",
+        "emotions": "```json\n{\n  \"visual_elements\": {\n    \"people_count\": \"约80-100人\",\n    \"main_speaker\": {\n      \"gender\": \"男性\",\n      \"age_estimated\": \"20-25岁\",\n      \"position\": \"站在木质讲台上，手持麦克风\",\n      \"relationship\": \"演讲者/主持人\"\n    },\n    \"audience\": {\n      \"description\": \"大量青年学生和部分中年教师\",\n      \"gender\": \"以男性为主，混有少量女性\",\n      \"age_range\": \"主要为15-25岁的青年学生，部分30-50岁的中年人\",\n      \"seating\": \"整齐排列的长条木凳，分多排就坐\"\n    },\n    \"scene\": \"室外临时集会，土质地面，前方为简易木质讲台\",\n    \"objects\": [\n      \"老式有线麦克风（立式麦克风架）\",\n      \"简易木质讲台\",\n      \"木质课桌（讲台右侧）\",\n      \"横幅\",\n      \"简陋木凳\"\n    ]\n  },\n  \"expressions_and_emotions\": {\n    \"speaker\": {\n      \"expression\": \"严肃认真，嘴巴微张正在讲话\",\n      \"posture\": \"站姿挺拔，左手持麦克风，右手自然下垂\",\n      \"emotion\": \"庄重、激昂，具有使命感\"\n    },\n    \"audience\": {\n      \"overall\": \"专注、严肃\",\n      \"details\": \"绝大多数人正面朝向演讲者，表情认真，部分人面带微笑，整体纪律性较强，显示出对讲话内容的重视\"\n    }\n  },\n  \"clothing_details\": {\n    \"speaker\": {\n      \"outfit\": \"白色长袖衬衫，黑色背带西裤，黑色皮鞋，脖子上系深色领巾（疑似红领巾或青年团标志）\",\n      \"style\": \"50年代青年知识分子/学生干部典型装扮\"\n    },\n    \"audience\": {\n      \"main_style\": \"中山装、列宁装、干部服为主\",\n      \"colors\": \"以深色（深蓝、黑、灰）为主，少量浅色棉衣\",\n      \"features\": \"棉袄、布鞋、少数人戴帽子，典型50年代中国基层民众冬装\"\n    }\n  },\n  \"background_architecture\": {\n    \"buildings\": [\n      \"传统北方农村民房\",\n      \"瓦房（灰瓦屋顶）\",\n      \"土坯墙或砖墙结构\"\n    ],\n    \"style\": \"典型的华北或东北农村院落建筑\",\n    \"features\": \"墙上可见粉刷的标语（“教育必须为无产阶级政治服务”字样隐约可见）\",\n    \"location_inference\": \"中国北方农村（极可能是河北、山东、河南或东北地区）\"\n  },\n  \"era_items\": {\n    \"microphone\": \"50年代常见的有线广播麦克风\",\n    \"banner\": \"红底白字横幅，上书“全校师生大会”\",\n    \"furniture\": \"简易木质讲台和课桌，工艺粗糙\",\n    \"wall_slogan\": \"墙上刷写的政治标语\",\n    \"time_indicators\": \"无现代电器、无塑料制品、无玻璃窗（使用木窗棂）\"\n  },\n  \"overall_description\": {\n    \"atmosphere\": \"庄严、整齐、富有集体主义和革命时代气息\",\n    \"estimated_year\": \"1955-1962年之间，最可能为1957-1960年\",\n    \"possible_scene\": \"农村中学或师范学校举行的全校师生大会，演讲者可能为学生会干部、青年团干部或年轻教师，正在进行政治学习、动员或形势报告\",\n    \"historical_context\": \"新中国成立初期，社会主义教育体系建设时期，农村教育普及与政治教育相结合的典型场景\"\n  }\n}\n```",
+        "clothing": "",
+        "background": "```json\n{\n  \"visual_elements\": {\n    \"people_count\": \"约80-100人\",\n    \"main_speaker\": {\n      \"gender\": \"男性\",\n      \"age_estimated\": \"20-25岁\",\n      \"position\": \"站在木质讲台上，手持麦克风\",\n      \"relationship\": \"演讲者/主持人\"\n    },\n    \"audience\": {\n      \"description\": \"大量青年学生和部分中年教师\",\n      \"gender\": \"以男性为主，混有少量女性\",\n      \"age_range\": \"主要为15-25岁的青年学生，部分30-50岁的中年人\",\n      \"seating\": \"整齐排列的长条木凳，分多排就坐\"\n    },\n    \"scene\": \"室外临时集会，土质地面，前方为简易木质讲台\",\n    \"objects\": [\n      \"老式有线麦克风（立式麦克风架）\",\n      \"简易木质讲台\",\n      \"木质课桌（讲台右侧）\",\n      \"横幅\",\n      \"简陋木凳\"\n    ]\n  },\n  \"expressions_and_emotions\": {\n    \"speaker\": {\n      \"expression\": \"严肃认真，嘴巴微张正在讲话\",\n      \"posture\": \"站姿挺拔，左手持麦克风，右手自然下垂\",\n      \"emotion\": \"庄重、激昂，具有使命感\"\n    },\n    \"audience\": {\n      \"overall\": \"专注、严肃\",\n      \"details\": \"绝大多数人正面朝向演讲者，表情认真，部分人面带微笑，整体纪律性较强，显示出对讲话内容的重视\"\n    }\n  },\n  \"clothing_details\": {\n    \"speaker\": {\n      \"outfit\": \"白色长袖衬衫，黑色背带西裤，黑色皮鞋，脖子上系深色领巾（疑似红领巾或青年团标志）\",\n      \"style\": \"50年代青年知识分子/学生干部典型装扮\"\n    },\n    \"audience\": {\n      \"main_style\": \"中山装、列宁装、干部服为主\",\n      \"colors\": \"以深色（深蓝、黑、灰）为主，少量浅色棉衣\",\n      \"features\": \"棉袄、布鞋、少数人戴帽子，典型50年代中国基层民众冬装\"\n    }\n  },\n  \"background_architecture\": {\n    \"buildings\": [\n      \"传统北方农村民房\",\n      \"瓦房（灰瓦屋顶）\",\n      \"土坯墙或砖墙结构\"\n    ],\n    \"style\": \"典型的华北或东北农村院落建筑\",\n    \"features\": \"墙上可见粉刷的标语（“教育必须为无产阶级政治服务”字样隐约可见）\",\n    \"location_inference\": \"中国北方农村（极可能是河北、山东、河南或东北地区）\"\n  },\n  \"era_items\": {\n    \"microphone\": \"50年代常见的有线广播麦克风\",\n    \"banner\": \"红底白字横幅，上书“全校师生大会”\",\n    \"furniture\": \"简易木质讲台和课桌，工艺粗糙\",\n    \"wall_slogan\": \"墙上刷写的政治标语\",\n    \"time_indicators\": \"无现代电器、无塑料制品、无玻璃窗（使用木窗棂）\"\n  },\n  \"overall_description\": {\n    \"atmosphere\": \"庄严、整齐、富有集体主义和革命时代气息\",\n    \"estimated_year\": \"1955-1962年之间，最可能为1957-1960年\",\n    \"possible_scene\": \"农村中学或师范学校举行的全校师生大会，演讲者可能为学生会干部、青年团干部或年轻教师，正在进行政治学习、动员或形势报告\",\n    \"historical_context\": \"新中国成立初期，社会主义教育体系建设时期，农村教育普及与政治教育相结合的典型场景\"\n  }\n}\n```",
+        "era_items": "",
+        "overall_description": "```json\n{\n  \"visual_elements\": {\n    \"people_count\": \"约80-100人\",\n    \"main_speaker\": {\n      \"gender\": \"男性\",\n      \"age_estimated\": \"20-25岁\",\n      \"position\": \"站在木质讲台上，手持麦克风\",\n      \"relationship\": \"演讲者/主持人\"\n    },\n    \"audience\": {\n      \"description\": \"大量青年学生和部分中年教师\",\n      \"gender\": \"以男性为主，混有少量女性\",\n      \"age_range\": \"主要为15-25岁的青年学生，部分30-50岁的中年人\",\n      \"seating\": \"整齐排列的长条木凳，分多排就坐\"\n    },\n    \"scene\": \"室外临时集会，土质地面，前方为简易木质讲台\",\n    \"objects\": [\n      \"老式有线麦克风（立式麦克风架）\",\n      \"简易木质讲台\",\n      \"木质课桌（讲台右侧）\",\n      \"横幅\",\n      \"简陋木凳\"\n    ]\n  },\n  \"expressions_and_emotions\": {\n    \"speaker\": {\n      \"expression\": \"严肃认真，嘴巴微张正在讲话\",\n      \"posture\": \"站姿挺拔，左手持麦克风，右手自然下垂\",\n      \"emotion\": \"庄重、激昂，具有使命感\"\n    },\n    \"audience\": {\n      \"overall\": \"专注、严肃\",\n      \"details\": \"绝大多数人正面朝向演讲者，表情认真，部分人面带微笑，整体纪律性较强，显示出对讲话内容的重视\"\n    }\n  },\n  \"clothing_details\": {\n    \"speaker\": {\n      \"outfit\": \"白色长袖衬衫，黑色背带西裤，黑色皮鞋，脖子上系深色领巾（疑似红领巾或青年团标志）\",\n      \"style\": \"50年代青年知识分子/学生干部典型装扮\"\n    },\n    \"audience\": {\n      \"main_style\": \"中山装、列宁装、干部服为主\",\n      \"colors\": \"以深色（深蓝、黑、灰）为主，少量浅色棉衣\",\n      \"features\": \"棉袄、布鞋、少数人戴帽子，典型50年代中国基层民众冬装\"\n    }\n  },\n  \"background_architecture\": {\n    \"buildings\": [\n      \"传统北方农村民房\",\n      \"瓦房（灰瓦屋顶）\",\n      \"土坯墙或砖墙结构\"\n    ],\n    \"style\": \"典型的华北或东北农村院落建筑\",\n    \"features\": \"墙上可见粉刷的标语（“教育必须为无产阶级政治服务”字样隐约可见）\",\n    \"location_inference\": \"中国北方农村（极可能是河北、山东、河南或东北地区）\"\n  },\n  \"era_items\": {\n    \"microphone\": \"50年代常见的有线广播麦克风\",\n    \"banner\": \"红底白字横幅，上书“全校师生大会”\",\n    \"furniture\": \"简易木质讲台和课桌，工艺粗糙\",\n    \"wall_slogan\": \"墙上刷写的政治标语\",\n    \"time_indicators\": \"无现代电器、无塑料制品、无玻璃窗（使用木窗棂）\"\n  },\n  \"overall_description\": {\n    \"atmosphere\": \"庄严、整齐、富有集体主义和革命时代气息\",\n    \"estimated_year\": \"1955-1962年之间，最可能为1957-1960年\",\n    \"possible_scene\": \"农村中学或师范学校举行的全校师生大会，演讲者可能为学生会干部、青年团干部或年轻教师，正在进行政治学习、动员或形势报告\",\n    \"historical_context\": \"新中国成立初期，社会主义教育体系建设时期，农村教育普及与政治教育相结合的典型场景\"\n  }\n}\n```"
+      },
+      "details": {
+        "final_score": 3.82,
+        "weights": {
+          "photo": 0.3,
+          "story": 0.5,
+          "interview": 0.2
+        },
+        "photo_evaluation": {
+          "raw_score": 13.0,
+          "max_score": 14.0,
+          "normalized_score": 4.64,
+          "accuracy": 92.86,
+          "image_path": "d:/desktop/Tencent Capstone Project/照片数据库/难忘的演讲.png",
+          "image_description": "这是一张黑白老照片，拍摄于上世纪六七十年代的农村。画面中，一名年轻男教师站在简易木制讲台上，正手持有线麦克风演讲，他身穿白色衬衫、深色长裤，胸前系着一条白毛巾，脚穿布鞋，姿态挺拔。\n\n台下整齐坐着上百名师生，男女皆有，大多穿着深色或浅色棉袄、中山装，部分人戴着帽子，表情专注地望着讲台。背景是一排低矮的土坯瓦房，墙上刷着标语，横幅上清晰可见“全校师生大会”六个大字。\n\n整个场景朴素而庄重，带有鲜明的那个时代的集体集会氛围，地面是裸露的黄土地，整体透着浓厚的乡村学校气息。",
+          "mme": {
+            "details": [
+              {
+                "question": "正在演讲的男孩脖子上是否佩戴着红领巾？",
+                "expected": "yes",
+                "predicted": "yes",
+                "raw_response": "yes",
+                "correct": true,
+                "score": 1.0
+              },
+              {
+                "question": "男孩手中是否正拿着一份厚厚的演讲稿在照着念？",
+                "expected": "no",
+                "predicted": "no",
+                "raw_response": "no",
+                "correct": true,
+                "score": 1.0
+              },
+              {
+                "question": "男孩的面前是否立着一个老式的麦克风（话筒）？",
+                "expected": "yes",
+                "predicted": "yes",
+                "raw_response": "yes",
+                "correct": true,
+                "score": 1.0
+              },
+              {
+                "question": "台下的听众们是否都坐在带有靠背和软垫的现代真皮沙发上？",
+                "expected": "no",
+                "predicted": "no",
+                "raw_response": "no",
+                "correct": true,
+                "score": 1.0
+              },
+              {
+                "question": "背景房屋的墙上是否悬挂着写有“全校师生大会”的横幅？",
+                "expected": "yes",
+                "predicted": "yes",
+                "raw_response": "yes",
+                "correct": true,
+                "score": 1.0
+              },
+              {
+                "question": "台下前排坐着的几位成年人（可能是老师）是否都在低头看智能手机？",
+                "expected": "no",
+                "predicted": "no",
+                "raw_response": "no",
+                "correct": true,
+                "score": 1.0
+              },
+              {
+                "question": "演讲的木制台面右侧是否摆放着一张木桌？",
+                "expected": "yes",
+                "predicted": "yes",
+                "raw_response": "yes",
+                "correct": true,
+                "score": 1.0
+              },
+              {
+                "question": "画面天空中是否有一架正在喷洒彩色烟雾的表演飞机？",
+                "expected": "no",
+                "predicted": "no",
+                "raw_response": "no",
+                "correct": true,
+                "score": 1.0
+              }
+            ],
+            "raw_score": 8.0,
+            "max_score": 8.0,
+            "normalized_score": 5.0
+          },
+          "mmbench": {
+            "details": [
+              {
+                "question": "结合照片中简陋的土坯房校舍、师生们穿着的朴素棉服、男孩佩戴的红领巾以及“全校师生大会”的横幅，这幅照片最有可能反映的是哪个历史时期的教育场景？",
+                "options": {
+                  "A": "21世纪20年代，设施先进、配备塑胶跑道的现代化城市重点小学",
+                  "B": "20世纪60年代左右，物质条件较为艰苦但精神面貌积极向上的乡村或基层学校",
+                  "C": "19世纪末期，西方传教士在中国偏远地区建立的早期教会学校",
+                  "D": "20世纪90年代末，已经全面普及多媒体教学设备的沿海发达地区乡镇中学"
+                },
+                "expected": "B",
+                "predicted": "B",
+                "raw_response": "B",
+                "correct": true,
+                "score": 1.0
+              },
+              {
+                "question": "根据画面中男孩站在台上对着麦克风且手势生动（且未拿讲稿），以及台下众多师生坐在小木凳上全神贯注聆听的状态，结合故事背景，以下对当前情节逻辑推断最合理的是：",
+                "options": {
+                  "A": "这是一场全校范围的才艺表演，男孩正在演唱一首流行歌曲，台下的老师们正在排队等候上台。",
+                  "B": "男孩因为严重违反了校规，正在全校师生面前做深刻的检讨报告以接受处分。",
+                  "C": "乡村学校正在放映露天电影，男孩是负责调试音响的放映员，台下观众正在等待电影开场。",
+                  "D": "这是一位优秀的少先队员代表，在获得难得的参观学习机会后，正充满自信地向全校师生进行脱稿汇报演讲。"
+                },
+                "expected": "D",
+                "predicted": "D",
+                "raw_response": "D",
+                "correct": true,
+                "score": 1.0
+              }
+            ],
+            "raw_score": 2.0,
+            "max_score": 2.0,
+            "normalized_score": 5.0
+          },
+          "hooks": {
+            "details": [
+              {
+                "hook": "全校师生大会",
+                "exact_match": true,
+                "semantic_match": false,
+                "score": 1.0
+              },
+              {
+                "hook": "红领巾",
+                "exact_match": false,
+                "semantic_match": false,
+                "score": 0.0
+              },
+              {
+                "hook": "观众",
+                "exact_match": false,
+                "semantic_match": true,
+                "score": 1.0
+              },
+              {
+                "hook": "演讲",
+                "exact_match": true,
+                "semantic_match": false,
+                "score": 1.0
+              }
+            ],
+            "raw_score": 3.0,
+            "max_score": 4.0,
+            "normalized_score": 3.75
+          },
+          "meta": {
+            "backend": "openai_compatible",
+            "model": "x-ai/grok-4.20-beta",
+            "scale": "0-5"
+          }
+        },
+        "story_evaluation": {
+          "scores": {
+            "relevance": 4.5,
+            "coherence": 4.5,
+            "empathy": 4.0,
+            "surprise": 2.5,
+            "engagement": 4.0,
+            "complexity": 4.5
+          },
+          "explanations": {
+            "relevance": "故事高度聚焦于‘参观后脱稿演讲’这一核心事件，并将其置于个人一生教育经历的脉络中，未跑题。",
+            "coherence": "叙事时间线清晰，从1929年出生到1985年退休，人物关系、因果逻辑连贯，事件发展自然。",
+            "empathy": "读者能感受到主角从紧张到激动的转变，以及艰苦年代中对教育的信念，如‘把细粮省给学生’的细节。",
+            "surprise": "整体为平实的人生回忆，缺乏显著的剧情转折或意外结局，仅在演讲后的个人成长上有轻微意外感。",
+            "engagement": "以第一人称讲述个人奋斗与信念，语言朴实真挚，具备较强的代入感和阅读延续欲。",
+            "complexity": "包含时代背景（1949-1985）、学校条件、参观细节、三年困难时期、职业发展等多层展开，细节丰富。"
+          },
+          "final_score": 4.0,
+          "summary": "一篇朴实、真挚且具有时代感的乡村教师回忆录，结构完整、情感真诚，惊喜度相对平淡，其余维度表现优秀。",
+          "raw_response": "{\n  \"scores\": {\n    \"relevance\": 4.5,\n    \"coherence\": 4.5,\n    \"empathy\": 4.0,\n    \"surprise\": 2.5,\n    \"engagement\": 4.0,\n    \"complexity\": 4.5\n  },\n  \"explanations\": {\n    \"relevance\": \"故事高度聚焦于‘参观后脱稿演讲’这一核心事件，并将其置于个人一生教育经历的脉络中，未跑题。\",\n    \"coherence\": \"叙事时间线清晰，从1929年出生到1985年退休，人物关系、因果逻辑连贯，事件发展自然。\",\n    \"empathy\": \"读者能感受到主角从紧张到激动的转变，以及艰苦年代中对教育的信念，如‘把细粮省给学生’的细节。\",\n    \"surprise\": \"整体为平实的人生回忆，缺乏显著的剧情转折或意外结局，仅在演讲后的个人成长上有轻微意外感。\",\n    \"engagement\": \"以第一人称讲述个人奋斗与信念，语言朴实真挚，具备较强的代入感和阅读延续欲。\",\n    \"complexity\": \"包含时代背景（1949-1985）、学校条件、参观细节、三年困难时期、职业发展等多层展开，细节丰富。\"\n  },\n  \"final_score\": 4.00,\n  \"summary\": \"一篇朴实、真挚且具有时代感的乡村教师回忆录，结构完整、情感真诚，惊喜度相对平淡，其余维度表现优秀。\"\n}",
+          "meta": {
+            "backend": "openai_compatible",
+            "model": "x-ai/grok-4.20-beta",
+            "has_prompt": false,
+            "has_reference": true
+          }
+        },
+        "interview_evaluation": {
+          "metrics": {
+            "answer_quality": 0.75,
+            "information_completeness": 2.5,
+            "question_depth": 5.0,
+            "topic_coverage": 0.0
+          },
+          "discussed_dimensions": [],
+          "remaining_gaps": [
+            "人物",
+            "地点",
+            "时间"
+          ],
+          "question_count": 1,
+          "final_score": 2.14,
+          "meta": {
+            "scale": "0-5",
+            "standard": "pr2-followup-quality"
+          }
+        },
+        "meta": {
+          "sample_index": 0,
+          "benchmark_file": "C:\\Users\\SHENGZ~1\\AppData\\Local\\Temp\\tmpppjumayo\\benchmark.json",
+          "score_scale": "0-5"
+        }
+      },
+      "data_type": "simulated"
+    },
+    {
+      "sample_id": "重返南澳岛",
+      "photo_score": 3.93,
+      "story_score": 3.75,
+      "interview_score": 1.08,
+      "final_score": 3.27,
+      "generated_story": "我这辈子，活到快九十了，儿孙们总让我把年轻时候的事讲给他们听。我本来不爱讲，怕他们听烦了。可前几年，2018年那次，我们老连长把大家召集起来，去南澳岛重聚。有人在观景台上给我拍了张照片，我站在最中间，穿着那件老军便服，右手指着远处那座跨海大桥。每次看到这张照片，我心里就忍不住翻腾。不是因为桥有多气派，而是想起我们那一代人走过的路，和如今这太平日子，实在太不一样了。所以我想把这些经历好好整理下来，留给后辈们知道，知道我们是怎么一步步走到今天的。\n我叫李守忠，1936年出生在广东潮阳县一个穷渔村。家里兄弟姐妹多，父亲靠打鱼为生，一年到头风里来浪里去，勉强够一家人糊口。小时候最深的记忆，就是饿。1940年代末，村里常常连番薯都吃不饱，我跟着哥哥去海边捡螺、挖沙虫，回来用咸水煮一煮，就是一顿饭。家里没钱读书，我只念了两年私塾就辍学了。父亲常说：“能活下来就不错了，读书是富人家的事。”那时候我心里就想，将来一定要离开这个穷地方，不能一辈子跟海讨饭吃。\n1955年，我19岁，村里来了征兵的人。那年头国家刚成立不久，到处都在建设，也需要保卫。我二话没说就报了名。家里人虽然舍不得，但也没拦着。记得临走那天，母亲塞给我两个红薯和一双新布鞋，眼里含着泪却没掉下来，只说了一句：“到了部队要听话，别给家里丢人。”我就是这样穿上军装，离开了潮阳，坐了三天三夜的火车，去了福建，后来又转到广东沿海的部队。\n真正让我长大的，是南澳岛上的那些年。1956年，我们连队被派到南澳岛守备。那时候的南澳可不像我们住的是石头垒的营房，屋顶盖着茅草，冬天风大得能把被子掀起来。每天天不亮就要出操，爬山、操练、站岗、修工事。吃的是地瓜米饭加咸菜，逢年过节才能吃上几块猪肉。最苦的是守海防，那时候台湾那边还不平静，我们经常要夜里巡逻，眼睛都不敢闭。有一年台风来，风浪把码头的船都掀翻了，我们连队全体出动去抢险，在海边泡了两天两夜，衣服都没干过。\n就是在南澳，我遇到了孙指导员。他是我的老指导员，比我大几岁，山东人，讲话慢条斯理，却特别会照顾人。他家后来就安在了岛上，娶了当地一个渔家姑娘，生了两个女儿。我退伍以后，我们一直保持联系。他常说，当兵的人要讲义气，要记得一起吃过苦的兄弟。这些话，我记了一辈子。\n1965年，我从部队退伍。那时候国家号召支援地方建设，我被分配到汕头地区的一家工厂，当了保卫干事。后来又调到码头做后勤工作，一干就是二十多年。结婚是在1968年，妻子是同乡介绍的渔家女，叫阿兰。她性子温和，家里条件也不好，但特别能吃苦。我们婚后第二年就生了儿子，后面又添了两个女儿。那时候生活还是紧巴巴的，家里只有一张木床和一个旧柜子，孩子们小时候穿的衣服都是我从部队带回来的旧军装改的。阿兰在家种菜、养鸡，我白天上班，晚上经常加班看仓库，一家六口挤在四十多平米的旧房子里。但我们从不抱怨，因为比起当兵那几年，这已经算是好日子了。\n改革开放以后，日子一天天好起来。1980年代，沿海开始发展，我工作的码头越来越忙，工资也涨了一些。我们省吃俭用，在1990年代初终于在市区买了一套小房子。孩子们渐渐长大，儿子考上了中专，两个女儿也先后参加了工作。2000年以后，我退休了。退休金虽然不多，但够吃够用。孙指导员的女儿后来在汕头安了家，他早上可以坐公交车去看女儿，晚上再坐车回来。这种日子，在我们年轻的时候是想都不敢想的。\n2018年，老连长突然打电话，说要组织我们这些还健在的老兵回南澳岛看看。大家一听都激动得不得了。那年到了岛上，看到的变化把我吓了一跳。当年我们住的石头营房早就没了，取而代之的是宽阔的公路、漂亮的居民楼，还有到处都是的新房子。我们去了当年站岗的山头，那些大风车转啊转的，白天晚上都不停，看着真叫人感慨。\n那天，我们一群老家伙穿着旧军装，胸前挂着纪念章，站在观景台上合影。我站在中间，右手不由自主地指向那座跨海大桥，心里最先想到的，就是孙指导员说的那句话——“我想起我们当年在岛上守海防的那些苦日子，想起那些一起站岗、一起挨饿、一起淋雨的兄弟，也想起这么多年国家发生的天翻地覆的变化。从我们那一代人手里交过来的，不仅是一座岛，更是一个安稳的国家。\n如今早上起来喝杯茶，看看报纸，下午和老伴在小区里散散步。儿孙们都很孝顺，逢年过节都回来陪我们。看到他们穿着干净的衣服，用着手机，谈论着工作和旅游，我心里就觉得满足。\n这一辈子，我吃过很多苦，也得到过很多帮助。我最骄傲的，不是当了什么大官、发了什么财，而是我们那一代人，用自己的青春和汗水，守住了这个国家，让后辈们能过上太平日子。当然也有遗憾，我没能让父母过上好日子，他们走得早，没能看到今天的繁荣。我也没能多读些书，文化水平不高，很多事情都是靠老老实实做过来的。\n我想告诉后辈们：日子好了，可千万别忘了过去的苦。一个人要懂得感恩，懂得珍惜，也要懂得吃苦耐劳。国家发展到今天不容易，是无数像我们这样普通人，一砖一瓦、一班一岗拼出来的。你们等你们老了，也能像我一样，站在高处指着远方，对儿孙们说一句：“我们这一辈子，没白活。”\n这就是我看到这张照片时，最想说的话。",
+      "qa_history": [
+        {
+          "question": "**老兵，您右手指向远处那座跨海大桥时，心里最先想到的是什么？",
+          "answer": "2018年，在老连长的召集下，我们一群老兵，回到了阔别已久的南澳岛，回到了我们曾经挥洒过青春和汗水的部队。我的老指导员孙指导员，他家安在岛上，女儿在汕头工作，现在他早上可以坐公交车去探望女儿，晚上又能坐车回来。"
+        }
+      ],
+      "analysis_result": {
+        "visual_elements": "\n\n以下是按要求输出的结构化JSON分析：\n\n```json\n{\n  \"visual_elements\": {\n    \"people_count\": 9,\n    \"people\": [\n      {\n        \"position\": \"前排中央\",\n        \"gender\": \"male\",\n        \"age_appearance\": \"75-85岁\",\n        \"identity\": \"退伍老兵（最核心人物）\",\n        \"clothing\": \"绿色军便服，佩戴多枚纪念章和勋章，戴绿色军帽\"\n      },\n      {\n        \"position\": \"前排左侧\",\n        \"gender\": \"male\",\n        \"age_appearance\": \"55-65岁\",\n        \"identity\": \"可能为老兵儿子或晚辈\",\n        \"clothing\": \"浅灰色T恤 + 卡其色休闲裤\"\n      },\n      {\n        \"position\": \"前排\",\n        \"gender\": \"male\",\n        \"age_appearance\": \"70-80岁\",\n        \"identity\": \"战友\",\n        \"clothing\": \"蓝色冲锋衣 + 绿色军帽\"\n      }\n    ],\n    \"scene\": \"海边山顶观景台\",\n    \"background\": \"大型跨海大桥、现代滨海城市、风力发电场、海上养殖区\",\n    \"items\": [\n      \"老兵佩戴的多枚纪念章和勋章\",\n      \"观景台石碑（有文字）\",\n      \"游客背包和鞋子（放在左侧石头上）\",\n      \"现代智能手机（有人拿着）\"\n    ]\n  },\n  \"expressions_and_emotions\": {\n    \"overall_mood\": \"喜悦、温暖、怀旧、骄傲\",\n    \"main_elder\": \"笑容灿烂，眼睛眯成一条缝，充满幸福感，右手指向远方\",\n    \"others\": \"绝大多数人都在开怀大笑，肢体语言非常亲密，互相搂肩搭背，情感外露\",\n    \"younger_man\": \"站在最右边的中年男子笑容最为克制，带有敬重和陪伴的意味\"\n  },\n  \"clothing_details\": {\n    \"style\": \"混搭风格\",\n    \"era_features\": \"2010年代休闲服饰 + 老式军便服共存\",\n    \"details\": [\n      \"老兵穿着经典的80-90年代款式绿色军便服（可能是退伍时军装或仿制版）\",\n      \"年轻一辈穿着典型的当代速干T恤、冲锋衣、运动服（阿迪达斯三条杠）\",\n      \"多位老人佩戴与军旅生涯相关的纪念章\"\n    ]\n  },\n  \"background_architecture\": {\n    \"style\": \"现代大型基础设施\",\n    \"features\": \"超长跨海大桥（疑似中国东部沿海某著名跨海大桥，如杭州湾大桥、胶州湾大桥、深圳-中山通道等类似景观）\",\n    \"city\": \"中国东部沿海发达城市\",\n    \"time_characteristic\": \"21世纪10-20年代\",\n    \"location_inference\": \"极可能位于中国东部沿海（浙江、山东、广东、福建等地）的著名观景台\"\n  },\n  \"era_items\": {\n    \"items\": [\n      {\n        \"item\": \"风力发电机群\",\n        \"era\": \"2005年以后大规模建设\"\n      },\n      {\n        \"item\": \"现代跨海大桥\",\n        \"era\": \"21世纪中国基建高峰期\"\n      },\n      {\n        \"item\": \"老兵纪念章\",\n        \"era\": \"2010年代后大量制作的抗战胜利、建军90周年等纪念章\"\n      }\n    ]\n  },\n  \"overall_description\": {\n    \"atmosphere\": \"温暖、和睦、岁月静好中带着军旅沧桑\",\n    \"estimated_year\": \"2016-2020年\",\n    \"possible_scene\": \"某沿海城市举办的老兵重聚活动，或老兵后代带父亲故地重游",
+        "emotions": "\n\n以下是按要求输出的结构化JSON分析：\n\n```json\n{\n  \"visual_elements\": {\n    \"people_count\": 9,\n    \"people\": [\n      {\n        \"position\": \"前排中央\",\n        \"gender\": \"male\",\n        \"age_appearance\": \"75-85岁\",\n        \"identity\": \"退伍老兵（最核心人物）\",\n        \"clothing\": \"绿色军便服，佩戴多枚纪念章和勋章，戴绿色军帽\"\n      },\n      {\n        \"position\": \"前排左侧\",\n        \"gender\": \"male\",\n        \"age_appearance\": \"55-65岁\",\n        \"identity\": \"可能为老兵儿子或晚辈\",\n        \"clothing\": \"浅灰色T恤 + 卡其色休闲裤\"\n      },\n      {\n        \"position\": \"前排\",\n        \"gender\": \"male\",\n        \"age_appearance\": \"70-80岁\",\n        \"identity\": \"战友\",\n        \"clothing\": \"蓝色冲锋衣 + 绿色军帽\"\n      }\n    ],\n    \"scene\": \"海边山顶观景台\",\n    \"background\": \"大型跨海大桥、现代滨海城市、风力发电场、海上养殖区\",\n    \"items\": [\n      \"老兵佩戴的多枚纪念章和勋章\",\n      \"观景台石碑（有文字）\",\n      \"游客背包和鞋子（放在左侧石头上）\",\n      \"现代智能手机（有人拿着）\"\n    ]\n  },\n  \"expressions_and_emotions\": {\n    \"overall_mood\": \"喜悦、温暖、怀旧、骄傲\",\n    \"main_elder\": \"笑容灿烂，眼睛眯成一条缝，充满幸福感，右手指向远方\",\n    \"others\": \"绝大多数人都在开怀大笑，肢体语言非常亲密，互相搂肩搭背，情感外露\",\n    \"younger_man\": \"站在最右边的中年男子笑容最为克制，带有敬重和陪伴的意味\"\n  },\n  \"clothing_details\": {\n    \"style\": \"混搭风格\",\n    \"era_features\": \"2010年代休闲服饰 + 老式军便服共存\",\n    \"details\": [\n      \"老兵穿着经典的80-90年代款式绿色军便服（可能是退伍时军装或仿制版）\",\n      \"年轻一辈穿着典型的当代速干T恤、冲锋衣、运动服（阿迪达斯三条杠）\",\n      \"多位老人佩戴与军旅生涯相关的纪念章\"\n    ]\n  },\n  \"background_architecture\": {\n    \"style\": \"现代大型基础设施\",\n    \"features\": \"超长跨海大桥（疑似中国东部沿海某著名跨海大桥，如杭州湾大桥、胶州湾大桥、深圳-中山通道等类似景观）\",\n    \"city\": \"中国东部沿海发达城市\",\n    \"time_characteristic\": \"21世纪10-20年代\",\n    \"location_inference\": \"极可能位于中国东部沿海（浙江、山东、广东、福建等地）的著名观景台\"\n  },\n  \"era_items\": {\n    \"items\": [\n      {\n        \"item\": \"风力发电机群\",\n        \"era\": \"2005年以后大规模建设\"\n      },\n      {\n        \"item\": \"现代跨海大桥\",\n        \"era\": \"21世纪中国基建高峰期\"\n      },\n      {\n        \"item\": \"老兵纪念章\",\n        \"era\": \"2010年代后大量制作的抗战胜利、建军90周年等纪念章\"\n      }\n    ]\n  },\n  \"overall_description\": {\n    \"atmosphere\": \"温暖、和睦、岁月静好中带着军旅沧桑\",\n    \"estimated_year\": \"2016-2020年\",\n    \"possible_scene\": \"某沿海城市举办的老兵重聚活动，或老兵后代带父亲故地重游",
+        "clothing": "\n\n以下是按要求输出的结构化JSON分析：\n\n```json\n{\n  \"visual_elements\": {\n    \"people_count\": 9,\n    \"people\": [\n      {\n        \"position\": \"前排中央\",\n        \"gender\": \"male\",\n        \"age_appearance\": \"75-85岁\",\n        \"identity\": \"退伍老兵（最核心人物）\",\n        \"clothing\": \"绿色军便服，佩戴多枚纪念章和勋章，戴绿色军帽\"\n      },\n      {\n        \"position\": \"前排左侧\",\n        \"gender\": \"male\",\n        \"age_appearance\": \"55-65岁\",\n        \"identity\": \"可能为老兵儿子或晚辈\",\n        \"clothing\": \"浅灰色T恤 + 卡其色休闲裤\"\n      },\n      {\n        \"position\": \"前排\",\n        \"gender\": \"male\",\n        \"age_appearance\": \"70-80岁\",\n        \"identity\": \"战友\",\n        \"clothing\": \"蓝色冲锋衣 + 绿色军帽\"\n      }\n    ],\n    \"scene\": \"海边山顶观景台\",\n    \"background\": \"大型跨海大桥、现代滨海城市、风力发电场、海上养殖区\",\n    \"items\": [\n      \"老兵佩戴的多枚纪念章和勋章\",\n      \"观景台石碑（有文字）\",\n      \"游客背包和鞋子（放在左侧石头上）\",\n      \"现代智能手机（有人拿着）\"\n    ]\n  },\n  \"expressions_and_emotions\": {\n    \"overall_mood\": \"喜悦、温暖、怀旧、骄傲\",\n    \"main_elder\": \"笑容灿烂，眼睛眯成一条缝，充满幸福感，右手指向远方\",\n    \"others\": \"绝大多数人都在开怀大笑，肢体语言非常亲密，互相搂肩搭背，情感外露\",\n    \"younger_man\": \"站在最右边的中年男子笑容最为克制，带有敬重和陪伴的意味\"\n  },\n  \"clothing_details\": {\n    \"style\": \"混搭风格\",\n    \"era_features\": \"2010年代休闲服饰 + 老式军便服共存\",\n    \"details\": [\n      \"老兵穿着经典的80-90年代款式绿色军便服（可能是退伍时军装或仿制版）\",\n      \"年轻一辈穿着典型的当代速干T恤、冲锋衣、运动服（阿迪达斯三条杠）\",\n      \"多位老人佩戴与军旅生涯相关的纪念章\"\n    ]\n  },\n  \"background_architecture\": {\n    \"style\": \"现代大型基础设施\",\n    \"features\": \"超长跨海大桥（疑似中国东部沿海某著名跨海大桥，如杭州湾大桥、胶州湾大桥、深圳-中山通道等类似景观）\",\n    \"city\": \"中国东部沿海发达城市\",\n    \"time_characteristic\": \"21世纪10-20年代\",\n    \"location_inference\": \"极可能位于中国东部沿海（浙江、山东、广东、福建等地）的著名观景台\"\n  },\n  \"era_items\": {\n    \"items\": [\n      {\n        \"item\": \"风力发电机群\",\n        \"era\": \"2005年以后大规模建设\"\n      },\n      {\n        \"item\": \"现代跨海大桥\",\n        \"era\": \"21世纪中国基建高峰期\"\n      },\n      {\n        \"item\": \"老兵纪念章\",\n        \"era\": \"2010年代后大量制作的抗战胜利、建军90周年等纪念章\"\n      }\n    ]\n  },\n  \"overall_description\": {\n    \"atmosphere\": \"温暖、和睦、岁月静好中带着军旅沧桑\",\n    \"estimated_year\": \"2016-2020年\",\n    \"possible_scene\": \"某沿海城市举办的老兵重聚活动，或老兵后代带父亲故地重游",
+        "background": "",
+        "era_items": "",
+        "overall_description": "**分析结果：**\n\n这张照片**不是老照片**，而是一张拍摄于**2015-2020年代**的现代彩色照片，属于典型的“老兵重聚”或“战友合影”类型。\n\n以下是按要求输出的结构化JSON分析：\n\n```json\n{\n  \"visual_elements\": {\n    \"people_count\": 9,\n    \"people\": [\n      {\n        \"position\": \"前排中央\",\n        \"gender\": \"male\",\n        \"age_appearance\": \"75-85岁\",\n        \"identity\": \"退伍老兵（最核心人物）\",\n        \"clothing\": \"绿色军便服，佩戴多枚纪念章和勋章，戴绿色军帽\"\n      },\n      {\n        \"position\": \"前排左侧\",\n        \"gender\": \"male\",\n        \"age_appearance\": \"55-65岁\",\n        \"identity\": \"可能为老兵儿子或晚辈\",\n        \"clothing\": \"浅灰色T恤 + 卡其色休闲裤\"\n      },\n      {\n        \"position\": \"前排\",\n        \"gender\": \"male\",\n        \"age_appearance\": \"70-80岁\",\n        \"identity\": \"战友\",\n        \"clothing\": \"蓝色冲锋衣 + 绿色军帽\"\n      }\n    ],\n    \"scene\": \"海边山顶观景台\",\n    \"background\": \"大型跨海大桥、现代滨海城市、风力发电场、海上养殖区\",\n    \"items\": [\n      \"老兵佩戴的多枚纪念章和勋章\",\n      \"观景台石碑（有文字）\",\n      \"游客背包和鞋子（放在左侧石头上）\",\n      \"现代智能手机（有人拿着）\"\n    ]\n  },\n  \"expressions_and_emotions\": {\n    \"overall_mood\": \"喜悦、温暖、怀旧、骄傲\",\n    \"main_elder\": \"笑容灿烂，眼睛眯成一条缝，充满幸福感，右手指向远方\",\n    \"others\": \"绝大多数人都在开怀大笑，肢体语言非常亲密，互相搂肩搭背，情感外露\",\n    \"younger_man\": \"站在最右边的中年男子笑容最为克制，带有敬重和陪伴的意味\"\n  },\n  \"clothing_details\": {\n    \"style\": \"混搭风格\",\n    \"era_features\": \"2010年代休闲服饰 + 老式军便服共存\",\n    \"details\": [\n      \"老兵穿着经典的80-90年代款式绿色军便服（可能是退伍时军装或仿制版）\",\n      \"年轻一辈穿着典型的当代速干T恤、冲锋衣、运动服（阿迪达斯三条杠）\",\n      \"多位老人佩戴与军旅生涯相关的纪念章\"\n    ]\n  },\n  \"background_architecture\": {\n    \"style\": \"现代大型基础设施\",\n    \"features\": \"超长跨海大桥（疑似中国东部沿海某著名跨海大桥，如杭州湾大桥、胶州湾大桥、深圳-中山通道等类似景观）\",\n    \"city\": \"中国东部沿海发达城市\",\n    \"time_characteristic\": \"21世纪10-20年代\",\n    \"location_inference\": \"极可能位于中国东部沿海（浙江、山东、广东、福建等地）的著名观景台\"\n  },\n  \"era_items\": {\n    \"items\": [\n      {\n        \"item\": \"风力发电机群\",\n        \"era\": \"2005年以后大规模建设\"\n      },\n      {\n        \"item\": \"现代跨海大桥\",\n        \"era\": \"21世纪中国基建高峰期\"\n      },\n      {\n        \"item\": \"老兵纪念章\",\n        \"era\": \"2010年代后大量制作的抗战胜利、建军90周年等纪念章\"\n      }\n    ]\n  },\n  \"overall_description\": {\n    \"atmosphere\": \"温暖、和睦、岁月静好中带着军旅沧桑\",\n    \"estimated_year\": \"2016-2020年\",\n    \"possible_scene\": \"某沿海城市举办的老兵重聚活动，或老兵后代带父亲故地重游。中央的老兵很可能参加过抗美援朝或中越战争，是整个群体的精神核心。\",\n    \"significance\": \"这是一张典型的“时代交汇”照片：经历过战争与动荡的老人，与和平年代的物质繁荣和子孙陪伴形成了强烈而温暖的对比。\"\n  }\n}\n```\n\n**总结判断**：这不是20世纪的老照片，而是一张**21世纪第二十年代**拍摄的、具有强烈情感温度的当代老兵合影。"
+      },
+      "details": {
+        "final_score": 3.27,
+        "weights": {
+          "photo": 0.3,
+          "story": 0.5,
+          "interview": 0.2
+        },
+        "photo_evaluation": {
+          "raw_score": 11.0,
+          "max_score": 14.0,
+          "normalized_score": 3.93,
+          "accuracy": 78.57,
+          "image_path": "d:/desktop/Tencent Capstone Project/照片数据库/重返南澳岛.png",
+          "image_description": "**这张老照片**展现了八位中年及老年男子在山顶观景台合影的场景。他们紧紧搂着肩膀、握着手，亲密地挤在一起合影，脸上都带着灿烂的笑容。\n\n中间一位老人身穿深绿色军装、头戴军帽，胸前佩戴多枚勋章，显得最为突出；他右手举起食指指向前方。其余人多穿着日常便服：灰色T恤、蓝色冲锋衣、深蓝色运动服，其中一人头戴绿色军帽，另一人戴着黑色鸭舌帽。\n\n背景是开阔的滨海景观：远处有跨海大桥、密集的渔排、现代高层建筑和山坡上成排的风力发电机。前景岩石上放着一个写有“观景台”的指示牌和一个深蓝色手提包。\n\n整体氛围温暖而富有年代感，既有老兵重逢的豪迈，又透着对岁月和家乡变迁的感慨。",
+          "mme": {
+            "details": [
+              {
+                "question": "画面前景中是否有一群老年男子紧紧搂抱在一起合影？",
+                "expected": "yes",
+                "predicted": "yes",
+                "raw_response": "yes",
+                "correct": true,
+                "score": 1.0
+              },
+              {
+                "question": "画面背景的跨海大桥下方是否有一艘巨大的航空母舰正在通过？",
+                "expected": "no",
+                "predicted": "yes",
+                "raw_response": "yes",
+                "correct": false,
+                "score": 0.0
+              },
+              {
+                "question": "站在人群正中间的老人是否穿着全套绿色的老式军装，且胸前佩戴着勋章？",
+                "expected": "yes",
+                "predicted": "yes",
+                "raw_response": "yes",
+                "correct": true,
+                "score": 1.0
+              },
+              {
+                "question": "这些老年男子手中是否都端着黑色的现代自动步枪？",
+                "expected": "no",
+                "predicted": "no",
+                "raw_response": "**no**\n\nThe image shows a group of elderly men (likely Chinese veterans) posing together outdoors by a scenic coastal area with wind turbines and a bridge in the background. They are wearing casual or semi-formal clothing, including some military-style caps and a green uniform with medals. None of them are holding any firearms, let alone black modern automatic rifles. They appear to be smiling and embracing for a group photo.",
+                "correct": true,
+                "score": 1.0
+              },
+              {
+                "question": "画面左后方的背景中是否有一座连接陆地的大型跨海大桥？",
+                "expected": "yes",
+                "predicted": "yes",
+                "raw_response": "yes",
+                "correct": true,
+                "score": 1.0
+              },
+              {
+                "question": "人群中穿着便装的男子里，是否有人头上戴着带有红五星的绿色军帽？",
+                "expected": "yes",
+                "predicted": "yes",
+                "raw_response": "yes",
+                "correct": true,
+                "score": 1.0
+              },
+              {
+                "question": "远处的山顶上是否停放着一排随时准备起飞的武装直升机？",
+                "expected": "no",
+                "predicted": "no",
+                "raw_response": "no",
+                "correct": true,
+                "score": 1.0
+              },
+              {
+                "question": "画面远处的山脊上是否能清晰看到多台白色的风力发电机？",
+                "expected": "yes",
+                "predicted": "yes",
+                "raw_response": "yes",
+                "correct": true,
+                "score": 1.0
+              }
+            ],
+            "raw_score": 7.0,
+            "max_score": 8.0,
+            "normalized_score": 4.38
+          },
+          "mmbench": {
+            "details": [
+              {
+                "question": "结合画面中央老人的老式军装、部分人佩戴的红军帽，以及背景中极具现代感的跨海大桥、城市高楼和风力发电机，这张照片最有可能反映的叙事逻辑是：",
+                "options": {
+                  "A": "20世纪70年代，海岛驻防部队正在跨海大桥的施工现场进行安保巡逻。",
+                  "B": "现代影视剧组正在拍摄一部科幻战争片，演员们穿着不同时代的服装正在休息。",
+                  "C": "阔别多年的老兵重返当年驻守的海岛聚会，曾经的军装与如今现代化的海岛建设形成了跨越时代的对比。",
+                  "D": "当地渔民为了庆祝跨海大桥通车，特意穿上戏服在山顶举行传统的祭海仪式。"
+                },
+                "expected": "C",
+                "predicted": "C",
+                "raw_response": "C",
+                "correct": true,
+                "score": 1.0
+              },
+              {
+                "question": "观察这群老年男子紧紧相拥的肢体语言、激动喜悦的面部表情，以及他们身上残存的军事元素符号（军装、军帽、勋章），可以推断他们之间最核心的关系是：",
+                "options": {
+                  "A": "为了争夺海岛水产养殖权而刚刚达成和解的几位商业竞争对手。",
+                  "B": "在当年激情燃烧的岁月中结下深厚情谊，如今久别重逢的老战友。",
+                  "C": "参加夕阳红旅行团，在导游的强行要求下勉强配合拍照的陌生游客。",
+                  "D": "正在勘测地形、准备在海岛上新建风力发电站的工程师团队。"
+                },
+                "expected": "B",
+                "predicted": "B",
+                "raw_response": "B",
+                "correct": true,
+                "score": 1.0
+              }
+            ],
+            "raw_score": 2.0,
+            "max_score": 2.0,
+            "normalized_score": 5.0
+          },
+          "hooks": {
+            "details": [
+              {
+                "hook": "老式军装",
+                "exact_match": false,
+                "semantic_match": false,
+                "score": 0.0
+              },
+              {
+                "hook": "跨海大桥",
+                "exact_match": true,
+                "semantic_match": false,
+                "score": 1.0
+              },
+              {
+                "hook": "战友相拥",
+                "exact_match": false,
+                "semantic_match": false,
+                "score": 0.0
+              },
+              {
+                "hook": "风力发电机",
+                "exact_match": true,
+                "semantic_match": false,
+                "score": 1.0
+              }
+            ],
+            "raw_score": 2.0,
+            "max_score": 4.0,
+            "normalized_score": 2.5
+          },
+          "meta": {
+            "backend": "openai_compatible",
+            "model": "x-ai/grok-4.20-beta",
+            "scale": "0-5"
+          }
+        },
+        "story_evaluation": {
+          "scores": {
+            "relevance": 4.5,
+            "coherence": 4.0,
+            "empathy": 4.0,
+            "surprise": 2.5,
+            "engagement": 3.5,
+            "complexity": 4.0
+          },
+          "explanations": {
+            "relevance": "故事高度聚焦于南澳岛从落后渔村到现代化岛屿的变化，以及老兵一代的青春与国家发展主题，与参考故事的核心内容高度一致。",
+            "coherence": "叙事按时间顺序从童年、参军、南澳守岛、退伍、改革开放到2018年重聚展开，人物关系和因果清晰，但部分段落过渡略显平直。",
+            "empathy": "通过描述饥饿、母亲塞红薯、台风抢险泡两天两夜、旧军装改衣服等细节，让读者能感受到老兵一代的苦难与情感。",
+            "surprise": "故事主要为平铺直叙的人生回顾，虽有时代变迁的感慨，但缺乏情节上的意外转折或令人惊讶的节点。",
+            "engagement": "第一人称回忆结合个人苦难与国家变化，有一定代入感，但篇幅较长且节奏平稳，吸引力中等。",
+            "complexity": "包含童年贫困、军旅生活、婚姻家庭、改革开放前后对比、2018年重聚等多层次内容，细节丰富且有历史背景展开。"
+          },
+          "final_score": 3.75,
+          "summary": "一篇情感真挚的老兵回忆录，真实记录了时代变迁与个人命运，主题鲜明但叙事惊喜度不足。",
+          "raw_response": "{\n  \"scores\": {\n    \"relevance\": 4.5,\n    \"coherence\": 4,\n    \"empathy\": 4,\n    \"surprise\": 2.5,\n    \"engagement\": 3.5,\n    \"complexity\": 4\n  },\n  \"explanations\": {\n    \"relevance\": \"故事高度聚焦于南澳岛从落后渔村到现代化岛屿的变化，以及老兵一代的青春与国家发展主题，与参考故事的核心内容高度一致。\",\n    \"coherence\": \"叙事按时间顺序从童年、参军、南澳守岛、退伍、改革开放到2018年重聚展开，人物关系和因果清晰，但部分段落过渡略显平直。\",\n    \"empathy\": \"通过描述饥饿、母亲塞红薯、台风抢险泡两天两夜、旧军装改衣服等细节，让读者能感受到老兵一代的苦难与情感。\",\n    \"surprise\": \"故事主要为平铺直叙的人生回顾，虽有时代变迁的感慨，但缺乏情节上的意外转折或令人惊讶的节点。\",\n    \"engagement\": \"第一人称回忆结合个人苦难与国家变化，有一定代入感，但篇幅较长且节奏平稳，吸引力中等。\",\n    \"complexity\": \"包含童年贫困、军旅生活、婚姻家庭、改革开放前后对比、2018年重聚等多层次内容，细节丰富且有历史背景展开。\"\n  },\n  \"final_score\": 3.75,\n  \"summary\": \"一篇情感真挚的老兵回忆录，真实记录了时代变迁与个人命运，主题鲜明但叙事惊喜度不足。\"\n}",
+          "meta": {
+            "backend": "openai_compatible",
+            "model": "x-ai/grok-4.20-beta",
+            "has_prompt": false,
+            "has_reference": true
+          }
+        },
+        "interview_evaluation": {
+          "metrics": {
+            "answer_quality": 0.6,
+            "information_completeness": 2.5,
+            "question_depth": 0.0,
+            "topic_coverage": 0.0
+          },
+          "discussed_dimensions": [],
+          "remaining_gaps": [
+            "人物",
+            "地点",
+            "时间"
+          ],
+          "question_count": 1,
+          "final_score": 1.08,
+          "meta": {
+            "scale": "0-5",
+            "standard": "pr2-followup-quality"
+          }
+        },
+        "meta": {
+          "sample_index": 0,
+          "benchmark_file": "C:\\Users\\SHENGZ~1\\AppData\\Local\\Temp\\tmpctkyjmoy\\benchmark.json",
+          "score_scale": "0-5"
+        }
+      },
+      "data_type": "simulated"
+    },
+    {
+      "sample_id": "军营代笔__集体照",
+      "photo_score": 3.93,
+      "story_score": 3.58,
+      "interview_score": 2.78,
+      "final_score": 3.53,
+      "generated_story": "我看到这张旧照片，心里就忍不住想起从前那些年月。照片是黑白的，拍的是一九五几年冬天的事，雪把院子盖得白茫茫一片。我们一群人围着一张木桌子，我坐在中间，身上穿着那件厚厚的棉袄，头上戴着解放帽。大家都看着我，或者看着桌上的文件和书。那时候国家号召大家学毛主席著作、读文件，上山下乡的口号就写在后面的拱门上。我今年已经八十多岁了，儿孙们总让我把年轻时候的事讲一讲，免得以后没人知道了。我想，就从这张照片讲起吧。\n我叫李长顺，一九二八年出生在河北保定乡下一个普通农家。家里兄弟姐妹多，地少粮薄，日子过得紧紧巴巴。我小时候最记得的就是冬天屋里冻得像冰窖，娘把所有能盖的东西都压在被子上，还是冷得睡不着。父亲是个老实庄稼人，一年到头就盼着收成好点，能让孩子们吃上顿饱饭。村里人说，共产党来了以后分了地，日子慢慢有了盼头。一九四七年，我十九岁，村里动员参军，我二话没说就报了名。那时候觉得，跟着队伍走，总比在家饿肚子强。\n参军后，我先在野战部队，后来转到后勤，跟着队伍一路北上。解放后，部队整编，我被留在了东北一个军区机关，负责管理文件和通信工作。那时候部队里文化人少，我虽然只念过几年私塾，但识字，能写信算账，就被安排做了文书。机关院子就是照片里这个样子，砖房、拱门、雪地，一到冬天，风刮在脸上像刀子。我们每天早上出操，晚上还要组织学习。桌上摆着的那些小册子，就是毛主席著作和各种文件。大家轮流读，我负责记录心得，有时候还给大家念报。\n照片上那一天，应该是五八年或者五九年的冬天。院子里雪下得厚，我们把桌子和凳子搬到外面来，开一个学习会。坐在我左边的是小王，眼睛一直盯着文件，认真得不得了。后面站着的是各个连队抽调来的同志，有老兵也有新兵。大家穿着一样的棉袄，戴着一样的帽子，看起来就像一家人。那时候讲究集体，干什么都一起。学习完了，还要讨论怎么把文件精神带回连队，怎么动员战士们上山下乡支援农村建设。\n其实我最常做的事，不是坐在桌子前开会，而是帮大家寄信。那时候家里人都在关内，战士们想家想得厉害。部队有规定，战士寄信只要盖上部队的三角免费邮戳，就不用花钱。我每天都要收一大摞信，检查地址、盖章、打包送去邮局。冬天手冻得僵硬，墨水一不小心就结冰，哈口气才能继续写。有时候信太多，我晚上还要加班到半夜。累是真累，可每当看到战友们拿到家里回信时那个高兴劲儿，我就觉得这点辛苦也值了。他们有的父母生病，有的媳妇刚生孩子，有的弟弟妹妹要上学，一封信就能让全家安心。我常想，自己虽然没打过什么大仗，但能让这些当兵的心里暖和一点，也算为国家做了点事。\n后来，六十年代初，部队精简，我响应号召转业到了地方。先是分到沈阳一家工厂当干部，负责工会和宣传。那个年代工厂里也天天组织学习，读文件、写大字报、搞评比。我把在部队里养成的习惯带了过来，每天早早到厂里，把报纸和学习材料摆好，组织工人轮流读。家里那时候已经有了两个孩子，媳妇是当地人，贤惠能干。我们分到一间十五平米的筒子楼，冬天烧煤球炉子，夏天热得像蒸笼。孩子们小的时候，我经常给他们讲部队里的故事，讲雪地里大家围着桌子学习的模样。他们听得眼睛亮亮的，可我心里知道，那时候的苦，他们是没吃过的。\n转折来得突然。一九六九年，上山下乡运动越搞越大，厂里也要派干部带队去农村。我想了想，当年自己就是从农村出来的，老婆虽然舍不得，但也没拦我。我带着几十个知识青年去了辽北一个公社，一去就是五年。那里条件更苦，住土坯房，吃高粱米，春天化雪的时候满地泥。白天带着青年们下地，晚上还要组织他们学文件、写心得。那些孩子最大的不过二十岁，哭着想家的时候，我就把当年部队里的事讲给他们听，告诉他们：苦是暂时的，信寄回家去，家里人知道你平安，就有盼头了。\n一九七四年，我因为身体原因回到城里，继续在工厂做到退休。两个孩子都上了大学，后来一个当了老师，一个进了机关。我老伴身体一直不错，我们一起把孙子孙女带大。儿女们工作忙，隔段时间会回来看我，把我拍的这些老照片翻出来让我讲故事。\n回想这一辈子，从河北农村的穷小子，到部队里的小文书，再到工厂干部、下乡带队的老同志，我做的都不是什么惊天动地的大事。可我始终觉得，人这一辈子，得对得起自己吃的粮、对得起信任你的人。照片里那张桌子、那些信、那些冻得通红的手，都还清清楚楚地在我脑子里。我最骄傲的，不是当了什么官，而是看到那些战士、那些青年拿到家信或者平安回来的时候，脸上露出的笑容。那种笑容，比什么都值钱。\n可我还是想告诉儿孙们：不管日子多好过，都别忘了吃苦的根本，也别忘了帮别人一把。寄一封信、说一句暖心的话，有时候就能让人走很远的路。我这辈子没啥遗憾，就是希望你们能踏踏实实做人，认认真真做事，像当年我们围着那张桌子学习时一样，心里头总得有点东西撑着，才不会在难的时候倒下去。\n这就是我看到这张照片，想起来的一辈子的事。",
+      "qa_history": [
+        {
+          "question": "请你讲讲坐在中间那位30多岁的男士，当时在团队里主要负责什么，大家为什么会这样围坐在他身边？",
+          "answer": "当时寄信不用钱，只要盖个部队的三角印就行，所以大家写信的热情很高。虽然很累，但看到战友们拿到家信时开心的样子，我觉得这点辛苦也值了。"
+        }
+      ],
+      "analysis_result": {
+        "visual_elements": "",
+        "emotions": "",
+        "clothing": "",
+        "background": "",
+        "era_items": "",
+        "overall_description": "```json\n{\n  \"visual_elements\": {\n    \"people_count\": 13,\n    \"people\": [\n      {\n        \"position\": \"seated_center\",\n        \"estimated_age\": \"30-40\",\n        \"gender\": \"male\",\n        \"role\": \"main_subject_possibly_leader\"\n      },\n      {\n        \"position\": \"seated_left\",\n        \"estimated_age\": \"25-35\",\n        \"gender\": \"male\",\n        \"role\": \"participant\"\n      },\n      {\n        \"position\": \"standing_group\",\n        \"estimated_age\": \"20-45\",\n        \"gender\": \"male\",\n        \"count\": 11,\n        \"role\": \"group_members\"\n      }\n    ],\n    \"scene\": \"outdoor_courtyard_in_winter\",\n    \"environment\": \"snow_covered_ground, institutional_compound\",\n    \"items\": [\n      \"wooden_desk\",\n      \"wooden_stool\",\n      \"open_booklets_or_documents\",\n      \"pen\",\n      \"small_stack_of_books\",\n      \"framed_portraits_on_a_stand\",\n      \"archway_with_slogan\"\n    ]\n  },\n  \"facial_expressions_and_emotions\": {\n    \"overall_mood\": \"serious, attentive, collective_focus\",\n    \"main_seated_man\": \"looking_directly_at_camera_with_neutral_to_slight_smile, composed\",\n    \"seated_left_man\": \"looking_at_documents, focused\",\n    \"standing_men\": [\n      \"mostly_looking_towards_camera_or_the_desk\",\n      \"expressions_range_from_neutral_to_slight_smiles\",\n      \"body_language_suggests_attention_and_discipline\"\n    ],\n    \"group_dynamics\": \"hierarchical_yet_collective, showing unity and seriousness of purpose\"\n  },\n  \"clothing_details\": {\n    \"style\": \"Chinese_early_PRC_cotton_padded_jackets\",\n    \"primary_garment\": \"Mao-style_padded_coats_(Mian'ao)\",\n    \"headwear\": \"most_wearing_dark_colored_mao_caps_(liberation_caps)\",\n    \"color\": \"predominantly_dark_grey_or_navy_blue\",\n    \"era_features\": \"1950s-1960s_Chinese_working_class/uniform_style\",\n    \"uniformity\": \"high_degree_of_uniformity_suggesting_organizational_affiliation\"\n  },\n  \"background_architecture\": {\n    \"structures\": [\n      \"brick_buildings\",\n      \"traditional_style_gate_arch\",\n      \"single_story_institutional_buildings\",\n      \"sloped_roofs\"\n    ],\n    \"style\": \"early_PRC_institutional_compound\",\n    \"slogan\": \"只读毛主席著作, 上山下乡, 读文件\",\n    \"slogan_meaning\": \"Only study Chairman Mao's works, Go to the mountains and countryside, Read documents\",\n    \"geographic_guess\": \"Northern_China_(likely_Northeast_or_North_China_plain)\",\n    \"time_period\": \"1950s_to_early_1960s\"\n  },\n  \"era_objects\": {\n    \"furniture\": \"simple_wooden_desk_and_stool_typical_of_1950s-60s_government_or_commune_offices\",\n    \"propaganda_items\": \"framed_portraits_likely_of_Mao_Zedong_and_other_leaders\",\n    \"documents\": \"small_booklets_resembling_Mao's_Little_Red_Book_or_study_materials\",\n    \"architectural_elements\": \"brick_gate_with_slogan_typical_of_the_period\"\n  },\n  \"overall_description\": {\n    \"atmosphere\": \"serious, disciplined, revolutionary_enthusiasm_mixed_with_regimented_formality\",\n    \"estimated_year\": \"1958-1965\",\n    \"likely_scene\": \"A_study_group_or_political_education_session_in_a_government_institution, factory, or_early_commune.\",\n    \"historical_context\": \"This image captures the height of the Maoist era's political study culture, where group reading and discussion of Mao Zedong's works was a daily requirement. The presence of the slogan mentioning '上山下乡' (Shangshan Xiaxiang - Going to the mountains and countryside) suggests it may be related to the early phases of the educated youth movement or a rural work team.\",\n    \"photographic_style\": \"Black_and_white, documentary_style, typical_of_Chinese_state_or_organizational_photography_of_the_period\"\n  }\n}\n```"
+      },
+      "details": {
+        "final_score": 3.53,
+        "weights": {
+          "photo": 0.3,
+          "story": 0.5,
+          "interview": 0.2
+        },
+        "photo_evaluation": {
+          "raw_score": 11.0,
+          "max_score": 14.0,
+          "normalized_score": 3.93,
+          "accuracy": 78.57,
+          "image_path": "d:/desktop/Tencent Capstone Project/照片数据库/军营代笔__集体照.png",
+          "image_description": "这是一张20世纪50-60年代的中国老照片。画面中，一群身穿深色棉袄、头戴解放帽的男性干部或民兵围在一张简易木桌旁。桌上摊着文件和笔记本，有人正低头记录，有人拿着纸张在讲解或讨论。众人神情专注，姿态自然，有的站着，有的坐在长凳上。背景是典型的北方农村或工地场景，有砖瓦平房、拱形门楼，门上方挂着“坚决响应毛主席号召，上山下乡，建设农村”的标语，远处可见山峦和松树，地面有残雪。整体氛围朴实、严肃而热烈，带有鲜明的时代印记。",
+          "mme": {
+            "details": [
+              {
+                "question": "画面正中间坐在桌前的男子是否手里拿着钢笔正在写字？",
+                "expected": "yes",
+                "predicted": "yes",
+                "raw_response": "**yes**",
+                "correct": true,
+                "score": 1.0
+              },
+              {
+                "question": "木质桌子上是否摆放着一台正在打印文件的现代打印机？",
+                "expected": "no",
+                "predicted": "no",
+                "raw_response": "no",
+                "correct": true,
+                "score": 1.0
+              },
+              {
+                "question": "桌面上是否整齐地摆放着几沓信封？",
+                "expected": "yes",
+                "predicted": "yes",
+                "raw_response": "yes",
+                "correct": true,
+                "score": 1.0
+              },
+              {
+                "question": "画面背景的大门上是否悬挂着写有“上山下乡，接受再教育”字样的横幅？",
+                "expected": "yes",
+                "predicted": "yes",
+                "raw_response": "**yes**\n\nThe banner in the background of the image clearly displays the text “上山下乡，接受再教育” (Go to the mountains and countryside, receive re-education), which matches the question exactly.",
+                "correct": true,
+                "score": 1.0
+              },
+              {
+                "question": "这些围绕在桌子旁边的青年们是否都穿着短袖T恤和短裤？",
+                "expected": "no",
+                "predicted": "no",
+                "raw_response": "no",
+                "correct": true,
+                "score": 1.0
+              },
+              {
+                "question": "画面右侧后方是否停放着一辆崭新的高铁列车？",
+                "expected": "no",
+                "predicted": "no",
+                "raw_response": "no",
+                "correct": true,
+                "score": 1.0
+              },
+              {
+                "question": "照片表面是否能看到明显的十字形白色折痕和破损的岁月痕迹？",
+                "expected": "yes",
+                "predicted": "yes",
+                "raw_response": "yes",
+                "correct": true,
+                "score": 1.0
+              },
+              {
+                "question": "从地面的白色覆盖物以及人物厚实的着装来看，画面展现的季节是否是冬季？",
+                "expected": "yes",
+                "predicted": "yes",
+                "raw_response": "yes",
+                "correct": true,
+                "score": 1.0
+              }
+            ],
+            "raw_score": 8.0,
+            "max_score": 8.0,
+            "normalized_score": 5.0
+          },
+          "mmbench": {
+            "details": [
+              {
+                "question": "结合背景横幅上“坚决响应毛主席号召，上山下乡，接受再教育”的时代标语、人物统一且厚实的棉服穿搭，以及黑白老照片的折痕质感，这张照片最可能反映的是哪个历史时期的场景？",
+                "options": {
+                  "A": "21世纪10年代，大学生暑期下乡支教团队在乡村小学的合影留念。",
+                  "B": "20世纪60年代末至70年代，知识青年或生产建设兵团战士参与“上山下乡”运动的特定历史时期。",
+                  "C": "20世纪90年代初，南方沿海经济特区工厂门前招工报名的火爆场景。",
+                  "D": "19世纪末期，晚清政府组织的第一批赴海外留学的幼童在码头集合。"
+                },
+                "expected": "B",
+                "predicted": "B",
+                "raw_response": "B",
+                "correct": true,
+                "score": 1.0
+              },
+              {
+                "question": "根据画面中心人物执笔书写、桌面上堆放的信封，以及周围战友/青年们满怀期待和喜悦的围观神态，结合“代笔先生”的故事背景，以下对画面情节逻辑推断最合理的是：",
+                "options": {
+                  "A": "这是部队里的发薪日，会计正在桌前核算工资，其他人正排队等着领现金。",
+                  "B": "这是村里的赤脚医生正在露天义诊，中间的人正在开具中药处方，村民们在围观。",
+                  "C": "中间文化水平较高的青年（或新兵）正在热心地担当“代笔”，帮周围不会写字的战友们给家里写平安信。",
+                  "D": "这群人正在进行一场激烈的扑克牌赌博游戏，中间的人正在记录每个人输赢的筹码分数。"
+                },
+                "expected": "C",
+                "predicted": "C",
+                "raw_response": "C",
+                "correct": true,
+                "score": 1.0
+              }
+            ],
+            "raw_score": 2.0,
+            "max_score": 2.0,
+            "normalized_score": 5.0
+          },
+          "hooks": {
+            "details": [
+              {
+                "hook": "代笔写信",
+                "exact_match": false,
+                "semantic_match": false,
+                "score": 0.0
+              },
+              {
+                "hook": "信封",
+                "exact_match": false,
+                "semantic_match": false,
+                "score": 0.0
+              },
+              {
+                "hook": "上山下乡横幅",
+                "exact_match": false,
+                "semantic_match": true,
+                "score": 1.0
+              },
+              {
+                "hook": "战友",
+                "exact_match": false,
+                "semantic_match": false,
+                "score": 0.0
+              }
+            ],
+            "raw_score": 1.0,
+            "max_score": 4.0,
+            "normalized_score": 1.25
+          },
+          "meta": {
+            "backend": "openai_compatible",
+            "model": "x-ai/grok-4.20-beta",
+            "scale": "0-5"
+          }
+        },
+        "story_evaluation": {
+          "scores": {
+            "relevance": 3.5,
+            "coherence": 4.5,
+            "empathy": 4.0,
+            "surprise": 2.0,
+            "engagement": 3.5,
+            "complexity": 4.0
+          },
+          "explanations": {
+            "relevance": "故事主题聚焦于部队代笔写信与助人经历，但大半篇幅用于个人一生经历（参军、转业、下乡、退休），与参考故事中‘班里代笔先生、帮7个新兵写信、一天写五封’的核心内容匹配度一般。",
+            "coherence": "叙事时间线清晰，从童年到参军、部队工作、转业、下乡到晚年，人物关系和因果逻辑连贯，事件过渡自然。",
+            "empathy": "较好展现了战士想家、作者手冻僵仍坚持写信、看到回信时大家的笑容等细节，读者能感受到作者的辛苦与满足，以及对家人的思念。",
+            "surprise": "故事基本按时间顺序平铺直叙个人经历，没有明显的剧情转折或意外结局，缺乏惊喜度。",
+            "engagement": "通过具体生活细节（如墨水结冰、雪地学习、筒子楼生活）吸引读者，但整体节奏较慢，回忆录式讲述投入感中等。",
+            "complexity": "包含丰富时代背景（解放、学习毛著、上山下乡、工厂生活）、个人成长轨迹和多阶段生活细节，层次较为丰富。"
+          },
+          "final_score": 3.58,
+          "summary": "一篇典型的革命年代回忆录，细节扎实、情感真挚，但与参考故事的‘新兵代笔’主题关联较弱，且叙事过于平直，惊喜度不足。",
+          "raw_response": "{\n  \"scores\": {\n    \"relevance\": 3.5,\n    \"coherence\": 4.5,\n    \"empathy\": 4,\n    \"surprise\": 2,\n    \"engagement\": 3.5,\n    \"complexity\": 4\n  },\n  \"explanations\": {\n    \"relevance\": \"故事主题聚焦于部队代笔写信与助人经历，但大半篇幅用于个人一生经历（参军、转业、下乡、退休），与参考故事中‘班里代笔先生、帮7个新兵写信、一天写五封’的核心内容匹配度一般。\",\n    \"coherence\": \"叙事时间线清晰，从童年到参军、部队工作、转业、下乡到晚年，人物关系和因果逻辑连贯，事件过渡自然。\",\n    \"empathy\": \"较好展现了战士想家、作者手冻僵仍坚持写信、看到回信时大家的笑容等细节，读者能感受到作者的辛苦与满足，以及对家人的思念。\",\n    \"surprise\": \"故事基本按时间顺序平铺直叙个人经历，没有明显的剧情转折或意外结局，缺乏惊喜度。\",\n    \"engagement\": \"通过具体生活细节（如墨水结冰、雪地学习、筒子楼生活）吸引读者，但整体节奏较慢，回忆录式讲述投入感中等。\",\n    \"complexity\": \"包含丰富时代背景（解放、学习毛著、上山下乡、工厂生活）、个人成长轨迹和多阶段生活细节，层次较为丰富。\"\n  },\n  \"final_score\": 3.58,\n  \"summary\": \"一篇典型的革命年代回忆录，细节扎实、情感真挚，但与参考故事的‘新兵代笔’主题关联较弱，且叙事过于平直，惊喜度不足。\"\n}",
+          "meta": {
+            "backend": "openai_compatible",
+            "model": "x-ai/grok-4.20-beta",
+            "has_prompt": false,
+            "has_reference": true
+          }
+        },
+        "interview_evaluation": {
+          "metrics": {
+            "answer_quality": 2.6,
+            "information_completeness": 2.5,
+            "question_depth": 5.0,
+            "topic_coverage": 0.0
+          },
+          "discussed_dimensions": [],
+          "remaining_gaps": [
+            "人物",
+            "地点",
+            "时间"
+          ],
+          "question_count": 1,
+          "final_score": 2.78,
+          "meta": {
+            "scale": "0-5",
+            "standard": "pr2-followup-quality"
+          }
+        },
+        "meta": {
+          "sample_index": 0,
+          "benchmark_file": "C:\\Users\\SHENGZ~1\\AppData\\Local\\Temp\\tmpu4ec7xjs\\benchmark.json",
+          "score_scale": "0-5"
+        }
+      },
+      "data_type": "simulated"
+    },
+    {
+      "sample_id": "创办农产品公司__开业剪彩",
+      "photo_score": 3.93,
+      "story_score": 3.75,
+      "interview_score": 1.03,
+      "final_score": 3.26,
+      "generated_story": "我叫李志国，今年七十八岁，辽宁沈阳人。看到这张老照片，心里就忍不住往前翻。从前总觉得这些事过去就过去了，没必要总挂在嘴边。可照片里那条红绸布剪彩带，我站在正中间，手里握着剪刀。那是1979年冬天，辽宁知青食品有限公司开业那天。站在那儿的时候，我心里五味杂陈，却也踏实得很。\n我出生在1950年，家里是沈阳铁西区一个普通工人家庭。父亲在机床厂当车工，母亲在家带我们四个孩子。童年过得紧巴巴，但也算安稳。每天放学回家，先帮母亲劈柴、烧炉子，再做功课。那个年代，大家都穷，却穷得齐整。1958年大跃进，父亲加班加点，家里常常只剩玉米面粥。我记得母亲把仅剩的一点白糖留给我，说“学习好将来才有糖吃”。那时候我小，不懂事，只知道糖是甜的，日子是苦的。\n真正改变我人生的是1968年。那年我十八岁，和成千上万的知青一起下乡，去了辽宁北边昌图县的一个生产队。刚到农村，住的是土坯房，睡的是大通炕。第一次下地干活，腰疼得直不起来。晚上躺在炕上，听着外面风刮过高粱地，心里直发慌。那时候最苦的是想家，想母亲做的酸菜炖土豆。知青点里有个叫王德山的，比我大三岁，是我们那批的“老大哥”。他教我怎么把镰刀磨得更快，怎么用玉米秆搭简易棚子挡风。冬天特别冷，我们几个人挤在一个被窝里取暖，第二天起来眉毛上全是霜。\n我在农村整整待了九年。1977年，知青返城政策下来，我回到沈阳。本以为能进父亲的工厂，结果只分到一个街道小厂，每天搬运货物。回来后没多久，婚姻也出了问题。我和妻子是下乡时认识的，一起回城后，她觉得我没本事，日子越过越冷。1980年，我们离婚了。那时候我三十出头，身边什么都没有，父母也已经年迈，弟弟妹妹各自成家。我常常半夜醒来，坐在小屋里抽烟，一根接一根。那段日子，是我人生里最灰暗的时候。\n转机出当年插队的几个老知青找到我，说想一起干点事。王德山从黑龙江回来，带了点做豆腐的方子；还有两个在食品厂干过的朋友，懂一点生产技术。他们说，大家一拍即合，决定办个食品厂，专门做饼干、面包和酱菜。厂址选在郊区一个废弃的仓库，房子漏风，四面透气。我们把所有积蓄拿出来，还借了不少钱。建厂的过程苦得很，没有机器就自己改，老式和面机是王德山带着几个人用废铁焊的。我负责跑批文、买原料，天天骑着自行车在城里城外跑，鞋底磨穿了好几双。\n最难的是1982年下半年，原料涨价，银行又催贷款，厂子差点撑不下去。那天我坐在厂门口的石头上发呆，王德山走过来拍拍我肩膀，说：“老李，当年我们在知青点不是说好了吗？再苦也要咬牙。”就是那时候，当年一起插队的十几个老友，有的从外地寄钱过来，有的直接过来帮忙干活，有的托关系帮我们联系销路。他们说：“咱们是一个壕沟里滚出来的，谁也不能倒下。”那份情谊，我一辈子都忘不了。\n终于，1983年冬天，我们的辽宁知青食品有限公司正式开业。那天就是照片里的场景。横幅是红底白字，写着“奋斗九年，热烈庆祝辽宁知青食品有限公司隆重开业”。来了很多老知青，还有街道和区里的领导。我站在剪彩带前，手有些抖。剪下去的那一刻，我没有想什么大道理，只是想起这些年走过的路——下乡时的泥巴、离婚后的冷清、办厂时的煎熬，还有老朋友们伸过来的手。心里最强烈的感受，就是两个字：不容易。但也不后悔。\n开业之后，厂子慢慢走上正轨。我们做的玉米酥和辣白菜在市场上有了点名气。我从厂长一直干到退休，1988年还入了党。1995年，厂子改制，我带着一帮老职工买下了部分股份，继续干到2005年正式退休。退休后，我把厂里的股份转让了，拿了点钱，和老伴在沈阳近郊买了个小院子，种点菜，养几只鸡。日子过得平淡，但心里踏实。\n孙子有时会拿手机给我看外面的世界，我笑着说，爷爷那时候连电冰箱都没有，你们时代变了，我们这一代人赶上了最乱也最有希望的时候。插队让我们知道什么是苦，返城让我们懂得什么是难，创业让我们明白什么是坚持。\n回想这一辈子，最遗憾的是和前妻的婚姻没有走到最后，也没能给父母更好的晚年。最骄傲的，是我们这帮知青没有被生活打倒，靠自己的双手办起了一个厂子，还帮了不少当年一起下乡的朋友。最感谢的，是那些在关键时刻拉我一把的老友。没有他们，就没有今天的我。\n我想对孙辈们说，人生不会一直顺风顺水，总会遇到沟沟坎坎。遇到难处时，别急着抱怨，先看看身边还有谁能帮你，也想想自己能为别人做什么。做人要实在，答应的事就要做到，欠的情一定要还。日子是过出来的，不是想出来的。踏踏实实走自己的路，哪怕慢一点，也要走得稳当。\n我把这张照片裱了起来，挂在客厅。偶尔有晚辈来，我就会指着照片里那个头发还黑着、穿中山装的自己，说：“这就是你爷爷。那年我四十三岁，正站在人生一个重要的坎上。剪下去的不只是一条红绸布，还有我对未来的所有盼望。”\n如今我老了，腰也弯了，但心里那股劲还在。知青那九年、离婚那一年、创业那几年，都成了我这辈子最宝贵的财富。我不求你们记住我这一生的细节，只希望你们在遇到难处时，能想起爷爷这句话——咬咬牙，往前走，总会有人帮你，也总会看到光。",
+      "qa_history": [
+        {
+          "question": "您在辽宁知青食品有限公司开业剪彩那天，站在红色绸布剪彩带前的那一刻，心里最强烈的感受是什么？",
+          "answer": "回望一生，有知青岁月的热血，有婚姻破裂的伤痛，也有创业的艰难和坚持。关键时刻，当年一起插队的知青老友伸出援手，帮助我渡过难关。"
+        }
+      ],
+      "analysis_result": {
+        "visual_elements": "```json\n{\n  \"visual_elements\": {\n    \"人物数量\": \"约20人\",\n    \"主要人物\": [\n      {\n        \"位置\": \"中心\",\n        \"数量\": 3,\n        \"年龄\": \"约40-55岁\",\n        \"性别\": \"男性\",\n        \"身份推测\": \"公司领导或重要嘉宾\"\n      },\n      {\n        \"位置\": \"左侧\",\n        \"数量\": \"约8人\",\n        \"年龄\": \"30-50岁\",\n        \"性别\": \"男性为主\",\n        \"身份推测\": \"公司干部或职工代表\"\n      },\n      {\n        \"位置\": \"右侧及后排\",\n        \"数量\": \"约9人\",\n        \"年龄\": \"30-60岁\",\n        \"性别\": \"男女均有\",\n        \"身份推测\": \"公司职工及家属\"\n      }\n    ],\n    \"场景\": \"企业开业剪彩仪式现场\",\n    \"主要物品\": [\n      \"红色绸布剪彩带\",\n      \"大型木质横幅\",\n      \"小黑板\",\n      \"纸质三角彩旗\"\n    ]\n  },\n  \"人物表情和情绪\": {\n    \"中心人物\": \"面带微笑，神态自信从容，展现出领导者的风范\",\n    \"左侧人物\": \"大部分面带笑容，部分人表情较为严肃正式，整体呈现喜悦与庄重并存的状态\",\n    \"右侧人物\": \"表情较为轻松自然，部分女性面带微笑，显示出对仪式的期待和喜悦\",\n    \"整体情绪\": \"喜悦、庄重、期待、团结\"\n  },\n  \"服饰细节\": {\n    \"主要服装\": \"中山装 / 干部服\",\n    \"颜色\": \"以深色（深灰、藏青、黑色）为主，少数浅色\",\n    \"时代特征\": \"典型的50-70年代中国干部与职工着装，领口可见扣子，口袋为四袋制，部分人物佩戴毛主席像章\",\n    \"女性服饰\": \"列宁装或简易女式干部服，朴素实用\"\n  },\n  \"背景建筑\": {\n    \"建筑风格\": \"简朴的北方平房建筑\",\n    \"年代特征\": \"20世纪中后期（50-70年代）\",\n    \"地理位置推测\": \"中国辽宁省（横幅文字明确显示'辽宁知青食品有限公司'）\",\n    \"细节\": \"砖瓦结构，门框为木质，屋顶有烟囱，整体较为简陋\"\n  },\n  \"时代物品\": {\n    \"横幅内容\": [\n      \"主横幅：辽宁知青食品有限公司\",\n      \"副横幅1：奋斗九年，底色最深\",\n      \"副横幅2：热烈庆祝辽宁知青食品有限公司隆重开业\",\n      \"小黑板：感谢老友，共创明天\"\n    ],\n    \"其他物品\": [\n      \"三角彩旗（典型文革至80年代初庆典装饰）\",\n      \"老式木门和砖墙\",\n      \"简易木质门框\"\n    ],\n    \"时代特征\": \"知青返城创业浪潮的产物，'奋斗九年'暗示该企业可能由知青创办\"\n  },\n  \"整体描述\": {\n    \"整体氛围\": \"庄重而又喜庆，既有正式仪式的严肃感，又充满创业初期的希望与喜悦\",\n    \"拍摄年代推测\": \"1978-1985年之间（最可能是1979-1982年）\",\n    \"可能场景\": \"辽宁某地知青返城后创办的集体或国营食品企业开业剪彩仪式\",\n    \"历史意义\": \"反映了中国改革开放初期，知青返城后自力更生创办企业的历史现象，是中国从计划经济向商品经济转型时期的珍贵影像记录\"\n  }\n}\n```",
+        "emotions": "```json\n{\n  \"visual_elements\": {\n    \"人物数量\": \"约20人\",\n    \"主要人物\": [\n      {\n        \"位置\": \"中心\",\n        \"数量\": 3,\n        \"年龄\": \"约40-55岁\",\n        \"性别\": \"男性\",\n        \"身份推测\": \"公司领导或重要嘉宾\"\n      },\n      {\n        \"位置\": \"左侧\",\n        \"数量\": \"约8人\",\n        \"年龄\": \"30-50岁\",\n        \"性别\": \"男性为主\",\n        \"身份推测\": \"公司干部或职工代表\"\n      },\n      {\n        \"位置\": \"右侧及后排\",\n        \"数量\": \"约9人\",\n        \"年龄\": \"30-60岁\",\n        \"性别\": \"男女均有\",\n        \"身份推测\": \"公司职工及家属\"\n      }\n    ],\n    \"场景\": \"企业开业剪彩仪式现场\",\n    \"主要物品\": [\n      \"红色绸布剪彩带\",\n      \"大型木质横幅\",\n      \"小黑板\",\n      \"纸质三角彩旗\"\n    ]\n  },\n  \"人物表情和情绪\": {\n    \"中心人物\": \"面带微笑，神态自信从容，展现出领导者的风范\",\n    \"左侧人物\": \"大部分面带笑容，部分人表情较为严肃正式，整体呈现喜悦与庄重并存的状态\",\n    \"右侧人物\": \"表情较为轻松自然，部分女性面带微笑，显示出对仪式的期待和喜悦\",\n    \"整体情绪\": \"喜悦、庄重、期待、团结\"\n  },\n  \"服饰细节\": {\n    \"主要服装\": \"中山装 / 干部服\",\n    \"颜色\": \"以深色（深灰、藏青、黑色）为主，少数浅色\",\n    \"时代特征\": \"典型的50-70年代中国干部与职工着装，领口可见扣子，口袋为四袋制，部分人物佩戴毛主席像章\",\n    \"女性服饰\": \"列宁装或简易女式干部服，朴素实用\"\n  },\n  \"背景建筑\": {\n    \"建筑风格\": \"简朴的北方平房建筑\",\n    \"年代特征\": \"20世纪中后期（50-70年代）\",\n    \"地理位置推测\": \"中国辽宁省（横幅文字明确显示'辽宁知青食品有限公司'）\",\n    \"细节\": \"砖瓦结构，门框为木质，屋顶有烟囱，整体较为简陋\"\n  },\n  \"时代物品\": {\n    \"横幅内容\": [\n      \"主横幅：辽宁知青食品有限公司\",\n      \"副横幅1：奋斗九年，底色最深\",\n      \"副横幅2：热烈庆祝辽宁知青食品有限公司隆重开业\",\n      \"小黑板：感谢老友，共创明天\"\n    ],\n    \"其他物品\": [\n      \"三角彩旗（典型文革至80年代初庆典装饰）\",\n      \"老式木门和砖墙\",\n      \"简易木质门框\"\n    ],\n    \"时代特征\": \"知青返城创业浪潮的产物，'奋斗九年'暗示该企业可能由知青创办\"\n  },\n  \"整体描述\": {\n    \"整体氛围\": \"庄重而又喜庆，既有正式仪式的严肃感，又充满创业初期的希望与喜悦\",\n    \"拍摄年代推测\": \"1978-1985年之间（最可能是1979-1982年）\",\n    \"可能场景\": \"辽宁某地知青返城后创办的集体或国营食品企业开业剪彩仪式\",\n    \"历史意义\": \"反映了中国改革开放初期，知青返城后自力更生创办企业的历史现象，是中国从计划经济向商品经济转型时期的珍贵影像记录\"\n  }\n}\n```",
+        "clothing": "```json\n{\n  \"visual_elements\": {\n    \"人物数量\": \"约20人\",\n    \"主要人物\": [\n      {\n        \"位置\": \"中心\",\n        \"数量\": 3,\n        \"年龄\": \"约40-55岁\",\n        \"性别\": \"男性\",\n        \"身份推测\": \"公司领导或重要嘉宾\"\n      },\n      {\n        \"位置\": \"左侧\",\n        \"数量\": \"约8人\",\n        \"年龄\": \"30-50岁\",\n        \"性别\": \"男性为主\",\n        \"身份推测\": \"公司干部或职工代表\"\n      },\n      {\n        \"位置\": \"右侧及后排\",\n        \"数量\": \"约9人\",\n        \"年龄\": \"30-60岁\",\n        \"性别\": \"男女均有\",\n        \"身份推测\": \"公司职工及家属\"\n      }\n    ],\n    \"场景\": \"企业开业剪彩仪式现场\",\n    \"主要物品\": [\n      \"红色绸布剪彩带\",\n      \"大型木质横幅\",\n      \"小黑板\",\n      \"纸质三角彩旗\"\n    ]\n  },\n  \"人物表情和情绪\": {\n    \"中心人物\": \"面带微笑，神态自信从容，展现出领导者的风范\",\n    \"左侧人物\": \"大部分面带笑容，部分人表情较为严肃正式，整体呈现喜悦与庄重并存的状态\",\n    \"右侧人物\": \"表情较为轻松自然，部分女性面带微笑，显示出对仪式的期待和喜悦\",\n    \"整体情绪\": \"喜悦、庄重、期待、团结\"\n  },\n  \"服饰细节\": {\n    \"主要服装\": \"中山装 / 干部服\",\n    \"颜色\": \"以深色（深灰、藏青、黑色）为主，少数浅色\",\n    \"时代特征\": \"典型的50-70年代中国干部与职工着装，领口可见扣子，口袋为四袋制，部分人物佩戴毛主席像章\",\n    \"女性服饰\": \"列宁装或简易女式干部服，朴素实用\"\n  },\n  \"背景建筑\": {\n    \"建筑风格\": \"简朴的北方平房建筑\",\n    \"年代特征\": \"20世纪中后期（50-70年代）\",\n    \"地理位置推测\": \"中国辽宁省（横幅文字明确显示'辽宁知青食品有限公司'）\",\n    \"细节\": \"砖瓦结构，门框为木质，屋顶有烟囱，整体较为简陋\"\n  },\n  \"时代物品\": {\n    \"横幅内容\": [\n      \"主横幅：辽宁知青食品有限公司\",\n      \"副横幅1：奋斗九年，底色最深\",\n      \"副横幅2：热烈庆祝辽宁知青食品有限公司隆重开业\",\n      \"小黑板：感谢老友，共创明天\"\n    ],\n    \"其他物品\": [\n      \"三角彩旗（典型文革至80年代初庆典装饰）\",\n      \"老式木门和砖墙\",\n      \"简易木质门框\"\n    ],\n    \"时代特征\": \"知青返城创业浪潮的产物，'奋斗九年'暗示该企业可能由知青创办\"\n  },\n  \"整体描述\": {\n    \"整体氛围\": \"庄重而又喜庆，既有正式仪式的严肃感，又充满创业初期的希望与喜悦\",\n    \"拍摄年代推测\": \"1978-1985年之间（最可能是1979-1982年）\",\n    \"可能场景\": \"辽宁某地知青返城后创办的集体或国营食品企业开业剪彩仪式\",\n    \"历史意义\": \"反映了中国改革开放初期，知青返城后自力更生创办企业的历史现象，是中国从计划经济向商品经济转型时期的珍贵影像记录\"\n  }\n}\n```",
+        "background": "```json\n{\n  \"visual_elements\": {\n    \"人物数量\": \"约20人\",\n    \"主要人物\": [\n      {\n        \"位置\": \"中心\",\n        \"数量\": 3,\n        \"年龄\": \"约40-55岁\",\n        \"性别\": \"男性\",\n        \"身份推测\": \"公司领导或重要嘉宾\"\n      },\n      {\n        \"位置\": \"左侧\",\n        \"数量\": \"约8人\",\n        \"年龄\": \"30-50岁\",\n        \"性别\": \"男性为主\",\n        \"身份推测\": \"公司干部或职工代表\"\n      },\n      {\n        \"位置\": \"右侧及后排\",\n        \"数量\": \"约9人\",\n        \"年龄\": \"30-60岁\",\n        \"性别\": \"男女均有\",\n        \"身份推测\": \"公司职工及家属\"\n      }\n    ],\n    \"场景\": \"企业开业剪彩仪式现场\",\n    \"主要物品\": [\n      \"红色绸布剪彩带\",\n      \"大型木质横幅\",\n      \"小黑板\",\n      \"纸质三角彩旗\"\n    ]\n  },\n  \"人物表情和情绪\": {\n    \"中心人物\": \"面带微笑，神态自信从容，展现出领导者的风范\",\n    \"左侧人物\": \"大部分面带笑容，部分人表情较为严肃正式，整体呈现喜悦与庄重并存的状态\",\n    \"右侧人物\": \"表情较为轻松自然，部分女性面带微笑，显示出对仪式的期待和喜悦\",\n    \"整体情绪\": \"喜悦、庄重、期待、团结\"\n  },\n  \"服饰细节\": {\n    \"主要服装\": \"中山装 / 干部服\",\n    \"颜色\": \"以深色（深灰、藏青、黑色）为主，少数浅色\",\n    \"时代特征\": \"典型的50-70年代中国干部与职工着装，领口可见扣子，口袋为四袋制，部分人物佩戴毛主席像章\",\n    \"女性服饰\": \"列宁装或简易女式干部服，朴素实用\"\n  },\n  \"背景建筑\": {\n    \"建筑风格\": \"简朴的北方平房建筑\",\n    \"年代特征\": \"20世纪中后期（50-70年代）\",\n    \"地理位置推测\": \"中国辽宁省（横幅文字明确显示'辽宁知青食品有限公司'）\",\n    \"细节\": \"砖瓦结构，门框为木质，屋顶有烟囱，整体较为简陋\"\n  },\n  \"时代物品\": {\n    \"横幅内容\": [\n      \"主横幅：辽宁知青食品有限公司\",\n      \"副横幅1：奋斗九年，底色最深\",\n      \"副横幅2：热烈庆祝辽宁知青食品有限公司隆重开业\",\n      \"小黑板：感谢老友，共创明天\"\n    ],\n    \"其他物品\": [\n      \"三角彩旗（典型文革至80年代初庆典装饰）\",\n      \"老式木门和砖墙\",\n      \"简易木质门框\"\n    ],\n    \"时代特征\": \"知青返城创业浪潮的产物，'奋斗九年'暗示该企业可能由知青创办\"\n  },\n  \"整体描述\": {\n    \"整体氛围\": \"庄重而又喜庆，既有正式仪式的严肃感，又充满创业初期的希望与喜悦\",\n    \"拍摄年代推测\": \"1978-1985年之间（最可能是1979-1982年）\",\n    \"可能场景\": \"辽宁某地知青返城后创办的集体或国营食品企业开业剪彩仪式\",\n    \"历史意义\": \"反映了中国改革开放初期，知青返城后自力更生创办企业的历史现象，是中国从计划经济向商品经济转型时期的珍贵影像记录\"\n  }\n}\n```",
+        "era_items": "```json\n{\n  \"visual_elements\": {\n    \"人物数量\": \"约20人\",\n    \"主要人物\": [\n      {\n        \"位置\": \"中心\",\n        \"数量\": 3,\n        \"年龄\": \"约40-55岁\",\n        \"性别\": \"男性\",\n        \"身份推测\": \"公司领导或重要嘉宾\"\n      },\n      {\n        \"位置\": \"左侧\",\n        \"数量\": \"约8人\",\n        \"年龄\": \"30-50岁\",\n        \"性别\": \"男性为主\",\n        \"身份推测\": \"公司干部或职工代表\"\n      },\n      {\n        \"位置\": \"右侧及后排\",\n        \"数量\": \"约9人\",\n        \"年龄\": \"30-60岁\",\n        \"性别\": \"男女均有\",\n        \"身份推测\": \"公司职工及家属\"\n      }\n    ],\n    \"场景\": \"企业开业剪彩仪式现场\",\n    \"主要物品\": [\n      \"红色绸布剪彩带\",\n      \"大型木质横幅\",\n      \"小黑板\",\n      \"纸质三角彩旗\"\n    ]\n  },\n  \"人物表情和情绪\": {\n    \"中心人物\": \"面带微笑，神态自信从容，展现出领导者的风范\",\n    \"左侧人物\": \"大部分面带笑容，部分人表情较为严肃正式，整体呈现喜悦与庄重并存的状态\",\n    \"右侧人物\": \"表情较为轻松自然，部分女性面带微笑，显示出对仪式的期待和喜悦\",\n    \"整体情绪\": \"喜悦、庄重、期待、团结\"\n  },\n  \"服饰细节\": {\n    \"主要服装\": \"中山装 / 干部服\",\n    \"颜色\": \"以深色（深灰、藏青、黑色）为主，少数浅色\",\n    \"时代特征\": \"典型的50-70年代中国干部与职工着装，领口可见扣子，口袋为四袋制，部分人物佩戴毛主席像章\",\n    \"女性服饰\": \"列宁装或简易女式干部服，朴素实用\"\n  },\n  \"背景建筑\": {\n    \"建筑风格\": \"简朴的北方平房建筑\",\n    \"年代特征\": \"20世纪中后期（50-70年代）\",\n    \"地理位置推测\": \"中国辽宁省（横幅文字明确显示'辽宁知青食品有限公司'）\",\n    \"细节\": \"砖瓦结构，门框为木质，屋顶有烟囱，整体较为简陋\"\n  },\n  \"时代物品\": {\n    \"横幅内容\": [\n      \"主横幅：辽宁知青食品有限公司\",\n      \"副横幅1：奋斗九年，底色最深\",\n      \"副横幅2：热烈庆祝辽宁知青食品有限公司隆重开业\",\n      \"小黑板：感谢老友，共创明天\"\n    ],\n    \"其他物品\": [\n      \"三角彩旗（典型文革至80年代初庆典装饰）\",\n      \"老式木门和砖墙\",\n      \"简易木质门框\"\n    ],\n    \"时代特征\": \"知青返城创业浪潮的产物，'奋斗九年'暗示该企业可能由知青创办\"\n  },\n  \"整体描述\": {\n    \"整体氛围\": \"庄重而又喜庆，既有正式仪式的严肃感，又充满创业初期的希望与喜悦\",\n    \"拍摄年代推测\": \"1978-1985年之间（最可能是1979-1982年）\",\n    \"可能场景\": \"辽宁某地知青返城后创办的集体或国营食品企业开业剪彩仪式\",\n    \"历史意义\": \"反映了中国改革开放初期，知青返城后自力更生创办企业的历史现象，是中国从计划经济向商品经济转型时期的珍贵影像记录\"\n  }\n}\n```",
+        "overall_description": "```json\n{\n  \"visual_elements\": {\n    \"人物数量\": \"约20人\",\n    \"主要人物\": [\n      {\n        \"位置\": \"中心\",\n        \"数量\": 3,\n        \"年龄\": \"约40-55岁\",\n        \"性别\": \"男性\",\n        \"身份推测\": \"公司领导或重要嘉宾\"\n      },\n      {\n        \"位置\": \"左侧\",\n        \"数量\": \"约8人\",\n        \"年龄\": \"30-50岁\",\n        \"性别\": \"男性为主\",\n        \"身份推测\": \"公司干部或职工代表\"\n      },\n      {\n        \"位置\": \"右侧及后排\",\n        \"数量\": \"约9人\",\n        \"年龄\": \"30-60岁\",\n        \"性别\": \"男女均有\",\n        \"身份推测\": \"公司职工及家属\"\n      }\n    ],\n    \"场景\": \"企业开业剪彩仪式现场\",\n    \"主要物品\": [\n      \"红色绸布剪彩带\",\n      \"大型木质横幅\",\n      \"小黑板\",\n      \"纸质三角彩旗\"\n    ]\n  },\n  \"人物表情和情绪\": {\n    \"中心人物\": \"面带微笑，神态自信从容，展现出领导者的风范\",\n    \"左侧人物\": \"大部分面带笑容，部分人表情较为严肃正式，整体呈现喜悦与庄重并存的状态\",\n    \"右侧人物\": \"表情较为轻松自然，部分女性面带微笑，显示出对仪式的期待和喜悦\",\n    \"整体情绪\": \"喜悦、庄重、期待、团结\"\n  },\n  \"服饰细节\": {\n    \"主要服装\": \"中山装 / 干部服\",\n    \"颜色\": \"以深色（深灰、藏青、黑色）为主，少数浅色\",\n    \"时代特征\": \"典型的50-70年代中国干部与职工着装，领口可见扣子，口袋为四袋制，部分人物佩戴毛主席像章\",\n    \"女性服饰\": \"列宁装或简易女式干部服，朴素实用\"\n  },\n  \"背景建筑\": {\n    \"建筑风格\": \"简朴的北方平房建筑\",\n    \"年代特征\": \"20世纪中后期（50-70年代）\",\n    \"地理位置推测\": \"中国辽宁省（横幅文字明确显示'辽宁知青食品有限公司'）\",\n    \"细节\": \"砖瓦结构，门框为木质，屋顶有烟囱，整体较为简陋\"\n  },\n  \"时代物品\": {\n    \"横幅内容\": [\n      \"主横幅：辽宁知青食品有限公司\",\n      \"副横幅1：奋斗九年，底色最深\",\n      \"副横幅2：热烈庆祝辽宁知青食品有限公司隆重开业\",\n      \"小黑板：感谢老友，共创明天\"\n    ],\n    \"其他物品\": [\n      \"三角彩旗（典型文革至80年代初庆典装饰）\",\n      \"老式木门和砖墙\",\n      \"简易木质门框\"\n    ],\n    \"时代特征\": \"知青返城创业浪潮的产物，'奋斗九年'暗示该企业可能由知青创办\"\n  },\n  \"整体描述\": {\n    \"整体氛围\": \"庄重而又喜庆，既有正式仪式的严肃感，又充满创业初期的希望与喜悦\",\n    \"拍摄年代推测\": \"1978-1985年之间（最可能是1979-1982年）\",\n    \"可能场景\": \"辽宁某地知青返城后创办的集体或国营食品企业开业剪彩仪式\",\n    \"历史意义\": \"反映了中国改革开放初期，知青返城后自力更生创办企业的历史现象，是中国从计划经济向商品经济转型时期的珍贵影像记录\"\n  }\n}\n```"
+      },
+      "details": {
+        "final_score": 3.26,
+        "weights": {
+          "photo": 0.3,
+          "story": 0.5,
+          "interview": 0.2
+        },
+        "photo_evaluation": {
+          "raw_score": 11.0,
+          "max_score": 14.0,
+          "normalized_score": 3.93,
+          "accuracy": 78.57,
+          "image_path": "d:/desktop/Tencent Capstone Project/照片数据库/创办农产品公司__开业剪彩.png",
+          "image_description": "这是一张20世纪80年代初的黑白老照片，记录了辽宁知青食品有限公司隆重开业的剪彩仪式。\n\n画面中央，一位身穿中山装、胸佩奖章的中年领导站在红绸带正中，手持剪刀准备剪彩。他的两侧站着十余名男女干部和职工，共同拉着一条长长的红绸带。众人均穿着当时典型的深色中山装或工作服，表情庄重而喜悦。\n\n背景是一座简朴的平房厂区大门，上方悬挂着“辽宁知青食品有限公司”的大木牌，下方有“奋斗九年，底色最深”“热烈庆祝辽宁知青食品有限公司隆重开业”等标语。远处可见老式瓦房、树木和三角彩旗，整体呈现出改革开放初期东北知青企业创业的朴实、热烈与庄重氛围。",
+          "mme": {
+            "details": [
+              {
+                "question": "画面正上方最大的木质牌匾上是否写着“辽宁知青食品有限公司”？",
+                "expected": "yes",
+                "predicted": "yes",
+                "raw_response": "yes",
+                "correct": true,
+                "score": 1.0
+              },
+              {
+                "question": "画面正中间的男子是否手里拿着一把剪刀正在剪彩？",
+                "expected": "yes",
+                "predicted": "yes",
+                "raw_response": "yes",
+                "correct": true,
+                "score": 1.0
+              },
+              {
+                "question": "画面前排参与剪彩的人员是否大多穿着笔挺的西装并打着领带？",
+                "expected": "no",
+                "predicted": "yes",
+                "raw_response": "yes",
+                "correct": false,
+                "score": 0.0
+              },
+              {
+                "question": "平房的屋檐下方是否悬挂着一排闪烁的现代LED霓虹灯管？",
+                "expected": "no",
+                "predicted": "no",
+                "raw_response": "no",
+                "correct": true,
+                "score": 1.0
+              },
+              {
+                "question": "画面右侧的黑板上是否写着“感谢老友，共渡难关”的字样？",
+                "expected": "yes",
+                "predicted": "yes",
+                "raw_response": "yes",
+                "correct": true,
+                "score": 1.0
+              },
+              {
+                "question": "参与合影的众人手里是否都拿着一部带有大屏幕的智能手机进行自拍？",
+                "expected": "no",
+                "predicted": "no",
+                "raw_response": "no",
+                "correct": true,
+                "score": 1.0
+              },
+              {
+                "question": "大牌匾正下方的小木牌上是否印有“奋斗九年，底色最深”这几个字？",
+                "expected": "yes",
+                "predicted": "yes",
+                "raw_response": "yes",
+                "correct": true,
+                "score": 1.0
+              },
+              {
+                "question": "画面左侧后方的背景中是否停放着一辆黄色的重型挖掘机？",
+                "expected": "no",
+                "predicted": "no",
+                "raw_response": "no",
+                "correct": true,
+                "score": 1.0
+              }
+            ],
+            "raw_score": 7.0,
+            "max_score": 8.0,
+            "normalized_score": 4.38
+          },
+          "mmbench": {
+            "details": [
+              {
+                "question": "结合牌匾上的公司名称“辽宁知青食品”、右侧黑板上的“感谢老友，共渡难关”，以及“奋斗九年，底色最深”的标语，这张照片最有可能反映的核心叙事是：",
+                "options": {
+                  "A": "一家跨国互联网科技公司在硅谷举行的上市敲钟仪式。",
+                  "B": "某大学农业专业的学生在校园里举办的模拟创业大赛颁奖典礼。",
+                  "C": "具有知青背景的创业者在老友的帮助下渡过难关，其创办的农产品公司隆重开业的纪念合影。",
+                  "D": "电影制片厂正在拍摄一部关于古代商人互帮互助的古装电视剧的杀青现场。"
+                },
+                "expected": "C",
+                "predicted": "C",
+                "raw_response": "C",
+                "correct": true,
+                "score": 1.0
+              },
+              {
+                "question": "根据画面中央男子手持剪刀剪断彩带的动作，结合背景中“热烈庆祝……隆重开业”的横幅，以下对当前场景及人物行为逻辑的推断最准确的是：",
+                "options": {
+                  "A": "这是当地裁缝铺在进行技能比赛，众人正在观看他裁剪布料。",
+                  "B": "这是一场正式的开业剪彩仪式，众人通过这一传统形式宣告新公司的正式成立与运营。",
+                  "C": "这群人正在进行一场拔河比赛，中间的男子正在用剪刀将绳索剪断以结束比赛。",
+                  "D": "这是建筑工人正在拆除封锁线，准备对身后的旧房屋进行爆破拆除。"
+                },
+                "expected": "B",
+                "predicted": "B",
+                "raw_response": "B",
+                "correct": true,
+                "score": 1.0
+              }
+            ],
+            "raw_score": 2.0,
+            "max_score": 2.0,
+            "normalized_score": 5.0
+          },
+          "hooks": {
+            "details": [
+              {
+                "hook": "开业剪彩",
+                "exact_match": false,
+                "semantic_match": true,
+                "score": 1.0
+              },
+              {
+                "hook": "辽宁知青食品",
+                "exact_match": true,
+                "semantic_match": false,
+                "score": 1.0
+              },
+              {
+                "hook": "木质牌匾",
+                "exact_match": false,
+                "semantic_match": false,
+                "score": 0.0
+              },
+              {
+                "hook": "快乐氛围",
+                "exact_match": false,
+                "semantic_match": false,
+                "score": 0.0
+              }
+            ],
+            "raw_score": 2.0,
+            "max_score": 4.0,
+            "normalized_score": 2.5
+          },
+          "meta": {
+            "backend": "openai_compatible",
+            "model": "x-ai/grok-4.20-beta",
+            "scale": "0-5"
+          }
+        },
+        "story_evaluation": {
+          "scores": {
+            "relevance": 4.5,
+            "coherence": 4.5,
+            "empathy": 4.0,
+            "surprise": 2.0,
+            "engagement": 3.5,
+            "complexity": 4.0
+          },
+          "explanations": {
+            "relevance": "故事高度聚焦知青经历、离婚创伤与创业坚持的核心主题，与参考故事的底色完全一致，未出现跑题内容。",
+            "coherence": "时间线从1950年出生到退休后清晰连贯，因果关系明确（如知青情谊直接导致创业成功），人物关系（如王德山）前后呼应。",
+            "empathy": "通过“半夜抽烟一根接一根”“腰疼得直不起来”“想起母亲留的白糖”等细节，让读者能感受到主人公的苦闷、孤独与感恩。",
+            "surprise": "故事基本按时间顺序平铺直叙，缺乏显著转折或意外结局，创业成功和知青相助均在预期之内。",
+            "engagement": "细节丰富且情感真挚，能吸引读者跟随一生轨迹，但节奏较为平缓，缺少强烈悬念推动继续阅读。",
+            "complexity": "包含童年、知青、离婚、创业、退休多个阶段，细节（如改装和面机、借钱、老友寄钱）与情感层次较丰富。"
+          },
+          "final_score": 3.75,
+          "summary": "一篇情感真挚、细节扎实的知青创业回忆录，结构完整且富有共情，但惊喜度较低，整体呈现为平稳而非高潮迭起的叙事。",
+          "raw_response": "{\n  \"scores\": {\n    \"relevance\": 4.5,\n    \"coherence\": 4.5,\n    \"empathy\": 4,\n    \"surprise\": 2,\n    \"engagement\": 3.5,\n    \"complexity\": 4\n  },\n  \"explanations\": {\n    \"relevance\": \"故事高度聚焦知青经历、离婚创伤与创业坚持的核心主题，与参考故事的底色完全一致，未出现跑题内容。\",\n    \"coherence\": \"时间线从1950年出生到退休后清晰连贯，因果关系明确（如知青情谊直接导致创业成功），人物关系（如王德山）前后呼应。\",\n    \"empathy\": \"通过“半夜抽烟一根接一根”“腰疼得直不起来”“想起母亲留的白糖”等细节，让读者能感受到主人公的苦闷、孤独与感恩。\",\n    \"surprise\": \"故事基本按时间顺序平铺直叙，缺乏显著转折或意外结局，创业成功和知青相助均在预期之内。\",\n    \"engagement\": \"细节丰富且情感真挚，能吸引读者跟随一生轨迹，但节奏较为平缓，缺少强烈悬念推动继续阅读。\",\n    \"complexity\": \"包含童年、知青、离婚、创业、退休多个阶段，细节（如改装和面机、借钱、老友寄钱）与情感层次较丰富。\"\n  },\n  \"final_score\": 3.75,\n  \"summary\": \"一篇情感真挚、细节扎实的知青创业回忆录，结构完整且富有共情，但惊喜度较低，整体呈现为平稳而非高潮迭起的叙事。\"\n}",
+          "meta": {
+            "backend": "openai_compatible",
+            "model": "x-ai/grok-4.20-beta",
+            "has_prompt": false,
+            "has_reference": true
+          }
+        },
+        "interview_evaluation": {
+          "metrics": {
+            "answer_quality": 0.45,
+            "information_completeness": 2.5,
+            "question_depth": 0.0,
+            "topic_coverage": 0.0
+          },
+          "discussed_dimensions": [],
+          "remaining_gaps": [
+            "人物",
+            "地点",
+            "时间"
+          ],
+          "question_count": 1,
+          "final_score": 1.03,
+          "meta": {
+            "scale": "0-5",
+            "standard": "pr2-followup-quality"
+          }
+        },
+        "meta": {
+          "sample_index": 0,
+          "benchmark_file": "C:\\Users\\SHENGZ~1\\AppData\\Local\\Temp\\tmpu2nkzt9b\\benchmark.json",
+          "score_scale": "0-5"
+        }
+      },
+      "data_type": "simulated"
+    },
+    {
+      "sample_id": "纺织厂女工__影楼版",
+      "photo_score": 4.29,
+      "story_score": 3.92,
+      "interview_score": 2.41,
+      "final_score": 3.73,
+      "generated_story": "我叫李桂英，1929年生在河北一个穷村子。看到这张老照片，我忽然觉得有必要把这一辈子的事儿跟你们这些晚辈好好唠唠。照片是上世纪七十年代初在合肥照相馆拍的，那时候照片边上已经发霉、折痕很深，可我每次翻出来，还是能闻见当年照相馆里那股潮湿的浆糊味儿。\n我出生那年正是民国十八年，家里种着几亩薄地，父亲早逝，母亲拉扯我们姐弟四个。童年过得苦，饭都吃不饱，哪里谈得上读书。十二岁那年，村里来了八路军的工作队，我娘咬咬牙把我送去识字班。就是在那儿，我第一次知道世界上还有“革命”两个字。1945年日本投降后，我十七岁，偷偷跟着村里的青年去参军，成了部队文工团的一名宣传员。那时候天天行军、唱歌、演戏，脚上磨出的泡一层摞一层，可心里头是真觉得自己在干大事。\n1954年，抗美援朝战争结束，部队集体转业。我被分配到安徽国棉一厂，从此成了一个纺织女工。那一年我二十五岁，第一次走进厂房的时候，机器轰鸣声震得人耳朵疼，空气里全是棉絮，呛得人直咳嗽。领导问我愿不愿意当宣传干事，我说愿意。从此白天在车间跟班劳动，晚上就坐在昏黄的灯底下写稿子、编黑板报。厂里女工多，大家来自五湖四海，有逃荒来的、有转业的、有刚从农村招来的。我就想把这些人的故事记下来，于是从1956年开始写《一个纺织女工的日记》，在《安徽日报》上连载了好几个月。那时候报纸一出来，车间里就有人拿着念给不识字的姐妹听。我心里头那个高兴啊，觉得自己的笔还能为这么多人说话。\n拍这张照片的时候，已经是七十年代初了。厂里组织大家去照相馆拍“革命纪念照”，要求穿干部服、手拿红宝书、站标准背景前。我特意挑了那套深色列宁装，裤腿宽宽的，脚上还是那双穿了多年的圆口布鞋。左手拿着《毛泽东选集》，其实那本书拍照的时候摄影师说“笑一笑”，我没笑。那时候的风气就是这样，照片要庄重，要有革命者的样子。背景布上画着天安门和青松，我站在那儿，心里想的却是这些年走过的路——从河北农村到部队，再到安徽的纺织厂，一步一步，都是时代把我推到这儿来的。\n在国棉一厂，我干了整整三十年。从普通女工到车间统计员，再到厂宣传科干事，最后退休的时候是工会副主席。中间也吃过不少苦。1959到1961那三年自然灾害，厂里粮食定量不够，大家就把棉籽饼、野菜掺着吃。我晚上写日记，白天还要带头下车间劳动，饿得头晕眼花也不敢说。文革开始后，厂里也乱过一阵子，我因为写过那些日记，被人贴过大字报，说是“宣扬小资产阶级情调”。那时候我真害怕，夜里睡不着，就把以前的日记本用油纸包好，埋在床底下的砖缝里。直到后来政策慢慢松了，我才敢把它们又拿出来。\n最让我欣慰的是，那些年我带出来的几个女徒弟，后来都成了厂里的骨干。有个叫小芳的姑娘，家里穷得叮当响，是我手把手教她认字、打算盘，后来她还考上了夜大。1978年改革开放后，厂里开始搞承包责任制，1985年我正式退休，厂里给我办了一个小小的欢送会，还把当年《安徽日报》连载我日记的剪报装裱了送给我。那一刻我眼眶有点热，但还是忍住了。\n我每天早上起来还是会去公园走两圈，下午晒晒太阳翻翻旧报纸。偶尔翻到这张照片，我就想起当年那个站在照相馆里、双手自然下垂、目光有点紧张的自己。那时候我以为革命就是一辈子的事，\n回想这一辈子，我没啥特别后悔的事。唯一遗憾的是没能多读几年书，写的东西也粗糙得很。但我庆幸自己赶上了那个时代，虽然苦，虽然乱，可也让我这样一个农村丫头有了走出家门、识字、工作的机会。我最想跟你们这些年轻人说的是：日子不管多难，总要一步一步走。手里有本书，心里有个念想，就不怕路远。做人要实在，工作要对得起良心，对身边的人好一点，日子自然就过得踏实。\n这就是我，李桂英，一个从河北农村走出来的纺织女工，用一辈子时间走过的路。照片里那个严肃的姑娘，如今已经成了满头白发的老太太。可我还是想告诉她——你当年选的这条路，没走错。",
+      "qa_history": [
+        {
+          "question": "**请问您当时为什么选择手持《毛泽东选集》，站在这张有天安门和松树的背景前拍这套照片呢？",
+          "answer": "我还写下《一个纺织女工的日记》，在《安徽日报》连载，记录女工们的工作和生活。1954年战争结束，我随部队集体转业，被分配到安徽国棉一厂。"
+        }
+      ],
+      "analysis_result": {
+        "visual_elements": "**以下是针对您提供的照片的结构化JSON分析结果：**\n\n```json\n{\n  \"visual_elements\": {\n    \"人物数量\": 2,\n    \"人物描述\": [\n      {\n        \"身份\": \"左侧全身照人物\",\n        \"性别\": \"女性\",\n        \"年龄推测\": \"20-25岁\",\n        \"身高体型\": \"中等身材，较为瘦削\",\n        \"姿态\": \"站立，全身照，双手自然下垂，左手持书\"\n      },\n      {\n        \"身份\": \"右侧半身照人物\",\n        \"性别\": \"女性\",\n        \"年龄推测\": \"20-25岁\",\n        \"姿态\": \"站立，半身特写，双手持书置于身前\"\n      }\n    ],\n    \"关系推测\": \"同一名年轻女性在同一时期拍摄的两张不同规格照片（全身与半身），极可能是同一套照相馆套照\",\n    \"场景\": \"室内照相馆，采用标准背景布\",\n    \"主要物品\": [\"书籍\", \"高脚花几\", \"盆景\", \"背景画布\"]\n  },\n  \"facial_expression_and_emotion\": {\n    \"整体表情特征\": \"典型的中国20世纪中后期标准证件/纪念照表情\",\n    \"左侧人物\": {\n      \"表情\": \"严肃、拘谨，嘴唇紧闭\",\n      \"眼神\": \"直视镜头，目光坚定而略带紧张\",\n      \"情绪状态\": \"庄重、克制，带有那个时代的集体审美特征\"\n    },\n    \"右侧人物\": {\n      \"表情\": \"更为严肃，眉头微锁\",\n      \"眼神\": \"直接且具有穿透力地注视镜头\",\n      \"情绪状态\": \"严肃、认真，略带警惕与倔强\"\n    },\n    \"共同特征\": \"无笑容，姿态端正，体现出强烈的时代纪律感与集体意识\"\n  },\n  \"clothing_details\": {\n    \"服装样式\": \"中山装风格的女式干部服/列宁装\",\n    \"上衣特征\": \"立领、四贴袋、双排扣（或单排扣）工装上衣\",\n    \"裤子\": \"宽松直筒长裤\",\n    \"颜色\": \"深色（照片中呈现为深灰/藏青色系）\",\n    \"时代特征\": \"典型的50-70年代中国大陆女性干部/知识青年常见装束\",\n    \"鞋子\": \"黑色圆口布鞋（左侧可见）\",\n    \"整体风格\": \"去性别化、实用主义、朴素硬朗\"\n  },\n  \"background_architecture\": {\n    \"背景类型\": \"照相馆标准绘制的背景布\",\n    \"画面内容\": \"中国传统宫殿建筑（疑似天安门或仿天安门样式）+ 松树 + 栏杆\",\n    \"象征意义\": \"将个人形象与国家象征性建筑结合，体现强烈的政治认同感\",\n    \"地理位置推测\": \"中国大陆主要城市照相馆（北京、上海、天津等大城市可能性较高）\"\n  },\n  \"era_items\": {\n    \"书籍\": {\n      \"特征\": \"厚本硬皮书，封面有文字（右侧照片中可见《毛泽东选集》字样）\",\n      \"意义\": \"当时最典型的政治文化符号\"\n    },\n    \"家具\": {\n      \"物品\": \"中式高脚木质花几（茶几）\",\n      \"时代特征\": \"50-70年代照相馆常用道具\"\n    },\n    \"盆景\": \"小型盆景，置于花几上，是当时照相馆常见装饰\"\n  },\n  \"overall_description\": {\n    \"整体氛围\": \"严肃、庄重、克制、带有强烈政治仪式感\",\n    \"拍摄年代推测\": \"1960年代末至1970年代中期（文革时期可能性极高）\",\n    \"可能场景\": \"照相馆纪念照 / 知青下乡前留影 / 入职/入党等重要时刻的正式照片\",\n    \"历史意义\": \"这组照片是特定历史时期中国青年女性形象的典型样本，体现了那个时代在审美、政治符号、个人表达上的高度统一性。\"\n}\n```\n\n此分析基于照片中人物的服饰、道具、背景、表情以及历史语境进行综合判断",
+        "emotions": "**以下是针对您提供的照片的结构化JSON分析结果：**\n\n```json\n{\n  \"visual_elements\": {\n    \"人物数量\": 2,\n    \"人物描述\": [\n      {\n        \"身份\": \"左侧全身照人物\",\n        \"性别\": \"女性\",\n        \"年龄推测\": \"20-25岁\",\n        \"身高体型\": \"中等身材，较为瘦削\",\n        \"姿态\": \"站立，全身照，双手自然下垂，左手持书\"\n      },\n      {\n        \"身份\": \"右侧半身照人物\",\n        \"性别\": \"女性\",\n        \"年龄推测\": \"20-25岁\",\n        \"姿态\": \"站立，半身特写，双手持书置于身前\"\n      }\n    ],\n    \"关系推测\": \"同一名年轻女性在同一时期拍摄的两张不同规格照片（全身与半身），极可能是同一套照相馆套照\",\n    \"场景\": \"室内照相馆，采用标准背景布\",\n    \"主要物品\": [\"书籍\", \"高脚花几\", \"盆景\", \"背景画布\"]\n  },\n  \"facial_expression_and_emotion\": {\n    \"整体表情特征\": \"典型的中国20世纪中后期标准证件/纪念照表情\",\n    \"左侧人物\": {\n      \"表情\": \"严肃、拘谨，嘴唇紧闭\",\n      \"眼神\": \"直视镜头，目光坚定而略带紧张\",\n      \"情绪状态\": \"庄重、克制，带有那个时代的集体审美特征\"\n    },\n    \"右侧人物\": {\n      \"表情\": \"更为严肃，眉头微锁\",\n      \"眼神\": \"直接且具有穿透力地注视镜头\",\n      \"情绪状态\": \"严肃、认真，略带警惕与倔强\"\n    },\n    \"共同特征\": \"无笑容，姿态端正，体现出强烈的时代纪律感与集体意识\"\n  },\n  \"clothing_details\": {\n    \"服装样式\": \"中山装风格的女式干部服/列宁装\",\n    \"上衣特征\": \"立领、四贴袋、双排扣（或单排扣）工装上衣\",\n    \"裤子\": \"宽松直筒长裤\",\n    \"颜色\": \"深色（照片中呈现为深灰/藏青色系）\",\n    \"时代特征\": \"典型的50-70年代中国大陆女性干部/知识青年常见装束\",\n    \"鞋子\": \"黑色圆口布鞋（左侧可见）\",\n    \"整体风格\": \"去性别化、实用主义、朴素硬朗\"\n  },\n  \"background_architecture\": {\n    \"背景类型\": \"照相馆标准绘制的背景布\",\n    \"画面内容\": \"中国传统宫殿建筑（疑似天安门或仿天安门样式）+ 松树 + 栏杆\",\n    \"象征意义\": \"将个人形象与国家象征性建筑结合，体现强烈的政治认同感\",\n    \"地理位置推测\": \"中国大陆主要城市照相馆（北京、上海、天津等大城市可能性较高）\"\n  },\n  \"era_items\": {\n    \"书籍\": {\n      \"特征\": \"厚本硬皮书，封面有文字（右侧照片中可见《毛泽东选集》字样）\",\n      \"意义\": \"当时最典型的政治文化符号\"\n    },\n    \"家具\": {\n      \"物品\": \"中式高脚木质花几（茶几）\",\n      \"时代特征\": \"50-70年代照相馆常用道具\"\n    },\n    \"盆景\": \"小型盆景，置于花几上，是当时照相馆常见装饰\"\n  },\n  \"overall_description\": {\n    \"整体氛围\": \"严肃、庄重、克制、带有强烈政治仪式感\",\n    \"拍摄年代推测\": \"1960年代末至1970年代中期（文革时期可能性极高）\",\n    \"可能场景\": \"照相馆纪念照 / 知青下乡前留影 / 入职/入党等重要时刻的正式照片\",\n    \"历史意义\": \"这组照片是特定历史时期中国青年女性形象的典型样本，体现了那个时代在审美、政治符号、个人表达上的高度统一性。照片中女性身着典型的中山装式干部服，手持《毛泽东选集》，站在绘有天安门图案的背景前，表情严肃庄重，是那个时代最具有代表性的视觉档案之一。\"\n}\n```\n\n此分析基于照片中人物的服饰、道具、背景、表情以及历史语境进行综合判断",
+        "clothing": "**以下是针对您提供的照片的结构化JSON分析结果：**\n\n```json\n{\n  \"visual_elements\": {\n    \"人物数量\": 2,\n    \"人物描述\": [\n      {\n        \"身份\": \"左侧全身照人物\",\n        \"性别\": \"女性\",\n        \"年龄推测\": \"20-25岁\",\n        \"身高体型\": \"中等身材，较为瘦削\",\n        \"姿态\": \"站立，全身照，双手自然下垂，左手持书\"\n      },\n      {\n        \"身份\": \"右侧半身照人物\",\n        \"性别\": \"女性\",\n        \"年龄推测\": \"20-25岁\",\n        \"姿态\": \"站立，半身特写，双手持书置于身前\"\n      }\n    ],\n    \"关系推测\": \"同一名年轻女性在同一时期拍摄的两张不同规格照片（全身与半身），极可能是同一套照相馆套照\",\n    \"场景\": \"室内照相馆，采用标准背景布\",\n    \"主要物品\": [\"书籍\", \"高脚花几\", \"盆景\", \"背景画布\"]\n  },\n  \"facial_expression_and_emotion\": {\n    \"整体表情特征\": \"典型的中国20世纪中后期标准证件/纪念照表情\",\n    \"左侧人物\": {\n      \"表情\": \"严肃、拘谨，嘴唇紧闭\",\n      \"眼神\": \"直视镜头，目光坚定而略带紧张\",\n      \"情绪状态\": \"庄重、克制，带有那个时代的集体审美特征\"\n    },\n    \"右侧人物\": {\n      \"表情\": \"更为严肃，眉头微锁\",\n      \"眼神\": \"直接且具有穿透力地注视镜头\",\n      \"情绪状态\": \"严肃、认真，略带警惕与倔强\"\n    },\n    \"共同特征\": \"无笑容，姿态端正，体现出强烈的时代纪律感与集体意识\"\n  },\n  \"clothing_details\": {\n    \"服装样式\": \"中山装风格的女式干部服/列宁装\",\n    \"上衣特征\": \"立领、四贴袋、双排扣（或单排扣）工装上衣\",\n    \"裤子\": \"宽松直筒长裤\",\n    \"颜色\": \"深色（照片中呈现为深灰/藏青色系）\",\n    \"时代特征\": \"典型的50-70年代中国大陆女性干部/知识青年常见装束\",\n    \"鞋子\": \"黑色圆口布鞋（左侧可见）\",\n    \"整体风格\": \"去性别化、实用主义、朴素硬朗\"\n  },\n  \"background_architecture\": {\n    \"背景类型\": \"照相馆标准绘制的背景布\",\n    \"画面内容\": \"中国传统宫殿建筑（疑似天安门或仿天安门样式）+ 松树 + 栏杆\",\n    \"象征意义\": \"将个人形象与国家象征性建筑结合，体现强烈的政治认同感\",\n    \"地理位置推测\": \"中国大陆主要城市照相馆（北京、上海、天津等大城市可能性较高）\"\n  },\n  \"era_items\": {\n    \"书籍\": {\n      \"特征\": \"厚本硬皮书，封面有文字（右侧照片中可见《毛泽东选集》字样）\",\n      \"意义\": \"当时最典型的政治文化符号\"\n    },\n    \"家具\": {\n      \"物品\": \"中式高脚木质花几（茶几）\",\n      \"时代特征\": \"50-70年代照相馆常用道具\"\n    },\n    \"盆景\": \"小型盆景，置于花几上，是当时照相馆常见装饰\"\n  },\n  \"overall_description\": {\n    \"整体氛围\": \"严肃、庄重、克制、带有强烈政治仪式感\",\n    \"拍摄年代推测\": \"1960年代末至1970年代中期（文革时期可能性极高）\",\n    \"可能场景\": \"照相馆纪念照 / 知青下乡前留影 / 入职/入党等重要时刻的正式照片\",\n    \"历史意义\": \"这组照片是特定历史时期中国青年女性形象的典型样本，体现了那个时代在审美、政治符号、个人表达上的高度统一性。\"\n}\n```\n\n此分析基于照片中人物的服饰、道具、背景、表情以及历史语境进行综合判断",
+        "background": "**以下是针对您提供的照片的结构化JSON分析结果：**\n\n```json\n{\n  \"visual_elements\": {\n    \"人物数量\": 2,\n    \"人物描述\": [\n      {\n        \"身份\": \"左侧全身照人物\",\n        \"性别\": \"女性\",\n        \"年龄推测\": \"20-25岁\",\n        \"身高体型\": \"中等身材，较为瘦削\",\n        \"姿态\": \"站立，全身照，双手自然下垂，左手持书\"\n      },\n      {\n        \"身份\": \"右侧半身照人物\",\n        \"性别\": \"女性\",\n        \"年龄推测\": \"20-25岁\",\n        \"姿态\": \"站立，半身特写，双手持书置于身前\"\n      }\n    ],\n    \"关系推测\": \"同一名年轻女性在同一时期拍摄的两张不同规格照片（全身与半身），极可能是同一套照相馆套照\",\n    \"场景\": \"室内照相馆，采用标准背景布\",\n    \"主要物品\": [\"书籍\", \"高脚花几\", \"盆景\", \"背景画布\"]\n  },\n  \"facial_expression_and_emotion\": {\n    \"整体表情特征\": \"典型的中国20世纪中后期标准证件/纪念照表情\",\n    \"左侧人物\": {\n      \"表情\": \"严肃、拘谨，嘴唇紧闭\",\n      \"眼神\": \"直视镜头，目光坚定而略带紧张\",\n      \"情绪状态\": \"庄重、克制，带有那个时代的集体审美特征\"\n    },\n    \"右侧人物\": {\n      \"表情\": \"更为严肃，眉头微锁\",\n      \"眼神\": \"直接且具有穿透力地注视镜头\",\n      \"情绪状态\": \"严肃、认真，略带警惕与倔强\"\n    },\n    \"共同特征\": \"无笑容，姿态端正，体现出强烈的时代纪律感与集体意识\"\n  },\n  \"clothing_details\": {\n    \"服装样式\": \"中山装风格的女式干部服/列宁装\",\n    \"上衣特征\": \"立领、四贴袋、双排扣（或单排扣）工装上衣\",\n    \"裤子\": \"宽松直筒长裤\",\n    \"颜色\": \"深色（照片中呈现为深灰/藏青色系）\",\n    \"时代特征\": \"典型的50-70年代中国大陆女性干部/知识青年常见装束\",\n    \"鞋子\": \"黑色圆口布鞋（左侧可见）\",\n    \"整体风格\": \"去性别化、实用主义、朴素硬朗\"\n  },\n  \"background_architecture\": {\n    \"背景类型\": \"照相馆标准绘制的背景布\",\n    \"画面内容\": \"中国传统宫殿建筑（疑似天安门或仿天安门样式）+ 松树 + 栏杆\",\n    \"象征意义\": \"将个人形象与国家象征性建筑结合，体现强烈的政治认同感\",\n    \"地理位置推测\": \"中国大陆主要城市照相馆（北京、上海、天津等大城市可能性较高）\"\n  },\n  \"era_items\": {\n    \"书籍\": {\n      \"特征\": \"厚本硬皮书，封面有文字（右侧照片中可见《毛泽东选集》字样）\",\n      \"意义\": \"当时最典型的政治文化符号\"\n    },\n    \"家具\": {\n      \"物品\": \"中式高脚木质花几（茶几）\",\n      \"时代特征\": \"50-70年代照相馆常用道具\"\n    },\n    \"盆景\": \"小型盆景，置于花几上，是当时照相馆常见装饰\"\n  },\n  \"overall_description\": {\n    \"整体氛围\": \"严肃、庄重、克制、带有强烈政治仪式感\",\n    \"拍摄年代推测\": \"1960年代末至1970年代中期（文革时期可能性极高）\",\n    \"可能场景\": \"照相馆纪念照 / 知青下乡前留影 / 入职/入党等重要时刻的正式照片\",\n    \"历史意义\": \"这组照片是特定历史时期中国青年女性形象的典型样本，体现了那个时代在审美、政治符号、个人表达上的高度统一性。照片中女性身着典型的中山装式干部服，手持《毛泽东选集》，站在绘有天安门图案的背景前，表情严肃庄重，是那个时代最具有代表性的视觉档案之一。\"\n}\n```\n\n此分析基于照片中人物的服饰、道具、背景、表情以及历史语境进行综合判断",
+        "era_items": "**以下是针对您提供的照片的结构化JSON分析结果：**\n\n```json\n{\n  \"visual_elements\": {\n    \"人物数量\": 2,\n    \"人物描述\": [\n      {\n        \"身份\": \"左侧全身照人物\",\n        \"性别\": \"女性\",\n        \"年龄推测\": \"20-25岁\",\n        \"身高体型\": \"中等身材，较为瘦削\",\n        \"姿态\": \"站立，全身照，双手自然下垂，左手持书\"\n      },\n      {\n        \"身份\": \"右侧半身照人物\",\n        \"性别\": \"女性\",\n        \"年龄推测\": \"20-25岁\",\n        \"姿态\": \"站立，半身特写，双手持书置于身前\"\n      }\n    ],\n    \"关系推测\": \"同一名年轻女性在同一时期拍摄的两张不同规格照片（全身与半身），极可能是同一套照相馆套照\",\n    \"场景\": \"室内照相馆，采用标准背景布\",\n    \"主要物品\": [\"书籍\", \"高脚花几\", \"盆景\", \"背景画布\"]\n  },\n  \"facial_expression_and_emotion\": {\n    \"整体表情特征\": \"典型的中国20世纪中后期标准证件/纪念照表情\",\n    \"左侧人物\": {\n      \"表情\": \"严肃、拘谨，嘴唇紧闭\",\n      \"眼神\": \"直视镜头，目光坚定而略带紧张\",\n      \"情绪状态\": \"庄重、克制，带有那个时代的集体审美特征\"\n    },\n    \"右侧人物\": {\n      \"表情\": \"更为严肃，眉头微锁\",\n      \"眼神\": \"直接且具有穿透力地注视镜头\",\n      \"情绪状态\": \"严肃、认真，略带警惕与倔强\"\n    },\n    \"共同特征\": \"无笑容，姿态端正，体现出强烈的时代纪律感与集体意识\"\n  },\n  \"clothing_details\": {\n    \"服装样式\": \"中山装风格的女式干部服/列宁装\",\n    \"上衣特征\": \"立领、四贴袋、双排扣（或单排扣）工装上衣\",\n    \"裤子\": \"宽松直筒长裤\",\n    \"颜色\": \"深色（照片中呈现为深灰/藏青色系）\",\n    \"时代特征\": \"典型的50-70年代中国大陆女性干部/知识青年常见装束\",\n    \"鞋子\": \"黑色圆口布鞋（左侧可见）\",\n    \"整体风格\": \"去性别化、实用主义、朴素硬朗\"\n  },\n  \"background_architecture\": {\n    \"背景类型\": \"照相馆标准绘制的背景布\",\n    \"画面内容\": \"中国传统宫殿建筑（疑似天安门或仿天安门样式）+ 松树 + 栏杆\",\n    \"象征意义\": \"将个人形象与国家象征性建筑结合，体现强烈的政治认同感\",\n    \"地理位置推测\": \"中国大陆主要城市照相馆（北京、上海、天津等大城市可能性较高）\"\n  },\n  \"era_items\": {\n    \"书籍\": {\n      \"特征\": \"厚本硬皮书，封面有文字（右侧照片中可见《毛泽东选集》字样）\",\n      \"意义\": \"当时最典型的政治文化符号\"\n    },\n    \"家具\": {\n      \"物品\": \"中式高脚木质花几（茶几）\",\n      \"时代特征\": \"50-70年代照相馆常用道具\"\n    },\n    \"盆景\": \"小型盆景，置于花几上，是当时照相馆常见装饰\"\n  },\n  \"overall_description\": {\n    \"整体氛围\": \"严肃、庄重、克制、带有强烈政治仪式感\",\n    \"拍摄年代推测\": \"1960年代末至1970年代中期（文革时期可能性极高）\",\n    \"可能场景\": \"照相馆纪念照 / 知青下乡前留影 / 入职/入党等重要时刻的正式照片\",\n    \"历史意义\": \"这组照片是特定历史时期中国青年女性形象的典型样本，体现了那个时代在审美、政治符号、个人表达上的高度统一性",
+        "overall_description": "**以下是针对您提供的照片的结构化JSON分析结果：**\n\n```json\n{\n  \"visual_elements\": {\n    \"人物数量\": 2,\n    \"人物描述\": [\n      {\n        \"身份\": \"左侧全身照人物\",\n        \"性别\": \"女性\",\n        \"年龄推测\": \"20-25岁\",\n        \"身高体型\": \"中等身材，较为瘦削\",\n        \"姿态\": \"站立，全身照，双手自然下垂，左手持书\"\n      },\n      {\n        \"身份\": \"右侧半身照人物\",\n        \"性别\": \"女性\",\n        \"年龄推测\": \"20-25岁\",\n        \"姿态\": \"站立，半身特写，双手持书置于身前\"\n      }\n    ],\n    \"关系推测\": \"同一名年轻女性在同一时期拍摄的两张不同规格照片（全身与半身），极可能是同一套照相馆套照\",\n    \"场景\": \"室内照相馆，采用标准背景布\",\n    \"主要物品\": [\"书籍\", \"高脚花几\", \"盆景\", \"背景画布\"]\n  },\n  \"facial_expression_and_emotion\": {\n    \"整体表情特征\": \"典型的中国20世纪中后期标准证件/纪念照表情\",\n    \"左侧人物\": {\n      \"表情\": \"严肃、拘谨，嘴唇紧闭\",\n      \"眼神\": \"直视镜头，目光坚定而略带紧张\",\n      \"情绪状态\": \"庄重、克制，带有那个时代的集体审美特征\"\n    },\n    \"右侧人物\": {\n      \"表情\": \"更为严肃，眉头微锁\",\n      \"眼神\": \"直接且具有穿透力地注视镜头\",\n      \"情绪状态\": \"严肃、认真，略带警惕与倔强\"\n    },\n    \"共同特征\": \"无笑容，姿态端正，体现出强烈的时代纪律感与集体意识\"\n  },\n  \"clothing_details\": {\n    \"服装样式\": \"中山装风格的女式干部服/列宁装\",\n    \"上衣特征\": \"立领、四贴袋、双排扣（或单排扣）工装上衣\",\n    \"裤子\": \"宽松直筒长裤\",\n    \"颜色\": \"深色（照片中呈现为深灰/藏青色系）\",\n    \"时代特征\": \"典型的50-70年代中国大陆女性干部/知识青年常见装束\",\n    \"鞋子\": \"黑色圆口布鞋（左侧可见）\",\n    \"整体风格\": \"去性别化、实用主义、朴素硬朗\"\n  },\n  \"background_architecture\": {\n    \"背景类型\": \"照相馆标准绘制的背景布\",\n    \"画面内容\": \"中国传统宫殿建筑（疑似天安门或仿天安门样式）+ 松树 + 栏杆\",\n    \"象征意义\": \"将个人形象与国家象征性建筑结合，体现强烈的政治认同感\",\n    \"地理位置推测\": \"中国大陆主要城市照相馆（北京、上海、天津等大城市可能性较高）\"\n  },\n  \"era_items\": {\n    \"书籍\": {\n      \"特征\": \"厚本硬皮书，封面有文字（右侧照片中可见《毛泽东选集》字样）\",\n      \"意义\": \"当时最典型的政治文化符号\"\n    },\n    \"家具\": {\n      \"物品\": \"中式高脚木质花几（茶几）\",\n      \"时代特征\": \"50-70年代照相馆常用道具\"\n    },\n    \"盆景\": \"小型盆景，置于花几上，是当时照相馆常见装饰\"\n  },\n  \"overall_description\": {\n    \"整体氛围\": \"严肃、庄重、克制、带有强烈政治仪式感\",\n    \"拍摄年代推测\": \"1960年代末至1970年代中期（文革时期可能性极高）\",\n    \"可能场景\": \"照相馆纪念照 / 知青下乡前留影 / 入职/入党等重要时刻的正式照片\",\n    \"历史意义\": \"这组照片是特定历史时期中国青年女性形象的典型样本，体现了那个时代在审美、政治符号、个人表达上的高度统一性。两张照片（全身+半身）是当时非常流行的“标准照”拍摄模式。\",\n    \"照片状态\": \"老照片经过岁月侵蚀，出现明显折痕、霉斑和边缘破损，具有强烈的历史质感\"\n  },\n  \"summary\": \"这是一组拍摄于中国文革时期（约1966-1976年）的年轻女性标准照。照片中女性身着典型的中山装式干部服，手持《毛泽东选集》，站在绘有天安门图案的背景前，表情严肃庄重，是那个时代最具有代表性的视觉档案之一。\"\n}\n```\n\n此分析基于照片中人物的服饰、道具、背景、表情以及历史语境进行综合判断。"
+      },
+      "details": {
+        "final_score": 3.73,
+        "weights": {
+          "photo": 0.3,
+          "story": 0.5,
+          "interview": 0.2
+        },
+        "photo_evaluation": {
+          "raw_score": 12.0,
+          "max_score": 14.0,
+          "normalized_score": 4.29,
+          "accuracy": 85.71,
+          "image_path": "d:/desktop/Tencent Capstone Project/照片数据库/纺织厂女工__影楼版.png",
+          "image_description": "这是一张老旧的黑白双联照片，画面已明显折痕、龟裂和褪色。\n\n照片中是一位年轻女性，留着齐耳短发，面容严肃，神情坚定。她身穿一套当时常见的灰色女式干部服或工作服，衣服略显宽大，胸前口袋插着钢笔。左图中她全身站立，双手自然下垂；右图为半身特写，她双手持一本小册子（封面可见“毛主席语录”字样）抱于胸前。\n\n背景是典型的上世纪六七十年代照相馆布景：绘有天安门和松树的人造风景画，中间摆放着一张高脚小圆桌，桌上放着盆栽和装饰物。整体画面带有强烈的时代印记，氛围庄重而拘谨，透露出那个年代特有的严肃与质朴。",
+          "mme": {
+            "details": [
+              {
+                "question": "照片右侧的特写镜头中，女子手中是否拿着一本写有“一个纺织女工的日记”的本子？",
+                "expected": "yes",
+                "predicted": "yes",
+                "raw_response": "**yes**",
+                "correct": true,
+                "score": 1.0
+              },
+              {
+                "question": "女子的脖子上是否戴着一条闪亮奢华的珍珠项链？",
+                "expected": "no",
+                "predicted": "no",
+                "raw_response": "no",
+                "correct": true,
+                "score": 1.0
+              },
+              {
+                "question": "照片右侧女子的上衣左胸口袋处，是否插着一支钢笔？",
+                "expected": "yes",
+                "predicted": "yes",
+                "raw_response": "**yes**\n\nThe right-side image clearly shows a pen clipped into the left breast pocket of the woman's jacket.",
+                "correct": true,
+                "score": 1.0
+              },
+              {
+                "question": "画面左侧全身照的背景中，是否有一列正在高速行驶的现代动车组列车？",
+                "expected": "no",
+                "predicted": "no",
+                "raw_response": "no",
+                "correct": true,
+                "score": 1.0
+              },
+              {
+                "question": "这名女子是否穿着带有衣领和纽扣的长袖外套？",
+                "expected": "yes",
+                "predicted": "yes",
+                "raw_response": "yes",
+                "correct": true,
+                "score": 1.0
+              },
+              {
+                "question": "女子身旁的木制高几上，是否摆放着一台老式的拨盘式电话机？",
+                "expected": "no",
+                "predicted": "yes",
+                "raw_response": "**yes**\n\nThe image clearly shows a classic rotary dial telephone placed on the tall wooden pedestal table (高几) next to the woman.",
+                "correct": false,
+                "score": 0.0
+              },
+              {
+                "question": "照片左侧全身照的背景幕布上，是否画有类似天安门城楼的建筑图案？",
+                "expected": "yes",
+                "predicted": "yes",
+                "raw_response": "yes",
+                "correct": true,
+                "score": 1.0
+              },
+              {
+                "question": "从人物的穿着打扮和照片四周破损的相纸边缘来看，这是否表现的是一张极具年代感的老照片？",
+                "expected": "yes",
+                "predicted": "yes",
+                "raw_response": "yes",
+                "correct": true,
+                "score": 1.0
+              }
+            ],
+            "raw_score": 7.0,
+            "max_score": 8.0,
+            "normalized_score": 4.38
+          },
+          "mmbench": {
+            "details": [
+              {
+                "question": "观察照片左侧中女子的站姿、身旁摆放花瓶的木制高几以及背后带有天安门图案的风景布景，可以推断这张全身照的拍摄场景最可能是：",
+                "options": {
+                  "A": "她正在真实的北京天安门广场前游览拍照留念。",
+                  "B": "她在工厂车间的纺织机器旁进行日常的生产劳作。",
+                  "C": "她正在一家传统的照相馆内，利用手绘的风景幕布和道具作为背景进行人像摆拍。",
+                  "D": "她正在参加一场盛大的现代影视剧发布会，背后的建筑是高清电子屏幕播放的素材。"
+                },
+                "expected": "C",
+                "predicted": "C",
+                "raw_response": "C",
+                "correct": true,
+                "score": 1.0
+              },
+              {
+                "question": "结合女子手中《一个纺织女工的日记》、胸前的星形徽章与口袋里的钢笔，对比背景故事中关于她“转业到国棉一厂”、“被评为劳动标兵”以及“连载日记”的描述，以下对该人物身份和状态的推断最合理的是：",
+                "options": {
+                  "A": "她是一名推销员，正在向顾客展示最新出版的现代言情小说。",
+                  "B": "她是一名刚刚入伍的新兵，手里拿着的是部队配发的空白训练手册。",
+                  "C": "她是一名正在准备中考的女中学生，手里拿着的是她的语文复习资料。",
+                  "D": "她是一位具备一定文化素养的优秀纺织女工（或劳动标兵），这张照片可能是为了配合其日记发表或作为先进个人受表彰而特意在照相馆拍摄的荣誉纪念照。"
+                },
+                "expected": "D",
+                "predicted": "D",
+                "raw_response": "D",
+                "correct": true,
+                "score": 1.0
+              }
+            ],
+            "raw_score": 2.0,
+            "max_score": 2.0,
+            "normalized_score": 5.0
+          },
+          "hooks": {
+            "details": [
+              {
+                "hook": "日记本",
+                "exact_match": false,
+                "semantic_match": true,
+                "score": 1.0
+              },
+              {
+                "hook": "钢笔",
+                "exact_match": true,
+                "semantic_match": false,
+                "score": 1.0
+              },
+              {
+                "hook": "影楼",
+                "exact_match": false,
+                "semantic_match": false,
+                "score": 0.0
+              },
+              {
+                "hook": "徽章",
+                "exact_match": false,
+                "semantic_match": true,
+                "score": 1.0
+              }
+            ],
+            "raw_score": 3.0,
+            "max_score": 4.0,
+            "normalized_score": 3.75
+          },
+          "meta": {
+            "backend": "openai_compatible",
+            "model": "x-ai/grok-4.20-beta",
+            "scale": "0-5"
+          }
+        },
+        "story_evaluation": {
+          "scores": {
+            "relevance": 4.5,
+            "coherence": 4.5,
+            "empathy": 4.0,
+            "surprise": 2.5,
+            "engagement": 4.0,
+            "complexity": 4.0
+          },
+          "explanations": {
+            "relevance": "故事高度聚焦于从农村女孩到部队宣传员再到纺织女工的人生轨迹，与参考故事中‘战地女兵转业到安徽国棉一厂、学习后当工段长、写日记连载’的核心经历高度吻合，未跑题。",
+            "coherence": "叙事按时间顺序展开，从1929年出生到1985年退休，人物关系、时代背景与事件因果清晰连贯，逻辑通顺。",
+            "empathy": "通过‘饿得头晕眼花也不敢说’‘夜里睡不着把日记埋在砖缝里’‘眼眶有点热但忍住了’等细节，让读者感受到角色在苦难中的坚韧与情感波动。",
+            "surprise": "整体为平实的人生回忆录，缺少显著的剧情转折或意外结局，仅有文革被贴大字报这一小波折，惊喜度较低。",
+            "engagement": "第一人称口语化讲述，穿插感官细节（如棉絮呛人、浆糊味、机器轰鸣）和个人情感，具备较强的代入感和阅读吸引力。",
+            "complexity": "包含童年、参军、转业、三年自然灾害、文革、改革开放多个历史阶段，以及身份转变、写作、师徒关系等多层内容，细节与背景较为丰富。"
+          },
+          "final_score": 3.92,
+          "summary": "一篇情感真挚、细节扎实的口述体回忆录，时代感与个人命运结合较好，结构完整但戏剧张力不足。",
+          "raw_response": "{\n  \"scores\": {\n    \"relevance\": 4.5,\n    \"coherence\": 4.5,\n    \"empathy\": 4,\n    \"surprise\": 2.5,\n    \"engagement\": 4,\n    \"complexity\": 4\n  },\n  \"explanations\": {\n    \"relevance\": \"故事高度聚焦于从农村女孩到部队宣传员再到纺织女工的人生轨迹，与参考故事中‘战地女兵转业到安徽国棉一厂、学习后当工段长、写日记连载’的核心经历高度吻合，未跑题。\",\n    \"coherence\": \"叙事按时间顺序展开，从1929年出生到1985年退休，人物关系、时代背景与事件因果清晰连贯，逻辑通顺。\",\n    \"empathy\": \"通过‘饿得头晕眼花也不敢说’‘夜里睡不着把日记埋在砖缝里’‘眼眶有点热但忍住了’等细节，让读者感受到角色在苦难中的坚韧与情感波动。\",\n    \"surprise\": \"整体为平实的人生回忆录，缺少显著的剧情转折或意外结局，仅有文革被贴大字报这一小波折，惊喜度较低。\",\n    \"engagement\": \"第一人称口语化讲述，穿插感官细节（如棉絮呛人、浆糊味、机器轰鸣）和个人情感，具备较强的代入感和阅读吸引力。\",\n    \"complexity\": \"包含童年、参军、转业、三年自然灾害、文革、改革开放多个历史阶段，以及身份转变、写作、师徒关系等多层内容，细节与背景较为丰富。\"\n  },\n  \"final_score\": 3.92,\n  \"summary\": \"一篇情感真挚、细节扎实的口述体回忆录，时代感与个人命运结合较好，结构完整但戏剧张力不足。\"\n}",
+          "meta": {
+            "backend": "openai_compatible",
+            "model": "x-ai/grok-4.20-beta",
+            "has_prompt": false,
+            "has_reference": true
+          }
+        },
+        "interview_evaluation": {
+          "metrics": {
+            "answer_quality": 0.45,
+            "information_completeness": 3.33,
+            "question_depth": 5.0,
+            "topic_coverage": 0.83
+          },
+          "discussed_dimensions": [
+            "地点"
+          ],
+          "remaining_gaps": [
+            "人物",
+            "时间"
+          ],
+          "question_count": 1,
+          "final_score": 2.41,
+          "meta": {
+            "scale": "0-5",
+            "standard": "pr2-followup-quality"
+          }
+        },
+        "meta": {
+          "sample_index": 0,
+          "benchmark_file": "C:\\Users\\SHENGZ~1\\AppData\\Local\\Temp\\tmp1jbwdn03\\benchmark.json",
+          "score_scale": "0-5"
+        }
+      },
+      "data_type": "simulated"
+    },
+    {
+      "sample_id": "宗祠",
+      "photo_score": 4.64,
+      "story_score": 4.0,
+      "interview_score": 2.8,
+      "final_score": 3.95,
+      "generated_story": "我今年七十八岁了，姓林，叫林永泉，福建闽南一个靠山的小村子人。去年冬天，宗祠重修落成庆典那天，我站在祠堂前广场上，和族里另一位长辈一起把两本新修的红色族谱交接过去。四周舞狮在闹，横幅红得晃眼，后头挤满了老老少少，还有人举着手机拍。照片里我戴着眼镜，穿了件深蓝色羽绒服，脸上笑着，心里却翻腾得厉害。回到家，我常想起那一天，总觉得有些话得跟后辈们讲讲，不然就真要带进土里了。\n我出生在1946年，家里兄弟姐妹六个，我排行老三。父亲是种田的，一年到头守着几亩薄地，母亲除了做饭、喂猪，还要帮人洗衣服补贴家用。那时候村里刚解放没几年，日子过得紧巴巴的。记得我小时候最怕过年，因为要跟父亲去祠堂祭祖，祠堂已经破败得不成样子，屋顶漏雨，梁柱发黑。父亲每次都叹气，说林家祖上也阔过，只是后来世道乱，祠堂就没人好好管了。我那时小，只觉得冷，缩在父亲身后，闻着那股霉味和香火混在一起的怪味道。\n十五岁那年，我去县城读了初中，算是村里头一批。毕业后没考上高中，就回村里教了两年小学。那时候国家号召知识青年上山下乡，我主动报了名，去了闽北一个更偏的山村。那里比我们老家还苦，住的是土坯房，晚上点煤油灯，教的都是山里娃。我在那儿待了六年，娶了同是知青的妻子，她是浙江人，性子软，心肠好。我们俩一起种过地、挑过粪，也一起挨过批斗。1978年恢复高考，毕业后，我被分配回老家县里的中学教语文，一教就是二十多年，直到2008年退休。\n退休那几年，我本来打算跟老伴去厦门帮儿子带孙子。儿子在厦门做外贸，日子过得还不错。可就在2015年左右，村里开始有人张罗重修林氏宗祠的事。起初我没太上心，总觉得可后来我发现，事情跟我想的完全不一样。\n真正让我心里头震动的，是我们族里一个在广东东莞做装修生意的后辈，叫林志强。他比我小二十多岁，从小看着他长大，初中没读完就出去打工，靠着学装修手艺，在东莞站住了脚，生意做得还算红火。2019年，村里决定重修宗祠，他听说后，二话不说把东莞的店面和几个工程全交给合伙人，回来负责整个祠堂的修缮和装修。整整两年，他没接外面一个活儿，一分钱报酬也没要。每天从早到晚泡在工地上，风吹日晒，指挥工人怎么按老样子修复飞檐、怎么配木雕颜色。祠堂里很多精细的活儿，都是他亲自上手做的。\n我每次去工地看他，都见他满身灰，眼睛却亮得很。有一次我忍不住问他：“志强，你在外头一年能挣不少钱，这两年全扔在这里，值得吗？”他抹了把汗，笑笑说：“叔公，祠堂是咱们林家的根，根都没了，人在外面再有钱，也像没脚的鸟。”就这句话，讲得我当时眼眶就热了。\n就是这种精神，把全族的人都带动起来了。有的在城里做生意的，捐了钱；有的在工地干活的，回来义务做了两个月；连一些在国外的族亲，也专门寄钱回来。众人拾柴火焰高，2022年秋天，宗祠终于修好了。青砖黛瓦，雕梁画栋，比我小时候见到的模样还要体面。庆典那天，舞狮、祭祖、交接新族谱，所有程序走下来，我心里一直想着志强和所有出钱出力的族亲们。\n站在祠堂前把那两本烫金的红色族谱递出去的时候，我心里最强烈的感受，其实不是自豪，而是感动。感动我们林家到了这个年代，还有人愿意为老祖宗的东西舍弃自己的利益；感动大家伙儿终于明白，钱可以再赚，根却不能断。那一刻我好像看见父亲当年站在破祠堂前的样子，也看见自己年轻时在山村教书时的样子，更看见我孙子这一辈拿着手机拍视频的样子。时代变了，可有些东西，好像又慢慢回来了。\n早上起来我还是喜欢到祠堂走一走，看看那块“林氏宗祠”的牌匾，看看新修的族谱摆在玻璃柜里。偶尔有年轻的后辈回来问我家谱的事，我就会把当年的事慢慢讲给他们听。\n我这一辈子，没做过什么惊天动地的大事。当过老师，种过地，挨过苦，也享过晚年的清福。要说遗憾，就是年轻时对父母照顾得太少；要说骄傲，就是我们林家这一代人，总算把祠堂给修起来了，把族谱给续上了。\n我想告诉后辈们，日子不管过得多好，都别忘了自己是从哪儿来的。钱可以赚，房子可以换，但祖宗传下来的东西，是一代一代人接力守住的。就像志强说的，根要是没了，人在外面再风光，也像没脚的鸟。你们这一代比我们幸运得多，希望你们在忙着过好自己的日子时，也能抽空回来看看，陪陪老人，修修祠堂，翻翻族谱。把这份心传下去，我们林家就永远有根。\n这就是我看到那张照片时，想对你们说的话。",
+      "qa_history": [
+        {
+          "question": "两位长辈正在宗祠前交接那两本红色烫金的族谱时，您当时心里最强烈的感受是什么？",
+          "answer": "让我深受感动的是，我们有一位在广东东莞做装修生意的族亲，为了回来负责宗祠的重建和装修工程，他放下了自己两年的生意，不计报酬，无私奉献。正是这种精神，鼓舞和感动了所有的族人，大家有钱出钱，有力出力，“众人拾柴火焰高”，终于在2022年将宗祠修缮一新。"
+        }
+      ],
+      "analysis_result": {
+        "visual_elements": "```json\n{\n  \"visual_elements\": {\n    \"people\": [\n      {\n        \"position\": \"foreground_left\",\n        \"gender\": \"male\",\n        \"age\": \"70-80\",\n        \"description\": \"身材较高，戴眼镜，短白发，面带微笑\",\n        \"relationship_inference\": \"与另一位老人为家族长辈或宗亲代表\"\n      },\n      {\n        \"position\": \"foreground_center\",\n        \"gender\": \"male\",\n        \"age\": \"75-85\",\n        \"description\": \"身材较矮，白发稀疏，侧身面向左侧老人\",\n        \"relationship_inference\": \"与左侧老人共同主持仪式，可能为宗族重要人物\"\n      },\n      {\n        \"position\": \"background\",\n        \"description\": \"大量村民及游客，包含中老年人、青年及儿童\",\n        \"count\": \"数十人\"\n      }\n    ],\n    \"scene\": \"传统中国宗祠前广场，举办宗族盛大庆典活动\",\n    \"objects\": [\n      \"两本红色精装书籍（族谱或宗谱）\",\n      \"两头大型传统舞狮（黄橙色，造型经典）\",\n      \"红色横幅\",\n      \"传统中式建筑（宗祠）\"\n    ]\n  },\n  \"expressions_and_emotions\": {\n    \"left_man\": {\n      \"expression\": \"温和微笑，眼角有明显笑纹\",\n      \"posture\": \"略微前倾，将书籍递给对方\",\n      \"emotion\": \"喜悦、自豪、庄重\"\n    },\n    \"right_man\": {\n      \"expression\": \"侧脸微笑，正在交接书籍\",\n      \"posture\": \"双手接书，身体微微前倾\",\n      \"emotion\": \"欣慰、尊重、仪式感强\"\n    },\n    \"crowd\": {\n      \"emotion\": \"热闹、欢庆、好奇\",\n      \"activity\": \"部分人举起手机拍照录像\"\n    }\n  },\n  \"clothing_details\": {\n    \"left_man\": \"深蓝色羽绒服，内搭浅色衬衫，现代保暖冬装\",\n    \"right_man\": \"深蓝色中长款呢子大衣或中山装风格外套，正式庄重\",\n    \"crowd\": \"以红色、粉色等喜庆颜色为主的现代冬季服装\",\n    \"era_feature\": \"21世纪当代服饰，保暖型面料为主\"\n  },\n  \"background_architecture\": {\n    \"building\": \"林氏宗祠（祠堂）\",\n    \"style\": \"传统江南或闽南风格，飞檐翘角，木结构，雕梁画栋\",\n    \"features\": \"红色大门、金色牌匾、精美木雕、青砖或石材基座\",\n    \"signboard\": \"‘林氏宗祠’（上方主匾）\",\n    \"location_inference\": \"中国东南沿海地区（福建、广东、浙江等地），林姓聚居区\",\n    \"era\": \"建筑为传统古建或复建，拍摄时为当代\"\n  },\n  \"era_objects\": {\n    \"books\": \"红色硬壳精装书籍，封面烫金，典型当代族谱印刷样式\",\n    \"banner\": \"红色电子喷绘横幅，简体汉字\",\n    \"vehicles\": \"背景可见现代汽车（SUV）\",\n    \"technology\": \"多名群众使用智能手机拍摄\"\n  },\n  \"overall_description\": {\n    \"atmosphere\": \"喜庆、庄重、家族凝聚力强，既有传统仪式感，又充满现代生活气息\",\n    \"estimated_year\": \"2015-2025年（极可能是2020年代）\",\n    \"possible_scene\": \"林氏宗族祠堂落成、族谱续修完成或宗祠重修落成庆典仪式\",\n    \"cultural_significance\": \"展现当代中国乡村/家族对传统宗族文化的复兴与重视，是‘传统文化创造性转化’的典型场景\"\n  }\n}\n```",
+        "emotions": "",
+        "clothing": "```json\n{\n  \"visual_elements\": {\n    \"people\": [\n      {\n        \"position\": \"foreground_left\",\n        \"gender\": \"male\",\n        \"age\": \"70-80\",\n        \"description\": \"身材较高，戴眼镜，短白发，面带微笑\",\n        \"relationship_inference\": \"与另一位老人为家族长辈或宗亲代表\"\n      },\n      {\n        \"position\": \"foreground_center\",\n        \"gender\": \"male\",\n        \"age\": \"75-85\",\n        \"description\": \"身材较矮，白发稀疏，侧身面向左侧老人\",\n        \"relationship_inference\": \"与左侧老人共同主持仪式，可能为宗族重要人物\"\n      },\n      {\n        \"position\": \"background\",\n        \"description\": \"大量村民及游客，包含中老年人、青年及儿童\",\n        \"count\": \"数十人\"\n      }\n    ],\n    \"scene\": \"传统中国宗祠前广场，举办宗族盛大庆典活动\",\n    \"objects\": [\n      \"两本红色精装书籍（族谱或宗谱）\",\n      \"两头大型传统舞狮（黄橙色，造型经典）\",\n      \"红色横幅\",\n      \"传统中式建筑（宗祠）\"\n    ]\n  },\n  \"expressions_and_emotions\": {\n    \"left_man\": {\n      \"expression\": \"温和微笑，眼角有明显笑纹\",\n      \"posture\": \"略微前倾，将书籍递给对方\",\n      \"emotion\": \"喜悦、自豪、庄重\"\n    },\n    \"right_man\": {\n      \"expression\": \"侧脸微笑，正在交接书籍\",\n      \"posture\": \"双手接书，身体微微前倾\",\n      \"emotion\": \"欣慰、尊重、仪式感强\"\n    },\n    \"crowd\": {\n      \"emotion\": \"热闹、欢庆、好奇\",\n      \"activity\": \"部分人举起手机拍照录像\"\n    }\n  },\n  \"clothing_details\": {\n    \"left_man\": \"深蓝色羽绒服，内搭浅色衬衫，现代保暖冬装\",\n    \"right_man\": \"深蓝色中长款呢子大衣或中山装风格外套，正式庄重\",\n    \"crowd\": \"以红色、粉色等喜庆颜色为主的现代冬季服装\",\n    \"era_feature\": \"21世纪当代服饰，保暖型面料为主\"\n  },\n  \"background_architecture\": {\n    \"building\": \"林氏宗祠（祠堂）\",\n    \"style\": \"传统江南或闽南风格，飞檐翘角，木结构，雕梁画栋\",\n    \"features\": \"红色大门、金色牌匾、精美木雕、青砖或石材基座\",\n    \"signboard\": \"‘林氏宗祠’（上方主匾）\",\n    \"location_inference\": \"中国东南沿海地区（福建、广东、浙江等地），林姓聚居区\",\n    \"era\": \"建筑为传统古建或复建，拍摄时为当代\"\n  },\n  \"era_objects\": {\n    \"books\": \"红色硬壳精装书籍，封面烫金，典型当代族谱印刷样式\",\n    \"banner\": \"红色电子喷绘横幅，简体汉字\",\n    \"vehicles\": \"背景可见现代汽车（SUV）\",\n    \"technology\": \"多名群众使用智能手机拍摄\"\n  },\n  \"overall_description\": {\n    \"atmosphere\": \"喜庆、庄重、家族凝聚力强，既有传统仪式感，又充满现代生活气息\",\n    \"estimated_year\": \"2015-2025年（极可能是2020年代）\",\n    \"possible_scene\": \"林氏宗族祠堂落成、族谱续修完成或宗祠重修落成庆典仪式\",\n    \"cultural_significance\": \"展现当代中国乡村/家族对传统宗族文化的复兴与重视，是‘传统文化创造性转化’的典型场景\"\n  }\n}\n```",
+        "background": "```json\n{\n  \"visual_elements\": {\n    \"people\": [\n      {\n        \"position\": \"foreground_left\",\n        \"gender\": \"male\",\n        \"age\": \"70-80\",\n        \"description\": \"身材较高，戴眼镜，短白发，面带微笑\",\n        \"relationship_inference\": \"与另一位老人为家族长辈或宗亲代表\"\n      },\n      {\n        \"position\": \"foreground_center\",\n        \"gender\": \"male\",\n        \"age\": \"75-85\",\n        \"description\": \"身材较矮，白发稀疏，侧身面向左侧老人\",\n        \"relationship_inference\": \"与左侧老人共同主持仪式，可能为宗族重要人物\"\n      },\n      {\n        \"position\": \"background\",\n        \"description\": \"大量村民及游客，包含中老年人、青年及儿童\",\n        \"count\": \"数十人\"\n      }\n    ],\n    \"scene\": \"传统中国宗祠前广场，举办宗族盛大庆典活动\",\n    \"objects\": [\n      \"两本红色精装书籍（族谱或宗谱）\",\n      \"两头大型传统舞狮（黄橙色，造型经典）\",\n      \"红色横幅\",\n      \"传统中式建筑（宗祠）\"\n    ]\n  },\n  \"expressions_and_emotions\": {\n    \"left_man\": {\n      \"expression\": \"温和微笑，眼角有明显笑纹\",\n      \"posture\": \"略微前倾，将书籍递给对方\",\n      \"emotion\": \"喜悦、自豪、庄重\"\n    },\n    \"right_man\": {\n      \"expression\": \"侧脸微笑，正在交接书籍\",\n      \"posture\": \"双手接书，身体微微前倾\",\n      \"emotion\": \"欣慰、尊重、仪式感强\"\n    },\n    \"crowd\": {\n      \"emotion\": \"热闹、欢庆、好奇\",\n      \"activity\": \"部分人举起手机拍照录像\"\n    }\n  },\n  \"clothing_details\": {\n    \"left_man\": \"深蓝色羽绒服，内搭浅色衬衫，现代保暖冬装\",\n    \"right_man\": \"深蓝色中长款呢子大衣或中山装风格外套，正式庄重\",\n    \"crowd\": \"以红色、粉色等喜庆颜色为主的现代冬季服装\",\n    \"era_feature\": \"21世纪当代服饰，保暖型面料为主\"\n  },\n  \"background_architecture\": {\n    \"building\": \"林氏宗祠（祠堂）\",\n    \"style\": \"传统江南或闽南风格，飞檐翘角，木结构，雕梁画栋\",\n    \"features\": \"红色大门、金色牌匾、精美木雕、青砖或石材基座\",\n    \"signboard\": \"‘林氏宗祠’（上方主匾）\",\n    \"location_inference\": \"中国东南沿海地区（福建、广东、浙江等地），林姓聚居区\",\n    \"era\": \"建筑为传统古建或复建，拍摄时为当代\"\n  },\n  \"era_objects\": {\n    \"books\": \"红色硬壳精装书籍，封面烫金，典型当代族谱印刷样式\",\n    \"banner\": \"红色电子喷绘横幅，简体汉字\",\n    \"vehicles\": \"背景可见现代汽车（SUV）\",\n    \"technology\": \"多名群众使用智能手机拍摄\"\n  },\n  \"overall_description\": {\n    \"atmosphere\": \"喜庆、庄重、家族凝聚力强，既有传统仪式感，又充满现代生活气息\",\n    \"estimated_year\": \"2015-2025年（极可能是2020年代）\",\n    \"possible_scene\": \"林氏宗族祠堂落成、族谱续修完成或宗祠重修落成庆典仪式\",\n    \"cultural_significance\": \"展现当代中国乡村/家族对传统宗族文化的复兴与重视，是‘传统文化创造性转化’的典型场景\"\n  }\n}\n```",
+        "era_items": "",
+        "overall_description": "```json\n{\n  \"visual_elements\": {\n    \"people\": [\n      {\n        \"position\": \"foreground_left\",\n        \"gender\": \"male\",\n        \"age\": \"70-80\",\n        \"description\": \"身材较高，戴眼镜，短白发，面带微笑\",\n        \"relationship_inference\": \"与另一位老人为家族长辈或宗亲代表\"\n      },\n      {\n        \"position\": \"foreground_center\",\n        \"gender\": \"male\",\n        \"age\": \"75-85\",\n        \"description\": \"身材较矮，白发稀疏，侧身面向左侧老人\",\n        \"relationship_inference\": \"与左侧老人共同主持仪式，可能为宗族重要人物\"\n      },\n      {\n        \"position\": \"background\",\n        \"description\": \"大量村民及游客，包含中老年人、青年及儿童\",\n        \"count\": \"数十人\"\n      }\n    ],\n    \"scene\": \"传统中国宗祠前广场，举办宗族盛大庆典活动\",\n    \"objects\": [\n      \"两本红色精装书籍（族谱或宗谱）\",\n      \"两头大型传统舞狮（黄橙色，造型经典）\",\n      \"红色横幅\",\n      \"传统中式建筑（宗祠）\"\n    ]\n  },\n  \"expressions_and_emotions\": {\n    \"left_man\": {\n      \"expression\": \"温和微笑，眼角有明显笑纹\",\n      \"posture\": \"略微前倾，将书籍递给对方\",\n      \"emotion\": \"喜悦、自豪、庄重\"\n    },\n    \"right_man\": {\n      \"expression\": \"侧脸微笑，正在交接书籍\",\n      \"posture\": \"双手接书，身体微微前倾\",\n      \"emotion\": \"欣慰、尊重、仪式感强\"\n    },\n    \"crowd\": {\n      \"emotion\": \"热闹、欢庆、好奇\",\n      \"activity\": \"部分人举起手机拍照录像\"\n    }\n  },\n  \"clothing_details\": {\n    \"left_man\": \"深蓝色羽绒服，内搭浅色衬衫，现代保暖冬装\",\n    \"right_man\": \"深蓝色中长款呢子大衣或中山装风格外套，正式庄重\",\n    \"crowd\": \"以红色、粉色等喜庆颜色为主的现代冬季服装\",\n    \"era_feature\": \"21世纪当代服饰，保暖型面料为主\"\n  },\n  \"background_architecture\": {\n    \"building\": \"林氏宗祠（祠堂）\",\n    \"style\": \"传统江南或闽南风格，飞檐翘角，木结构，雕梁画栋\",\n    \"features\": \"红色大门、金色牌匾、精美木雕、青砖或石材基座\",\n    \"signboard\": \"‘林氏宗祠’（上方主匾）\",\n    \"location_inference\": \"中国东南沿海地区（福建、广东、浙江等地），林姓聚居区\",\n    \"era\": \"建筑为传统古建或复建，拍摄时为当代\"\n  },\n  \"era_objects\": {\n    \"books\": \"红色硬壳精装书籍，封面烫金，典型当代族谱印刷样式\",\n    \"banner\": \"红色电子喷绘横幅，简体汉字\",\n    \"vehicles\": \"背景可见现代汽车（SUV）\",\n    \"technology\": \"多名群众使用智能手机拍摄\"\n  },\n  \"overall_description\": {\n    \"atmosphere\": \"喜庆、庄重、家族凝聚力强，既有传统仪式感，又充满现代生活气息\",\n    \"estimated_year\": \"2015-2025年（极可能是2020年代）\",\n    \"possible_scene\": \"林氏宗族祠堂落成、族谱续修完成或宗祠重修落成庆典仪式\",\n    \"cultural_significance\": \"展现当代中国乡村/家族对传统宗族文化的复兴与重视，是‘传统文化创造性转化’的典型场景\"\n  }\n}\n```"
+      },
+      "details": {
+        "final_score": 3.95,
+        "weights": {
+          "photo": 0.3,
+          "story": 0.5,
+          "interview": 0.2
+        },
+        "photo_evaluation": {
+          "raw_score": 13.0,
+          "max_score": 14.0,
+          "normalized_score": 4.64,
+          "accuracy": 92.86,
+          "image_path": "d:/desktop/Tencent Capstone Project/照片数据库/宗祠.png",
+          "image_description": "**描述：**\n\n两位白发老人站在古建筑前的石阶上，正在交接两本厚重的红色精装书。左边老人戴眼镜，穿着深蓝色羽绒服，右边老人身着黑色外套，两人皆面带微笑。背景是雕梁画栋的林氏宗祠，门楣挂着“林氏宗祠”金字匾额，门前悬挂红色横幅，上书“热烈祝贺林氏宗祠落成暨族谱颁发庆典”。两头色彩鲜艳的舞狮立于宗祠门前，远处聚集着众多村民，有人观看，有人举手机拍照。整体画面呈现出传统宗族文化复兴的喜庆与庄重氛围，时代特征为当代。",
+          "mme": {
+            "details": [
+              {
+                "question": "画面前景中，左侧戴眼镜的男子手里拿的书封面上是否写着“林氏族谱”字样？",
+                "expected": "yes",
+                "predicted": "yes",
+                "raw_response": "yes",
+                "correct": true,
+                "score": 1.0
+              },
+              {
+                "question": "画面前景中，右侧的男子是否穿着一件深蓝色的夹克外套？",
+                "expected": "yes",
+                "predicted": "yes",
+                "raw_response": "yes",
+                "correct": true,
+                "score": 1.0
+              },
+              {
+                "question": "建筑门楣上的金字牌匾是否明确写着“林氏宗祠”？",
+                "expected": "yes",
+                "predicted": "yes",
+                "raw_response": "**yes**",
+                "correct": true,
+                "score": 1.0
+              },
+              {
+                "question": "红色横幅上的文字内容中，是否包含“落成暨族谱颁发”的字样？",
+                "expected": "yes",
+                "predicted": "yes",
+                "raw_response": "yes",
+                "correct": true,
+                "score": 1.0
+              },
+              {
+                "question": "宗祠建筑前，是否有两只金黄色的狮子正在进行舞狮表演？",
+                "expected": "yes",
+                "predicted": "yes",
+                "raw_response": "yes",
+                "correct": true,
+                "score": 1.0
+              },
+              {
+                "question": "画面前景中，两名男子的头发是否大部分是黑色的？",
+                "expected": "no",
+                "predicted": "yes",
+                "raw_response": "yes",
+                "correct": false,
+                "score": 0.0
+              },
+              {
+                "question": "画面中，是否有几架无人机在天空中进行航拍？",
+                "expected": "no",
+                "predicted": "no",
+                "raw_response": "no",
+                "correct": true,
+                "score": 1.0
+              },
+              {
+                "question": "前景两名男子身后的地面上，是否有一个巨大的三角钢琴？",
+                "expected": "no",
+                "predicted": "no",
+                "raw_response": "no",
+                "correct": true,
+                "score": 1.0
+              }
+            ],
+            "raw_score": 7.0,
+            "max_score": 8.0,
+            "normalized_score": 4.38
+          },
+          "mmbench": {
+            "details": [
+              {
+                "question": "根据画面中人群普遍使用手机拍照（包括屏幕显示），以及横幅上关于“宗祠落成暨族谱颁发庆典”的信息，可以推断这张照片所拍摄的庆典发生于哪个时期？",
+                "options": {
+                  "A": "20 世纪 80 年代，早期黑白手机时代",
+                  "B": "20 世纪 90 年代，BP 机和早茶文化盛行时代",
+                  "C": "21 世纪 10 年代，智能手机刚起步时代",
+                  "D": "21 世纪 20 年代，移动互联深入生活、宗族文化复兴时代"
+                },
+                "expected": "D",
+                "predicted": "D",
+                "raw_response": "D",
+                "correct": true,
+                "score": 1.0
+              },
+              {
+                "question": "结合画面中前景两人热切交流的情态，以及手中的《林氏族谱》，可以推断这两位男子最有可能是以下哪种身份或关系？",
+                "options": {
+                  "A": "外地电视台记者正在采访当地退休干部",
+                  "B": "参与了长达三载修谱工作的、具有深厚宗族感情的退休林氏族亲",
+                  "C": "林氏宗祠重建工程的施工队长与总设计师",
+                  "D": "该地区新上任的文化局长与他的行政秘书"
+                },
+                "expected": "B",
+                "predicted": "B",
+                "raw_response": "B",
+                "correct": true,
+                "score": 1.0
+              }
+            ],
+            "raw_score": 2.0,
+            "max_score": 2.0,
+            "normalized_score": 5.0
+          },
+          "hooks": {
+            "details": [
+              {
+                "hook": "林氏宗祠",
+                "exact_match": true,
+                "semantic_match": false,
+                "score": 1.0
+              },
+              {
+                "hook": "林氏族谱",
+                "exact_match": false,
+                "semantic_match": true,
+                "score": 1.0
+              },
+              {
+                "hook": "舞狮",
+                "exact_match": true,
+                "semantic_match": false,
+                "score": 1.0
+              },
+              {
+                "hook": "庆典",
+                "exact_match": true,
+                "semantic_match": false,
+                "score": 1.0
+              }
+            ],
+            "raw_score": 4.0,
+            "max_score": 4.0,
+            "normalized_score": 5.0
+          },
+          "meta": {
+            "backend": "openai_compatible",
+            "model": "x-ai/grok-4.20-beta",
+            "scale": "0-5"
+          }
+        },
+        "story_evaluation": {
+          "scores": {
+            "relevance": 4.5,
+            "coherence": 4.5,
+            "empathy": 4.5,
+            "surprise": 2.5,
+            "engagement": 4.0,
+            "complexity": 4.0
+          },
+          "explanations": {
+            "relevance": "故事高度聚焦于宗祠修缮、族谱续修与家族根脉主题，与Reference Story的核心事件（族亲无偿修祠、2022年落成、2023年庆典）高度一致，未跑题。",
+            "coherence": "叙事时间线清晰，从1946年出生到2022年庆典，人物关系（叔公与志强）、因果逻辑连贯，事件发展自然。",
+            "empathy": "通过“我”对父亲叹气、志强满身灰却眼亮的细节描写，以及“眼眶就热了”“感动”等内心独白，读者能强烈感受到家族责任与情感共鸣。",
+            "surprise": "整体平铺直叙，虽有志强放弃生意回乡的情节，但缺乏显著转折或意外结局，惊喜度较低。",
+            "engagement": "第一人称回忆结合具体生活细节（如闻霉味、挑粪、工地对话），情感真挚，易让读者持续投入。",
+            "complexity": "包含个人一生跨度（知青、教书、退休）、家族历史、志强事迹、社会变迁等多层内容，细节丰富但未过度复杂。"
+          },
+          "final_score": 4.0,
+          "summary": "一篇情感真挚、主题鲜明的家族记忆故事，叙事流畅、共情力强，但惊喜度不足，整体完成度较高。",
+          "raw_response": "{\n  \"scores\": {\n    \"relevance\": 4.5,\n    \"coherence\": 4.5,\n    \"empathy\": 4.5,\n    \"surprise\": 2.5,\n    \"engagement\": 4,\n    \"complexity\": 4\n  },\n  \"explanations\": {\n    \"relevance\": \"故事高度聚焦于宗祠修缮、族谱续修与家族根脉主题，与Reference Story的核心事件（族亲无偿修祠、2022年落成、2023年庆典）高度一致，未跑题。\",\n    \"coherence\": \"叙事时间线清晰，从1946年出生到2022年庆典，人物关系（叔公与志强）、因果逻辑连贯，事件发展自然。\",\n    \"empathy\": \"通过“我”对父亲叹气、志强满身灰却眼亮的细节描写，以及“眼眶就热了”“感动”等内心独白，读者能强烈感受到家族责任与情感共鸣。\",\n    \"surprise\": \"整体平铺直叙，虽有志强放弃生意回乡的情节，但缺乏显著转折或意外结局，惊喜度较低。\",\n    \"engagement\": \"第一人称回忆结合具体生活细节（如闻霉味、挑粪、工地对话），情感真挚，易让读者持续投入。\",\n    \"complexity\": \"包含个人一生跨度（知青、教书、退休）、家族历史、志强事迹、社会变迁等多层内容，细节丰富但未过度复杂。\"\n  },\n  \"final_score\": 4.00,\n  \"summary\": \"一篇情感真挚、主题鲜明的家族记忆故事，叙事流畅、共情力强，但惊喜度不足，整体完成度较高。\"\n}",
+          "meta": {
+            "backend": "openai_compatible",
+            "model": "x-ai/grok-4.20-beta",
+            "has_prompt": false,
+            "has_reference": true
+          }
+        },
+        "interview_evaluation": {
+          "metrics": {
+            "answer_quality": 2.4,
+            "information_completeness": 2.5,
+            "question_depth": 5.0,
+            "topic_coverage": 0.83
+          },
+          "discussed_dimensions": [
+            "人物"
+          ],
+          "remaining_gaps": [
+            "地点",
+            "时间",
+            "细节"
+          ],
+          "question_count": 1,
+          "final_score": 2.8,
+          "meta": {
+            "scale": "0-5",
+            "standard": "pr2-followup-quality"
+          }
+        },
+        "meta": {
+          "sample_index": 0,
+          "benchmark_file": "C:\\Users\\SHENGZ~1\\AppData\\Local\\Temp\\tmpnw6nhiiy\\benchmark.json",
+          "score_scale": "0-5"
+        }
+      },
+      "data_type": "simulated"
+    },
+    {
+      "sample_id": "夜里行军",
+      "photo_score": 3.46,
+      "story_score": 3.67,
+      "interview_score": 2.03,
+      "final_score": 3.28,
+      "generated_story": "我叫李志明，今年八十二岁，广东潮阳人。昨天晚辈拿来一张老照片让我看，黑白的，边角都发黄了。照片里是一队人在夜间沿海的山径上走着，最前头那个背影就是我，手里提着灯，腰上挂着水壶，身后跟着五个新兵。看到这张照片，我心里忽然就想，有些话还是得跟你们这些后辈讲讲，不然以后就没人知道了。\n我出生在民国二十一年，那时候家里穷，父亲在县城给人打短工，母亲种几亩薄田，勉强够一家人糊口。小时候最深的记忆就是饿。每年青黄不接的时候，母亲就把番薯藤切碎了和米糠一起煮，我们兄弟几个蹲在门槛上，捧着碗呼啦呼啦吃得比什么都香。父亲常说，男孩子要吃得苦，以后才有出路。我十三岁那年，家里实在养不起了，就把我送到汕头一家米行当学徒。每天天不亮就要起来扫地、挑水、搬米袋，晚上睡在米行后头的阁楼上，老鼠在头顶跑来跑去。那时候我才知道，世道有多难。\n一九四九年以后，世道慢慢变了。我二十三岁那年，村里开始动员参军。我想着与其在米行给人低头哈腰，不如去当兵，说不定还能混出点名堂。家里人起初不同意，母亲哭了半宿，说打仗要死人的。我跪在堂屋里给父母磕了三个头，说：“阿爸阿妈，我去为国家做事，回来一定好好孝顺你们。”就这样，我穿上了军装。\n参军后，我们这批新兵先是被编在野战军下面的教导队。那天晚上发生的事，我到我们在沿海那个县城住了一晚，第二天一早军车就把我们拉到了码头。船靠岸的时候，天已经完全黑了。岛上没有灯，只有风吹着海浪的声音。我们六个人排成一队，摸黑往山上走。我被指定走在最前面，手里拿着手电筒，腰间的水壶随着步子一下一下地撞着胯骨。山路又窄又陡，左边是灌木和石头，右边就是悬崖，下面就是海。后面五个新兵谁也不敢说话，只能听见鞋子踩在碎石上的声音和粗重的喘气声。我们就这样走了一个半钟头，才终于看到教导队的灯光。那天晚上我脚上打了三个血泡，第二天脱袜子的时候，袜子都粘在肉上了。\n教导队的生活比我想象的还要苦。每天天还没亮就要出操，跑步、爬山、练刺杀、背诵条令。饭堂里经常只有番薯和咸菜，肉一个月才能吃上两回。我个子不高，体力也不是最好的，经常被班长骂“潮阳仔，腿短还想当兵？”可我咬着牙，从来不喊苦。晚上躺在硬板床上，我常常想起小时候母亲煮的那锅番薯藤汤，心里反而踏实了很多。我知道，只有把眼前这关熬过去，以后才有资格说自己是个有用的人。\n在部队里，我一干就是三十多年。从新兵到班长，再到排长，最后转业到地方一家机械厂当保卫科科长。中间也经历过不少事。一九六二年边境紧张的时候，我们连紧急拉到福建前线，在山沟里挖了三个月的战壕，蚊子咬得人晚上睡不着。妻子是我一九五八年结婚的，她是潮阳老家一个裁缝的女儿。那时候我一个月只能回家三天，她一个人带着两个孩子，还要照顾我瘫痪在床的母亲。家里最困难的时候，她把自己的金耳环都卖了给我母亲抓药。我每次回家看到她瘦削的脸，都说不出话来，只能把津贴全部交给她。\n转业回到地方后，我才真正体会到什么是柴米油盐。工厂里管保卫，表面看着轻松，其实责任不小。晚上要巡厂，白天要处理各种纠纷，回家还要帮妻子做家务。那时候孩子们上学要交学费，我工资不高，就省吃俭用，衣服穿了补，补了穿，一双解放鞋穿了五年。孩子们小时候最喜欢听我讲当兵时候的故事，特别是那晚在岛上走夜路的事。他们总是睁大眼睛问：“爸爸，你害怕吗？”我说：“怕什么？身后有五个新兵跟着我，我要是怕了，他们怎么办？”\n如今妻子前年走了，两个儿子一个在广州，一个在深圳，逢年过节才会回来。孙子孙女偶尔视频跟我聊天，问我年轻时候的事。我就把这张照片拿出来给他们看。他们说：“爷爷，你那时候好威风啊，像电影里一样。”我笑笑，没说话。哪里是什么威风，不过是那个年代的人，都得咬着牙往前走。\n回想这一辈子，从潮阳乡下那个饿肚子的孩子，到穿上军装的新兵，再到工厂里的老保卫，我其实没做过什么惊天动地的大事。可我问心无愧。我守过海岛，走过夜路，也守过工厂的大门，最重要的是，我把两个孩子拉扯大了，他们都比我有出息。\n如果你们这些晚辈问我，这一辈子最重要的是什么，我会告诉你们：人这一辈子，苦肯定是要吃的，但不能怕苦。路要自己走，责任要自己扛。家里再穷，父母再难，也要记得自己是从哪里来的。遇到难处的时候，别总想着退缩，咬咬牙，挺过去，前面就有光了。\n我海还是那片海，山还是那座山，只是人老了。照片里的那个年轻人，可我心里清楚，那晚山路上的每一步，都没有白走。它让我知道，自己这辈子，活得还算踏实。\n这就是我，一个普通中国人的来路。讲给你们听，不是为了显摆什么，只是希望你们知道，你们今天的好日子，是我们那一代人，一步一个脚印走出来的。往后不管遇到什么困难，都要记得——路是人走出来的，腰杆要挺直，心要放正。",
+      "qa_history": [
+        {
+          "question": "**这支队伍在夜间沿海山径上行进时，你们当时要去执行什么任务？",
+          "answer": "在那里，某野战军派来的军车接上我们，在沿海的一个县城住了一晚后，又继续向汕头进发。等我们上了岛，天已经全黑了，又摸黑走了一个半钟头的山路，才终于到了新兵教导队。"
+        }
+      ],
+      "analysis_result": {
+        "visual_elements": "```json\n{\n  \"visual_elements\": {\n    \"人物数量\": 6,\n    \"人物描述\": [\n      {\n        \"位置\": \"最前方\",\n        \"年龄推测\": \"20-30岁\",\n        \"性别\": \"男性\",\n        \"姿态\": \"背对镜头，行走中\",\n        \"关系推测\": \"队伍领头者或指挥官\"\n      },\n      {\n        \"位置\": \"中后方\",\n        \"年龄推测\": \"20-35岁\",\n        \"性别\": \"男性\",\n        \"数量\": 5,\n        \"姿态\": \"排成纵队跟随前行\"\n      }\n    ],\n    \"场景\": \"夜间沿海山地小径，左侧为岩石与灌木丛，右侧为悬崖或陡坡，下方可见大海\",\n    \"物品\": [\n      \"军用水壶（左侧士兵腰间）\",\n      \"手电筒或信号灯（最前方士兵右手持有，发光）\",\n      \"军用背包/行囊\",\n      \"头盔或军帽\"\n    ]\n  },\n  \"人物表情和情绪\": {\n    \"整体情绪\": \"警惕、专注、任务导向\",\n    \"具体描述\": \"由于大部分人物为背影或侧面，无法看到清晰面部表情。\",\n    \"环境特征\": \"崎岖山路、茂密灌木、陡峭海岸、夜间海面\"\n  },\n  \"时代物品\": {\n    \"主要物品\": [\n      {\n        \"物品\": \"军用水壶\",\n        \"时代特征\": \"二战时期美军或英联邦军队常见款式\"\n      },\n      {\n        \"物品\": \"手持照明设备\",\n        \"时代特征\": \"可能为二战时期的手电筒或信号灯\"\n      },\n      {\n        \"物品\": \"军用背包\",\n        \"时代特征\": \"1940年代军用帆布背包\"\n      }\n    ]\n  },\n  \"整体描述\": {\n    \"整体氛围\": \"紧张、神秘、富有历史厚重感。\",\n    \"拍摄年代推测\": \"1940年代后期至1950年代初期（二战末期或战后）\",\n    \"可能的场景\": \"夜间海岸巡逻、登陆行动后的渗透、特种部队夜袭准备、或军事训练",
+        "emotions": "```json\n{\n  \"visual_elements\": {\n    \"人物数量\": 6,\n    \"人物描述\": [\n      {\n        \"位置\": \"最前方\",\n        \"年龄推测\": \"20-30岁\",\n        \"性别\": \"男性\",\n        \"姿态\": \"背对镜头，行走中\",\n        \"关系推测\": \"队伍领头者或指挥官\"\n      },\n      {\n        \"位置\": \"中后方\",\n        \"年龄推测\": \"20-35岁\",\n        \"性别\": \"男性\",\n        \"数量\": 5,\n        \"姿态\": \"排成纵队跟随前行\"\n      }\n    ],\n    \"场景\": \"夜间沿海山地小径，左侧为岩石与灌木丛，右侧为悬崖或陡坡，下方可见大海\",\n    \"物品\": [\n      \"军用水壶（左侧士兵腰间）\",\n      \"手电筒或信号灯（最前方士兵右手持有，发光）\",\n      \"军用背包/行囊\",\n      \"头盔或军帽\"\n    ]\n  },\n  \"人物表情和情绪\": {\n    \"整体情绪\": \"警惕、专注、任务导向\",\n    \"具体描述\": \"由于大部分人物为背影或侧面，无法看到清晰面部表情。情绪氛围为紧张而克制，带有军事行动的严肃感",
+        "clothing": "\"\n  },\n  \"服饰细节\": {\n    \"服装样式\": \"军用制服，包括长袖上衣、长裤、军靴\",\n    \"颜色\": \"照片为黑白，推测为卡其色、橄榄绿或灰绿色军装\",\n    \"时代特征\": \"二战或战后初期（1940s-1950s）军服风格\",\n    \"配件\": \"腰带、军用水壶、背包带、军帽（部分为圆顶帽或贝雷帽样式）\"\n  },\n  \"背景建筑\": {\n    \"建筑\": \"无明显建筑，主要为自然景观\",\n    \"地理位置推测\": \"地中海或太平洋沿岸的山地海岸线",
+        "background": "\"\n  },\n  \"服饰细节\": {\n    \"服装样式\": \"军用制服，包括长袖上衣、长裤、军靴\",\n    \"颜色\": \"照片为黑白，推测为卡其色、橄榄绿或灰绿色军装\",\n    \"时代特征\": \"二战或战后初期（1940s-1950s）军服风格\",\n    \"配件\": \"腰带、军用水壶、背包带、军帽（部分为圆顶帽或贝雷帽样式）\"\n  },\n  \"背景建筑\": {\n    \"建筑\": \"无明显建筑，主要为自然景观\",\n    \"地理位置推测\": \"地中海或太平洋沿岸的山地海岸线。\",\n    \"环境特征\": \"崎岖山路、茂密灌木、陡峭海岸、夜间海面\"\n  },\n  \"时代物品\": {\n    \"主要物品\": [\n      {\n        \"物品\": \"军用水壶\",\n        \"时代特征\": \"二战时期美军或英联邦军队常见款式\"\n      },\n      {\n        \"物品\": \"手持照明设备\",\n        \"时代特征\": \"可能为二战时期的手电筒或信号灯\"\n      },\n      {\n        \"物品\": \"军用背包\",\n        \"时代特征\": \"1940年代军用帆布背包\"\n      }\n    ]\n  },\n  \"整体描述\": {\n    \"整体氛围\": \"紧张、神秘、富有历史厚重感",
+        "era_items": "```json\n{\n  \"visual_elements\": {\n    \"人物数量\": 6,\n    \"人物描述\": [\n      {\n        \"位置\": \"最前方\",\n        \"年龄推测\": \"20-30岁\",\n        \"性别\": \"男性\",\n        \"姿态\": \"背对镜头，行走中\",\n        \"关系推测\": \"队伍领头者或指挥官\"\n      },\n      {\n        \"位置\": \"中后方\",\n        \"年龄推测\": \"20-35岁\",\n        \"性别\": \"男性\",\n        \"数量\": 5,\n        \"姿态\": \"排成纵队跟随前行\"\n      }\n    ],\n    \"场景\": \"夜间沿海山地小径，左侧为岩石与灌木丛，右侧为悬崖或陡坡，下方可见大海\",\n    \"物品\": [\n      \"军用水壶（左侧士兵腰间）\",\n      \"手电筒或信号灯（最前方士兵右手持有，发光）\",\n      \"军用背包/行囊\",\n      \"头盔或军帽\"\n    ]\n  },\n  \"人物表情和情绪\": {\n    \"整体情绪\": \"警惕、专注、任务导向\",\n    \"具体描述\": \"由于大部分人物为背影或侧面，无法看到清晰面部表情。\",\n    \"环境特征\": \"崎岖山路、茂密灌木、陡峭海岸、夜间海面\"\n  },\n  \"时代物品\": {\n    \"主要物品\": [\n      {\n        \"物品\": \"军用水壶\",\n        \"时代特征\": \"二战时期美军或英联邦军队常见款式\"\n      },\n      {\n        \"物品\": \"手持照明设备\",\n        \"时代特征\": \"可能为二战时期的手电筒或信号灯\"\n      },\n      {\n        \"物品\": \"军用背包\",\n        \"时代特征\": \"1940年代军用帆布背包\"\n      }\n    ]\n  },\n  \"整体描述\": {\n    \"整体氛围\": \"紧张、神秘、富有历史厚重感",
+        "overall_description": "```json\n{\n  \"visual_elements\": {\n    \"人物数量\": 6,\n    \"人物描述\": [\n      {\n        \"位置\": \"最前方\",\n        \"年龄推测\": \"20-30岁\",\n        \"性别\": \"男性\",\n        \"姿态\": \"背对镜头，行走中\",\n        \"关系推测\": \"队伍领头者或指挥官\"\n      },\n      {\n        \"位置\": \"中后方\",\n        \"年龄推测\": \"20-35岁\",\n        \"性别\": \"男性\",\n        \"数量\": 5,\n        \"姿态\": \"排成纵队跟随前行\"\n      }\n    ],\n    \"场景\": \"夜间沿海山地小径，左侧为岩石与灌木丛，右侧为悬崖或陡坡，下方可见大海\",\n    \"物品\": [\n      \"军用水壶（左侧士兵腰间）\",\n      \"手电筒或信号灯（最前方士兵右手持有，发光）\",\n      \"军用背包/行囊\",\n      \"头盔或军帽\"\n    ]\n  },\n  \"人物表情和情绪\": {\n    \"整体情绪\": \"警惕、专注、任务导向\",\n    \"具体描述\": \"由于大部分人物为背影或侧面，无法看到清晰面部表情。从姿态判断，队伍保持安静、纪律性强，处于执行夜间任务的状态。情绪氛围为紧张而克制，带有军事行动的严肃感。\",\n    \"特殊观察\": \"最前方士兵头部略微侧转，可能正在观察地形或听取身后指令。\"\n  },\n  \"服饰细节\": {\n    \"服装样式\": \"军用制服，包括长袖上衣、长裤、军靴\",\n    \"颜色\": \"照片为黑白，推测为卡其色、橄榄绿或灰绿色军装\",\n    \"时代特征\": \"二战或战后初期（1940s-1950s）军服风格\",\n    \"配件\": \"腰带、军用水壶、背包带、军帽（部分为圆顶帽或贝雷帽样式）\"\n  },\n  \"背景建筑\": {\n    \"建筑\": \"无明显建筑，主要为自然景观\",\n    \"地理位置推测\": \"地中海或太平洋沿岸的山地海岸线。岩石地貌与植被特征类似二战时期的意大利、西西里岛、太平洋岛屿或希腊沿海地区。\",\n    \"环境特征\": \"崎岖山路、茂密灌木、陡峭海岸、夜间海面\"\n  },\n  \"时代物品\": {\n    \"主要物品\": [\n      {\n        \"物品\": \"军用水壶\",\n        \"时代特征\": \"二战时期美军或英联邦军队常见款式\"\n      },\n      {\n        \"物品\": \"手持照明设备\",\n        \"时代特征\": \"可能为二战时期的手电筒或信号灯\"\n      },\n      {\n        \"物品\": \"军用背包\",\n        \"时代特征\": \"1940年代军用帆布背包\"\n      }\n    ]\n  },\n  \"整体描述\": {\n    \"整体氛围\": \"紧张、神秘、富有历史厚重感。夜间行军的画面给人以强烈的战时氛围和电影感。\",\n    \"拍摄年代推测\": \"1940年代后期至1950年代初期（二战末期或战后）\",\n    \"可能的场景\": \"夜间海岸巡逻、登陆行动后的渗透、特种部队夜袭准备、或军事训练。极有可能是二战期间盟军在欧洲或太平洋战区的夜间军事行动记录。\",\n    \"照片特点\": \"带有明显年代痕迹的泛黄边框与划痕，具有历史档案照片的质感。构图极具电影感，类似战地摄影师的作品。\"\n  }\n}\n```"
+      },
+      "details": {
+        "final_score": 3.28,
+        "weights": {
+          "photo": 0.3,
+          "story": 0.5,
+          "interview": 0.2
+        },
+        "photo_evaluation": {
+          "raw_score": 9.0,
+          "max_score": 13.0,
+          "normalized_score": 3.46,
+          "accuracy": 69.23,
+          "image_path": "d:/desktop/Tencent Capstone Project/照片数据库/夜里行军.png",
+          "image_description": "**描述：**\n\n这是一张年代久远的黑白老照片，拍摄于夜间。一队士兵正沿着崎岖的山路向下行进。前景中，一名士兵背对镜头走在最前面，身穿老式军服，头戴军帽，背着背包，腰间挂着水壶和手电筒，右手提着物品。身后几名士兵排成一列跟随，同样身着军装、背负装备。队伍行进在布满岩石和低矮灌木的山坡上，右侧是漆黑的大海，远处海面上能看到一处微弱的光点。照片边缘有明显的老化痕迹和折痕，整体氛围严肃、紧张，带有浓厚的战争时期野外夜行色彩。",
+          "mme": {
+            "details": [
+              {
+                "question": "照片中的军人们是否排成一列在崎岖的道路上行进？",
+                "expected": "yes",
+                "predicted": "yes",
+                "raw_response": "yes",
+                "correct": true,
+                "score": 1.0
+              },
+              {
+                "question": "画面天空中是否有一架正在低空盘旋并开启探照灯的直升机？",
+                "expected": "no",
+                "predicted": "yes",
+                "raw_response": "yes",
+                "correct": false,
+                "score": 0.0
+              },
+              {
+                "question": "画面右侧的深色水域远端，是否能看到几处隐约的灯光？",
+                "expected": "yes",
+                "predicted": "yes",
+                "raw_response": "yes",
+                "correct": true,
+                "score": 1.0
+              },
+              {
+                "question": "队伍中是否有人手里高举着一面巨大的旗帜？",
+                "expected": "no",
+                "predicted": "yes",
+                "raw_response": "yes",
+                "correct": false,
+                "score": 0.0
+              },
+              {
+                "question": "照片四周的边缘是否呈现出明显的破损和泛黄的老照片质感？",
+                "expected": "yes",
+                "predicted": "yes",
+                "raw_response": "yes",
+                "correct": true,
+                "score": 1.0
+              },
+              {
+                "question": "距离镜头最近的军人背上是否背着行囊或背包？",
+                "expected": "yes",
+                "predicted": "yes",
+                "raw_response": "**yes**\n\nThe soldier closest to the camera is wearing what appears to be a backpack or field pack on his back.",
+                "correct": true,
+                "score": 1.0
+              },
+              {
+                "question": "画面左侧的岩石壁上是否安装了明亮的路灯用于照明？",
+                "expected": "no",
+                "predicted": "yes",
+                "raw_response": "yes",
+                "correct": false,
+                "score": 0.0
+              },
+              {
+                "question": "从画面的光线和阴影来看，这是否表现的是一个夜晚或光线极暗的场景？",
+                "expected": "yes",
+                "predicted": "yes",
+                "raw_response": "**yes**",
+                "correct": true,
+                "score": 1.0
+              }
+            ],
+            "raw_score": 5.0,
+            "max_score": 8.0,
+            "normalized_score": 3.12
+          },
+          "mmbench": {
+            "details": [
+              {
+                "question": "结合照片中军人背负行囊夜间行军的状态、右侧的大片水域（大海）以及老照片的时代质感，以下最符合该照片叙事背景的推断是：",
+                "options": {
+                  "A": "现代特种部队正在配备先进夜视仪的情况下进行城市反恐演习",
+                  "B": "20世纪中后期，新兵乘船抵达偏远海岛后，连夜摸黑走山路前往教导队驻地",
+                  "C": "古代商队正在丝绸之路上连夜赶路，右侧是广阔的沙漠",
+                  "D": "一群穿着迷彩服的游客正在海滨风景区体验夜间徒步观光项目"
+                },
+                "expected": "B",
+                "predicted": "B",
+                "raw_response": "B",
+                "correct": true,
+                "score": 1.0
+              },
+              {
+                "question": "根据士兵们在狭窄、崎岖的沿海碎石路上排成单列行进的画面细节，以及夜间摸黑行军的情境，可以推断以下哪项最符合当时的客观逻辑？",
+                "options": {
+                  "A": "他们正在进行轻松的饭后海滩漫步，队伍十分涣散随意。",
+                  "B": "此时处于白天，只是因为大雾导致视线不佳，他们正在宽阔平坦的公路上跑步前进。",
+                  "C": "由于初登海岛且处于夜间，地形陌生、道路崎岖狭窄，队伍只能依靠微弱的光线或前人的指引排成单列谨慎前行。",
+                  "D": "前方是一处灯火通明的繁华夜市，士兵们正加快脚步准备去采购生活物资。"
+                },
+                "expected": "C",
+                "predicted": "C",
+                "raw_response": "C",
+                "correct": true,
+                "score": 1.0
+              }
+            ],
+            "raw_score": 2.0,
+            "max_score": 2.0,
+            "normalized_score": 5.0
+          },
+          "hooks": {
+            "details": [
+              {
+                "hook": "夜间行军",
+                "exact_match": false,
+                "semantic_match": true,
+                "score": 1.0
+              },
+              {
+                "hook": "军人背影",
+                "exact_match": false,
+                "semantic_match": true,
+                "score": 1.0
+              },
+              {
+                "hook": "沿海山路",
+                "exact_match": false,
+                "semantic_match": false,
+                "score": 0.0
+              }
+            ],
+            "raw_score": 2.0,
+            "max_score": 3.0,
+            "normalized_score": 3.33
+          },
+          "meta": {
+            "backend": "openai_compatible",
+            "model": "x-ai/grok-4.20-beta",
+            "scale": "0-5"
+          }
+        },
+        "story_evaluation": {
+          "scores": {
+            "relevance": 4.0,
+            "coherence": 4.5,
+            "empathy": 4.0,
+            "surprise": 2.0,
+            "engagement": 3.5,
+            "complexity": 4.0
+          },
+          "explanations": {
+            "relevance": "故事高度聚焦于参考文本中的‘夜间沿海山路行军’场景，将其扩展为个人一生回忆，主题集中，未跑题。",
+            "coherence": "叙事时间线清晰，从童年到参军、部队生活、转业到晚年，人物关系和因果逻辑连贯，山路细节与参考文本一致。",
+            "empathy": "通过饥饿童年、母亲哭泣、脚打血泡、妻子卖耳环等具体细节，让读者感受到角色吃苦、责任与情感变化。",
+            "surprise": "故事基本按时间顺序平铺直叙个人经历，缺乏情节转折或意外发展，结尾的感悟也较为常规。",
+            "engagement": "第一人称回忆结合具体生活细节（如番薯藤汤、夜路喘气声），有一定代入感，但整体节奏较平缓，吸引力中等。",
+            "complexity": "包含童年贫困、参军动机、部队艰苦、边境执勤、家庭责任、晚年感悟等多层内容，细节丰富且有时代背景。"
+          },
+          "final_score": 3.67,
+          "summary": "一部朴实、真挚的个人生命史，以夜行山路为情感核心，情感与细节扎实，但惊喜度不足，整体中上水平。",
+          "raw_response": "{\n  \"scores\": {\n    \"relevance\": 4.0,\n    \"coherence\": 4.5,\n    \"empathy\": 4.0,\n    \"surprise\": 2.0,\n    \"engagement\": 3.5,\n    \"complexity\": 4.0\n  },\n  \"explanations\": {\n    \"relevance\": \"故事高度聚焦于参考文本中的‘夜间沿海山路行军’场景，将其扩展为个人一生回忆，主题集中，未跑题。\",\n    \"coherence\": \"叙事时间线清晰，从童年到参军、部队生活、转业到晚年，人物关系和因果逻辑连贯，山路细节与参考文本一致。\",\n    \"empathy\": \"通过饥饿童年、母亲哭泣、脚打血泡、妻子卖耳环等具体细节，让读者感受到角色吃苦、责任与情感变化。\",\n    \"surprise\": \"故事基本按时间顺序平铺直叙个人经历，缺乏情节转折或意外发展，结尾的感悟也较为常规。\",\n    \"engagement\": \"第一人称回忆结合具体生活细节（如番薯藤汤、夜路喘气声），有一定代入感，但整体节奏较平缓，吸引力中等。\",\n    \"complexity\": \"包含童年贫困、参军动机、部队艰苦、边境执勤、家庭责任、晚年感悟等多层内容，细节丰富且有时代背景。\"\n  },\n  \"final_score\": 3.67,\n  \"summary\": \"一部朴实、真挚的个人生命史，以夜行山路为情感核心，情感与细节扎实，但惊喜度不足，整体中上水平。\"\n}",
+          "meta": {
+            "backend": "openai_compatible",
+            "model": "x-ai/grok-4.20-beta",
+            "has_prompt": false,
+            "has_reference": true
+          }
+        },
+        "interview_evaluation": {
+          "metrics": {
+            "answer_quality": 0.45,
+            "information_completeness": 2.5,
+            "question_depth": 5.0,
+            "topic_coverage": 0.0
+          },
+          "discussed_dimensions": [],
+          "remaining_gaps": [
+            "人物",
+            "地点",
+            "时间"
+          ],
+          "question_count": 1,
+          "final_score": 2.03,
+          "meta": {
+            "scale": "0-5",
+            "standard": "pr2-followup-quality"
+          }
+        },
+        "meta": {
+          "sample_index": 0,
+          "benchmark_file": "C:\\Users\\SHENGZ~1\\AppData\\Local\\Temp\\tmpxyruhphk\\benchmark.json",
+          "score_scale": "0-5"
+        }
+      },
+      "data_type": "simulated"
+    },
+    {
+      "sample_id": "升排长__照相馆",
+      "photo_score": 4.0,
+      "story_score": 4.5,
+      "interview_score": 1.78,
+      "final_score": 3.81,
+      "data_type": "real"
+    }
+  ]
+}

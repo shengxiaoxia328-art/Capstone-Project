@@ -1,0 +1,29 @@
+{
+  "sample_id": "升排长__照相馆",
+  "models": {
+    "mimo": {
+      "photo_score": 4.0,
+      "story_score": 4.5,
+      "interview_score": 1.03,
+      "final_score": 3.66
+    },
+    "kimi": {
+      "photo_score": 3.67,
+      "story_score": 4.67,
+      "interview_score": 0.74,
+      "final_score": 3.58
+    },
+    "qwen": {
+      "photo_score": 3.67,
+      "story_score": 4.5,
+      "interview_score": 2.03,
+      "final_score": 3.76
+    },
+    "grok": {
+      "photo_score": 4.0,
+      "story_score": 4.5,
+      "interview_score": 1.78,
+      "final_score": 3.81
+    }
+  }
+}

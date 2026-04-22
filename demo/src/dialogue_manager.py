@@ -20,6 +20,7 @@ class DialogueManager:
         self,
         photo_id: str,
         analysis_result: Dict,
+        context: Optional[Dict] = None,
         on_stream_chunk: Optional[Callable[[str], None]] = None,
     ) -> List[str]:
         """
@@ -28,6 +29,7 @@ class DialogueManager:
         Args:
             photo_id: 照片ID
             analysis_result: 照片分析结果
+            context: 可选，多图模式下的历史上下文
             on_stream_chunk: 可选，生成问题时每段文本回调（用于前端显示思考过程）
             
         Returns:
@@ -40,7 +42,9 @@ class DialogueManager:
         from src.question_generator import QuestionGenerator
         generator = QuestionGenerator()
         questions = generator.generate_initial_questions(
-            analysis_result, on_stream_chunk=on_stream_chunk
+            analysis_result,
+            context=context,
+            on_stream_chunk=on_stream_chunk,
         )
         
         return questions

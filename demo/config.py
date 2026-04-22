@@ -28,6 +28,14 @@ GEMINI_API_ENDPOINT = os.getenv(
 )
 USE_GEMINI = bool(GEMINI_API_KEY and GEMINI_API_ENDPOINT)
 
+# ---------- 通用模型配置 -----------
+MODEL_PROVIDER = os.getenv("MODEL_PROVIDER", "").strip().lower()
+MODEL_API_KEY = os.getenv("MODEL_API_KEY", "")
+MODEL_API_ENDPOINT = os.getenv("MODEL_API_ENDPOINT", "")
+MODEL_TEXT_MODEL = os.getenv("MODEL_TEXT_MODEL", "")
+MODEL_VISION_MODEL = os.getenv("MODEL_VISION_MODEL", "")
+USE_GENERIC_MODEL = bool(MODEL_PROVIDER and MODEL_API_KEY and MODEL_API_ENDPOINT)
+
 
 # Gemini模型配置
 # 默认 gemini-2.5-pro 质量好但较慢；可改为 gemini-2.0-flash 以加快速度（略降质量）

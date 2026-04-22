@@ -134,7 +134,8 @@ class PhotoStorySystem:
                 # 第一张照片：生成初始问题
                 questions = self.dialogue_manager.start_dialogue(
                     photo_id=photo_id,
-                    analysis_result=analysis_result
+                    analysis_result=analysis_result,
+                    context=context,
                 )
             else:
                 # 后续照片：生成跨照片关联问题
@@ -145,12 +146,14 @@ class PhotoStorySystem:
                     questions = [cross_question]
                     self.dialogue_manager.start_dialogue(
                         photo_id=photo_id,
-                        analysis_result=analysis_result
+                        analysis_result=analysis_result,
+                        context=context,
                     )
                 else:
                     questions = self.dialogue_manager.start_dialogue(
                         photo_id=photo_id,
-                        analysis_result=analysis_result
+                        analysis_result=analysis_result,
+                        context=context,
                     )
             
             # 4. 问答交互（简化版）
@@ -516,9 +519,12 @@ class PhotoStorySystem:
                     photo_id=photo_id, analysis_result=analysis_result
                 )
             else:
+                context = self.context_manager.get_relevant_context(analysis_result)
                 cross_q = self.context_manager.generate_cross_photo_question(analysis_result)
                 questions = self.dialogue_manager.start_dialogue(
-                    photo_id=photo_id, analysis_result=analysis_result
+                    photo_id=photo_id,
+                    analysis_result=analysis_result,
+                    context=context,
                 )
                 if cross_q and cross_q.strip():
                     questions = [cross_q]

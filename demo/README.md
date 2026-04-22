@@ -240,12 +240,58 @@ python judge_final.py \
    - 故事分直接使用 HANNA 六维平均分；
    - 最终分按权重加权求和。
 
+### 把 PR #2 的追问质量标准并入最终评分
+
+如果你希望把 PR #2 里的“追问/访谈质量标准”也算进最终分，现在可以额外传入问答历史 JSON：
+
+```bash
+python judge_final.py \
+    --benchmark-file path/to/benchmark_data.json \
+    --sample-index 0 \
+    --image-root path/to/images \
+    --story-file path/to/story.txt \
+    --qa-history-file path/to/qa_history.json \
+    --photo-weight 0.3 \
+    --story-weight 0.5 \
+    --interview-weight 0.2 \
+    --output final_evaluation.json
+```
+
+`qa_history.json` 支持两种格式：
+
+```json
+[
+   {"question": "照片里这位穿军装的人是谁？", "answer": "那是我父亲，当时刚退伍回乡。"},
+   {"question": "看到这张照片，你当时最强烈的感受是什么？", "answer": "特别怀念，那时候一家人难得拍一次照。"}
+]
+```
+
+或：
+
+```json
+{
+   "qa_history": [
+      {"question": "...", "answer": "..."}
+   ]
+}
+```
+
+这部分评分参考 PR #2 的增强追问思路，主要看四项：
+
+- `answer_quality`：回答质量，是否有信息量、细节和情感
+- `information_completeness`：信息完整度，人物/地点/时间等维度是否补齐
+- `question_depth`：问题深度，是否追问原因、感受、意义、影响等
+- `topic_coverage`：覆盖度，访谈涉及了多少关键信息维度
+
+四项会合成为 `interview_evaluation.final_score`，再和照片分、故事分一起做加权融合。
+
 输出 JSON 包含：
 
 - `final_score`：最终融合分
-- `weights`：归一化后的照片/故事权重
+- `weights`：归一化后的照片/故事/访谈权重
 - `photo_evaluation`：照片 benchmark 的原始分、归一化分和逐题明细
 - `story_evaluation`：HANNA 六维评分结果
+- `interview_evaluation`：追问质量评分结果（未提供 `qa_history` 时为 `null`）
 
 ## 核心模块说明
 

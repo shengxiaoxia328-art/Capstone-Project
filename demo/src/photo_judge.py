@@ -11,6 +11,7 @@ from typing import Any, Dict, List, Optional, Tuple
 import requests
 
 import config
+from src.model_backend import call_text_api, call_vision_api, get_model_name, get_model_settings
 
 
 def _clamp(value: float, lower: float, upper: float) -> float:
@@ -21,20 +22,10 @@ class PhotoJudge:
     """对单张照片执行 benchmark 评分。"""
 
     def __init__(self, api_key: str = None, api_endpoint: str = None):
-        if api_key and api_endpoint:
-            self.api_key = api_key
-            self.api_endpoint = api_endpoint
-            self.backend = "custom"
-        elif config.USE_HUNYUAN:
-            self.api_key = config.HUNYUAN_API_KEY
-            self.api_endpoint = config.HUNYUAN_API_ENDPOINT
-            self.backend = "hunyuan"
-        elif config.USE_GEMINI:
-            self.api_key = config.GEMINI_API_KEY
-            self.api_endpoint = config.GEMINI_API_ENDPOINT
-            self.backend = "gemini"
-        else:
-            raise RuntimeError("未检测到可用的模型配置，请先在 demo/.env 中配置 Gemini 或混元 API。")
+        self.model_settings = get_model_settings(api_key=api_key, api_endpoint=api_endpoint)
+        self.api_key = self.model_settings["api_key"]
+        self.api_endpoint = self.model_settings["api_endpoint"]
+        self.backend = self.model_settings["provider"]
 
     def judge_photo(self, sample: Dict[str, Any], image_root: Optional[str] = None) -> Dict[str, Any]:
         image_path = self._resolve_image_path(sample.get("image_path", ""), image_root)
@@ -90,11 +81,7 @@ class PhotoJudge:
         }
 
     def _get_model_name(self) -> str:
-        if self.backend == "hunyuan":
-            return getattr(config, "HUNYUAN_VISION_MODEL", "hunyuan-vision")
-        if self.backend == "gemini":
-            return getattr(config, "GEMINI_MODEL_NAME", "gemini-2.5-pro")
-        return "custom"
+        return get_model_name(self.model_settings, "vision")
 
     def _resolve_image_path(self, image_path: str, image_root: Optional[str]) -> str:
         image_path = str(image_path or "").strip()
@@ -297,14 +284,17 @@ class PhotoJudge:
         return text
 
     def _call_text_api(self, prompt: str) -> str:
-        if self.backend == "hunyuan":
-            return self._call_hunyuan_text_api(prompt)
-        return self._call_gemini_text_api(prompt)
+        return call_text_api(self.model_settings, prompt, temperature=0.2, max_tokens=2048)
 
     def _call_vision_api(self, image_base64: str, prompt: str, image_format: str) -> str:
-        if self.backend == "hunyuan":
-            return self._call_hunyuan_vision_api(image_base64, prompt, image_format)
-        return self._call_gemini_vision_api(image_base64, prompt, image_format)
+        return call_vision_api(
+            self.model_settings,
+            image_base64=image_base64,
+            prompt=prompt,
+            image_format=image_format,
+            temperature=0.2,
+            max_tokens=2048,
+        )
 
     def _call_hunyuan_text_api(self, prompt: str) -> str:
         headers = {

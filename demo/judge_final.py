@@ -5,12 +5,13 @@ import argparse
 import json
 import os
 import sys
-from typing import Dict
+from typing import Dict, List
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "src"))
 
 from src.photo_judge import PhotoJudge, load_benchmark_sample
+from src.interview_judge import InterviewJudge
 from src.story_judge import StoryJudge
 
 
@@ -21,6 +22,16 @@ def _read_text_argument(text: str, file_path: str, field_name: str) -> str:
         with open(file_path, "r", encoding="utf-8") as file_obj:
             return file_obj.read().strip()
     return (text or "").strip()
+
+
+def _read_json_argument(file_path: str, field_name: str):
+    if not file_path:
+        return None
+    with open(file_path, "r", encoding="utf-8") as file_obj:
+        data = json.load(file_obj)
+    if isinstance(data, dict) and field_name in data:
+        return data[field_name]
+    return data
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -34,21 +45,33 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--prompt-file", help="从文件读取 prompt")
     parser.add_argument("--reference", help="可选，参考故事或原始回忆录")
     parser.add_argument("--reference-file", help="从文件读取参考故事")
+    parser.add_argument("--qa-history-file", help="可选，从 JSON 文件读取问答历史，用于访谈评分")
     parser.add_argument("--photo-weight", type=float, default=0.5, help="照片分权重，默认 0.5")
     parser.add_argument("--story-weight", type=float, default=0.5, help="故事分权重，默认 0.5")
+    parser.add_argument("--interview-weight", type=float, default=0.0, help="访谈分权重，默认 0.0")
     parser.add_argument("--output", help="可选，将结果写入指定 JSON 文件")
     return parser
 
 
-def _validate_weights(photo_weight: float, story_weight: float) -> Dict[str, float]:
-    if photo_weight < 0 or story_weight < 0:
+def _validate_weights(photo_weight: float, story_weight: float, interview_weight: float) -> Dict[str, float]:
+    if photo_weight < 0 or story_weight < 0 or interview_weight < 0:
         raise ValueError("权重不能为负数")
-    total = photo_weight + story_weight
+    total = photo_weight + story_weight + interview_weight
     if total <= 0:
-        raise ValueError("photo_weight 与 story_weight 之和必须大于 0")
+        raise ValueError("photo_weight、story_weight 与 interview_weight 之和必须大于 0")
     return {
         "photo": round(photo_weight / total, 4),
         "story": round(story_weight / total, 4),
+        "interview": round(interview_weight / total, 4),
+    }
+
+
+def _build_interview_analysis_result(sample: Dict, photo_result: Dict) -> Dict:
+    return {
+        "overall_description": (
+            photo_result.get("image_description")
+            or str(sample.get("image_description", "")).strip()
+        )
     }
 
 
@@ -62,12 +85,17 @@ def main() -> int:
 
     story_prompt = _read_text_argument(args.prompt, args.prompt_file, "prompt")
     reference_story = _read_text_argument(args.reference, args.reference_file, "reference")
-    weights = _validate_weights(args.photo_weight, args.story_weight)
+    qa_history = _read_json_argument(args.qa_history_file, "qa_history") if args.qa_history_file else None
+    if args.interview_weight > 0 and not qa_history:
+        parser.error("当 interview-weight 大于 0 时，必须通过 --qa-history-file 提供问答历史")
+
+    weights = _validate_weights(args.photo_weight, args.story_weight, args.interview_weight)
 
     sample = load_benchmark_sample(args.benchmark_file, args.sample_index)
 
     photo_judge = PhotoJudge()
     story_judge = StoryJudge()
+    interview_judge = InterviewJudge() if qa_history else None
 
     photo_result = photo_judge.judge_photo(sample=sample, image_root=args.image_root)
     story_result = story_judge.judge_story(
@@ -76,9 +104,17 @@ def main() -> int:
         reference_story=reference_story or None,
     )
 
+    interview_result = None
+    if interview_judge and qa_history:
+        interview_result = interview_judge.judge_interview(
+            qa_history=qa_history,
+            analysis_result=_build_interview_analysis_result(sample, photo_result),
+        )
+
     final_score = round(
         photo_result["normalized_score"] * weights["photo"]
-        + story_result["final_score"] * weights["story"],
+        + story_result["final_score"] * weights["story"]
+        + ((interview_result or {}).get("final_score", 0.0) * weights["interview"]),
         2,
     )
 
@@ -98,6 +134,7 @@ def main() -> int:
             "meta": photo_result.get("meta", {}),
         },
         "story_evaluation": story_result,
+        "interview_evaluation": interview_result,
         "meta": {
             "sample_index": args.sample_index,
             "benchmark_file": args.benchmark_file,

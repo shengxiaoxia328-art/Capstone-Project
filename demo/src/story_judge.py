@@ -9,6 +9,7 @@ from typing import Dict, List, Optional
 import requests
 
 import config
+from src.model_backend import call_text_api, get_model_name, get_model_settings
 
 
 CRITERIA = [
@@ -55,20 +56,10 @@ class StoryJudge:
     """使用现有模型配置对故事进行六维评分。"""
 
     def __init__(self, api_key: str = None, api_endpoint: str = None):
-        if api_key and api_endpoint:
-            self.api_key = api_key
-            self.api_endpoint = api_endpoint
-            self.backend = "custom"
-        elif config.USE_HUNYUAN:
-            self.api_key = config.HUNYUAN_API_KEY
-            self.api_endpoint = config.HUNYUAN_API_ENDPOINT
-            self.backend = "hunyuan"
-        elif config.USE_GEMINI:
-            self.api_key = config.GEMINI_API_KEY
-            self.api_endpoint = config.GEMINI_API_ENDPOINT
-            self.backend = "gemini"
-        else:
-            raise RuntimeError("未检测到可用的模型配置，请先在 demo/.env 中配置 Gemini 或混元 API。")
+        self.model_settings = get_model_settings(api_key=api_key, api_endpoint=api_endpoint)
+        self.api_key = self.model_settings["api_key"]
+        self.api_endpoint = self.model_settings["api_endpoint"]
+        self.backend = self.model_settings["provider"]
 
     def judge_story(
         self,
@@ -98,9 +89,7 @@ class StoryJudge:
         return parsed
 
     def _get_model_name(self) -> str:
-        if self.backend == "hunyuan":
-            return getattr(config, "HUNYUAN_TEXT_MODEL", "hunyuan-vision")
-        return getattr(config, "GEMINI_MODEL_NAME", "gemini-2.5-pro")
+        return get_model_name(self.model_settings, "text")
 
     def _build_judge_prompt(
         self,
@@ -163,9 +152,13 @@ Story:
 """
 
     def _call_text_api(self, prompt: str) -> str:
-        if self.backend == "hunyuan":
-            return self._call_hunyuan_text_api(prompt)
-        return self._call_gemini_text_api(prompt)
+        return call_text_api(
+            self.model_settings,
+            prompt,
+            temperature=0.2,
+            max_tokens=2048,
+            json_mode=True,
+        )
 
     def _call_gemini_text_api(self, prompt: str) -> str:
         model_name = getattr(config, "GEMINI_MODEL_NAME", "gemini-2.5-pro")
@@ -280,6 +273,12 @@ Story:
         scores = data.get("scores") or {}
         explanations = data.get("explanations") or {}
 
+        # 兼容模型把分数放顶层（非 nested）的情况
+        if not scores:
+            for item in CRITERIA:
+                if item["key"] in data:
+                    scores[item["key"]] = data[item["key"]]
+
         normalized_scores = {}
         for item in CRITERIA:
             value = scores.get(item["key"])
@@ -304,13 +303,90 @@ Story:
 
     def _extract_json(self, text: str) -> Dict:
         text = (text or "").strip()
+        if not text:
+            raise RuntimeError("评分结果为空")
+
+        # ── 第 1 步: 去掉 markdown 代码围栏 ──
+        text = re.sub(r"^```(?:json)?\s*", "", text)
+        text = re.sub(r"\s*```\s*$", "", text)
+        text = text.strip()
+
+        # ── 第 2 步: 直接尝试解析 ──
         try:
             return json.loads(text)
         except json.JSONDecodeError:
-            match = re.search(r"\{[\s\S]*\}", text)
-            if not match:
-                raise RuntimeError(f"评分结果不是有效 JSON: {text[:500]}")
-            return json.loads(match.group(0))
+            pass
+
+        # ── 第 3 步: 提取最外层 {} 块 ──
+        match = re.search(r"\{[\s\S]*\}", text)
+        if match:
+            block = match.group(0)
+            try:
+                return json.loads(block)
+            except json.JSONDecodeError:
+                pass
+
+            # ── 第 4 步: 修复常见 JSON 缺陷后重试 ──
+            fixed = self._repair_json(block)
+            try:
+                return json.loads(fixed)
+            except json.JSONDecodeError:
+                pass
+
+        # ── 第 5 步: 正则逐字段提取分数 (最终 fallback) ──
+        return self._regex_extract_scores(text)
+
+    @staticmethod
+    def _repair_json(text: str) -> str:
+        """尝试修复常见的 JSON 格式问题"""
+        # 移除非法控制字符 (保留 \n \r \t)
+        text = re.sub(r"[\x00-\x08\x0b\x0c\x0e-\x1f]", " ", text)
+        # 修复未转义的换行 (在双引号字符串内)
+        text = re.sub(r'(?<=":)\s*"(.*?)"', lambda m: '"' + m.group(1).replace('\n', '\\n') + '"', text)
+        # 移除尾部逗号 (}, 或 ],)
+        text = re.sub(r",\s*([}\]])", r"\1", text)
+        # 尝试截断到最后一个完整的 key-value 对
+        lines = text.split("\n")
+        for i in range(len(lines), 0, -1):
+            candidate = "\n".join(lines[:i])
+            # 确保花括号闭合
+            opens = candidate.count("{") - candidate.count("}")
+            if opens > 0:
+                candidate += "\n}" * opens
+            elif opens < 0:
+                continue
+            try:
+                return json.dumps(json.loads(candidate), ensure_ascii=False)
+            except json.JSONDecodeError:
+                continue
+        return text
+
+    def _regex_extract_scores(self, text: str) -> Dict:
+        """正则逐字段提取分数 — 当 JSON 完全无法修复时的最终手段"""
+        score_keys = [item["key"] for item in CRITERIA]
+        scores = {}
+        explanations = {}
+        for key in score_keys:
+            # 匹配 "key": 4.2 或 "key": "4.2"
+            m = re.search(rf'"{key}"\s*:\s*"?(\d+(?:\.\d+)?)"?', text)
+            if m:
+                scores[key] = float(m.group(1))
+
+        m_final = re.search(r'"final_score"\s*:\s*"?(\d+(?:\.\d+)?)"?', text)
+        final_score = float(m_final.group(1)) if m_final else None
+
+        m_summary = re.search(r'"summary"\s*:\s*"([^"]*)"', text)
+        summary = m_summary.group(1) if m_summary else ""
+
+        if not scores:
+            raise RuntimeError(f"评分结果不是有效 JSON 且无法提取分数: {text[:500]}")
+
+        return {
+            "scores": scores,
+            "explanations": explanations,
+            "final_score": final_score,
+            "summary": summary,
+        }
 
     def _normalize_score(self, value, key: str) -> float:
         if value is None:

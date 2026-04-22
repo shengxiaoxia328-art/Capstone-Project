@@ -5,6 +5,7 @@
 from typing import Dict, List, Optional
 import json
 import os
+import re
 from datetime import datetime
 import chromadb
 from chromadb.config import Settings
@@ -13,6 +14,23 @@ import config
 
 class ContextManager:
     """多图上下文管理器"""
+
+    PERSON_KEYWORDS = [
+        "我", "父亲", "母亲", "爸爸", "妈妈", "爷爷", "奶奶", "外公", "外婆",
+        "叔叔", "阿姨", "老师", "同学", "战友", "连长", "指导员", "妻子", "丈夫",
+        "儿子", "女儿", "孙子", "孙女", "哥哥", "姐姐", "弟弟", "妹妹"
+    ]
+    PLACE_KEYWORDS = [
+        "老家", "家里", "村里", "学校", "部队", "工厂", "县城", "镇上", "南澳岛",
+        "广州", "汕头", "东莞", "福建", "广东", "车间", "营房", "祠堂", "宗祠"
+    ]
+    EVENT_KEYWORDS = [
+        "参军", "入伍", "退伍", "转业", "上学", "毕业", "结婚", "生孩子", "比赛",
+        "演讲", "下乡", "返城", "工作", "退休", "修祠", "建桥", "拍照", "获奖"
+    ]
+    EMOTION_KEYWORDS = [
+        "高兴", "开心", "难过", "激动", "紧张", "骄傲", "怀念", "感动", "遗憾", "委屈", "自豪"
+    ]
     
     def __init__(self, db_path: str = None):
         """
@@ -66,6 +84,7 @@ class ContextManager:
         record = {
             "photo_id": photo_id,
             "timestamp": datetime.now().isoformat(),
+            "sequence": len(self.photo_sequence) + 1,
             "analysis": analysis_result,
             "qa_history": qa_history,
             "key_info": key_info,
@@ -82,7 +101,8 @@ class ContextManager:
             metadatas=[{
                 "photo_id": photo_id,
                 "key_info": json.dumps(key_info, ensure_ascii=False),
-                "sequence": len(self.photo_sequence)
+                "sequence": len(self.photo_sequence),
+                "stage": key_info.get("stage") or "unknown"
             }],
             ids=[record_id]
         )
@@ -108,7 +128,7 @@ class ContextManager:
             return {}
         
         # 构建查询文本
-        query_text = current_analysis.get('overall_description', '')
+        query_text = self._build_query_text(current_analysis)
         
         # 从向量数据库检索
         results = self.collection.query(
@@ -119,7 +139,17 @@ class ContextManager:
         # 提取相关信息
         relevant_context = {
             "previous_photos": [],
-            "key_connections": []
+            "key_connections": [],
+            "latest_photo": None,
+            "retrieved_photo": None,
+            "merged_key_info": {
+                "people": [],
+                "places": [],
+                "events": [],
+                "time": None,
+                "emotions": [],
+                "stage": None,
+            }
         }
         
         if results['ids'] and len(results['ids'][0]) > 0:
@@ -130,6 +160,8 @@ class ContextManager:
                     record = self.photo_sequence[seq_num]
                     relevant_context["previous_photos"].append({
                         "photo_id": record["photo_id"],
+                        "sequence": record["sequence"],
+                        "record_index": seq_num,
                         "key_info": record["key_info"],
                         "summary": record["dialogue_text"][:200] + "..."
                     })
@@ -139,9 +171,30 @@ class ContextManager:
             last_record = self.photo_sequence[-1]
             relevant_context["previous_photos"].append({
                 "photo_id": last_record["photo_id"],
+                "sequence": last_record["sequence"],
+                "record_index": len(self.photo_sequence) - 1,
                 "key_info": last_record["key_info"],
                 "summary": last_record["dialogue_text"][:200] + "..."
             })
+
+        if self.photo_sequence:
+            latest_record = self.photo_sequence[-1]
+            relevant_context["latest_photo"] = {
+                "photo_id": latest_record["photo_id"],
+                "sequence": latest_record["sequence"],
+                "record_index": len(self.photo_sequence) - 1,
+                "key_info": latest_record["key_info"],
+                "summary": latest_record["dialogue_text"][:200] + "..."
+            }
+
+        if relevant_context["previous_photos"]:
+            relevant_context["retrieved_photo"] = relevant_context["previous_photos"][0]
+            relevant_context["merged_key_info"] = self._merge_key_info(
+                [entry.get("key_info", {}) for entry in relevant_context["previous_photos"]]
+            )
+            relevant_context["key_connections"] = self._build_key_connections(
+                relevant_context["previous_photos"]
+            )
         
         return relevant_context
     
@@ -167,8 +220,9 @@ class ContextManager:
         if not context.get("previous_photos"):
             return None
         
-        # 使用上一张照片的信息
-        previous_photo = self.photo_sequence[-1]
+        previous_photo = self._select_reference_record(context)
+        if previous_photo is None:
+            return None
         
         from src.question_generator import QuestionGenerator
         generator = QuestionGenerator()
@@ -185,6 +239,16 @@ class ContextManager:
         )
         
         return question
+
+    def _build_query_text(self, analysis_result: Dict) -> str:
+        """构建更适合检索的查询文本。"""
+        parts = [
+            str(analysis_result.get("overall_description", "") or ""),
+            str(analysis_result.get("background", "") or ""),
+            str(analysis_result.get("emotions", "") or ""),
+            str(analysis_result.get("era_items", "") or ""),
+        ]
+        return " ".join(part for part in parts if part).strip()
     
     def _format_dialogue(self, analysis_result: Dict, qa_history: List[Dict]) -> str:
         """格式化对话为文本"""
@@ -218,17 +282,144 @@ class ContextManager:
             "places": [],
             "events": [],
             "time": None,
-            "emotions": []
+            "emotions": [],
+            "stage": None,
         }
         
-        # 从问答中提取关键信息（简化版，实际可以使用NER模型）
-        all_text = analysis_result.get('overall_description', '') + " " + \
-                   " ".join([qa.get('answer', '') for qa in qa_history])
-        
-        # 简单的关键词提取（实际应该使用更高级的NLP方法）
-        # 这里只是示例，实际应该使用NER或信息抽取模型
+        text_parts = [
+            str(analysis_result.get("overall_description", "") or ""),
+            str(analysis_result.get("background", "") or ""),
+            str(analysis_result.get("emotions", "") or ""),
+            str(analysis_result.get("clothing", "") or ""),
+            str(analysis_result.get("era_items", "") or ""),
+            " ".join(qa.get("question", "") for qa in qa_history),
+            " ".join(qa.get("answer", "") for qa in qa_history),
+        ]
+        all_text = " ".join(part for part in text_parts if part)
+
+        key_info["people"] = self._extract_keyword_hits(all_text, self.PERSON_KEYWORDS)
+        key_info["places"] = self._extract_places(all_text)
+        key_info["events"] = self._extract_events(all_text)
+        key_info["time"] = self._extract_time(all_text)
+        key_info["emotions"] = self._extract_emotions(all_text)
+        key_info["stage"] = self._infer_stage(all_text)
         
         return key_info
+
+    def _extract_keyword_hits(self, text: str, keywords: List[str]) -> List[str]:
+        hits = []
+        for keyword in keywords:
+            if keyword in text and keyword not in hits:
+                hits.append(keyword)
+        return hits[:6]
+
+    def _extract_places(self, text: str) -> List[str]:
+        places = self._extract_keyword_hits(text, self.PLACE_KEYWORDS)
+        regex_hits = re.findall(r"([\u4e00-\u9fff]{2,10}(?:村|镇|县|市|岛|山|海|厂|校|营|祠|堂))", text)
+        for place in regex_hits:
+            if place not in places:
+                places.append(place)
+        return places[:6]
+
+    def _extract_events(self, text: str) -> List[str]:
+        events = self._extract_keyword_hits(text, self.EVENT_KEYWORDS)
+        snippets = re.findall(
+            r"([\u4e00-\u9fff0-9]{0,8}(?:参军|入伍|退伍|转业|上学|毕业|结婚|退休|比赛|演讲|下乡|返城|修祠|拍照)[\u4e00-\u9fff0-9]{0,8})",
+            text,
+        )
+        for snippet in snippets:
+            cleaned = snippet.strip(" ，。；：")
+            if cleaned and cleaned not in events:
+                events.append(cleaned)
+        return events[:6]
+
+    def _extract_time(self, text: str) -> Optional[str]:
+        patterns = [
+            r"(\d{4}年)",
+            r"((?:19|20)\d{2}年代)",
+            r"(小时候|童年|青年时期|年轻时|晚年|退休后)",
+        ]
+        for pattern in patterns:
+            match = re.search(pattern, text)
+            if match:
+                return match.group(1)
+        return None
+
+    def _extract_emotions(self, text: str) -> List[str]:
+        emotions = self._extract_keyword_hits(text, self.EMOTION_KEYWORDS)
+        if not emotions:
+            regex_hits = re.findall(r"(很(?:高兴|开心|难过|激动|紧张|骄傲|怀念|感动|遗憾|自豪))", text)
+            for emotion in regex_hits:
+                if emotion not in emotions:
+                    emotions.append(emotion)
+        return emotions[:5]
+
+    def _infer_stage(self, text: str) -> Optional[str]:
+        rules = [
+            ("童年", ["小时候", "童年", "上小学"]),
+            ("求学", ["读书", "上学", "毕业", "学校"]),
+            ("军旅", ["参军", "入伍", "部队", "战友", "连长"]),
+            ("工作", ["工作", "工厂", "单位", "车间", "演讲", "比赛"]),
+            ("家庭", ["结婚", "孩子", "一家人", "父亲", "母亲"]),
+            ("晚年", ["退休", "晚年", "孙子", "孙女"]),
+        ]
+        for stage, keywords in rules:
+            if any(keyword in text for keyword in keywords):
+                return stage
+        return None
+
+    def _merge_key_info(self, key_infos: List[Dict]) -> Dict:
+        merged = {
+            "people": [],
+            "places": [],
+            "events": [],
+            "time": None,
+            "emotions": [],
+            "stage": None,
+        }
+        for key_info in key_infos:
+            for field in ("people", "places", "events", "emotions"):
+                for item in key_info.get(field, []) or []:
+                    if item and item not in merged[field]:
+                        merged[field].append(item)
+            if not merged["time"] and key_info.get("time"):
+                merged["time"] = key_info["time"]
+            if not merged["stage"] and key_info.get("stage"):
+                merged["stage"] = key_info["stage"]
+        return merged
+
+    def _build_key_connections(self, previous_photos: List[Dict]) -> List[str]:
+        if not previous_photos:
+            return []
+        merged = self._merge_key_info([entry.get("key_info", {}) for entry in previous_photos])
+        connections = []
+        if merged["people"]:
+            connections.append(f"重复出现的人物线索：{'、'.join(merged['people'][:3])}")
+        if merged["places"]:
+            connections.append(f"可延续的地点线索：{'、'.join(merged['places'][:3])}")
+        if merged["events"]:
+            connections.append(f"前文事件线索：{'、'.join(merged['events'][:3])}")
+        if merged.get("stage"):
+            connections.append(f"当前最相关的人生阶段：{merged['stage']}")
+        return connections[:4]
+
+    def _select_reference_record(self, context: Dict) -> Optional[Dict]:
+        if not context:
+            return self.photo_sequence[-1] if self.photo_sequence else None
+
+        retrieved = context.get("retrieved_photo")
+        if retrieved is not None:
+            record_index = retrieved.get("record_index")
+            if isinstance(record_index, int) and 0 <= record_index < len(self.photo_sequence):
+                return self.photo_sequence[record_index]
+
+        latest = context.get("latest_photo")
+        if latest is not None:
+            record_index = latest.get("record_index")
+            if isinstance(record_index, int) and 0 <= record_index < len(self.photo_sequence):
+                return self.photo_sequence[record_index]
+
+        return self.photo_sequence[-1] if self.photo_sequence else None
     
     def get_story_timeline(self) -> List[Dict]:
         """

@@ -4,6 +4,7 @@
 """
 from typing import Dict, List, Optional, Callable
 import config
+from src.model_backend import call_text_api, get_model_settings
 
 try:
     from src.enhanced_followup import EnhancedFollowupGenerator
@@ -23,14 +24,10 @@ class QuestionGenerator:
             api_key: 混元API密钥
             api_endpoint: API端点
         """
-        if api_key and api_endpoint:
-            self.api_key, self.api_endpoint = api_key, api_endpoint
-        elif config.USE_HUNYUAN:
-            self.api_key = config.HUNYUAN_API_KEY
-            self.api_endpoint = config.HUNYUAN_API_ENDPOINT
-        else:
-            self.api_key = config.GEMINI_API_KEY
-            self.api_endpoint = config.GEMINI_API_ENDPOINT
+        self.model_settings = get_model_settings(api_key=api_key, api_endpoint=api_endpoint)
+        self.api_key = self.model_settings["api_key"]
+        self.api_endpoint = self.model_settings["api_endpoint"]
+        self.backend = self.model_settings["provider"]
 
         self.use_enhanced_followup = use_enhanced_followup and ENHANCED_FOLLOWUP_AVAILABLE
         self.enhanced_followup = EnhancedFollowupGenerator() if self.use_enhanced_followup else None
@@ -314,16 +311,12 @@ class QuestionGenerator:
         Returns:
             生成的问题文本
         """
-        if config.USE_HUNYUAN:
-            result = self._call_hunyuan_text_api(prompt, single)
-            if on_stream_chunk is not None and result:
-                on_stream_chunk(result)
-            return result
-        if config.USE_GEMINI and on_stream_chunk is not None:
-            return self._call_gemini_questions_stream(prompt, on_stream_chunk)
-        if config.USE_GEMINI:
-            return self._call_gemini_text_api(prompt)
-        result = self._call_hunyuan_text_api(prompt, single)
+        result = call_text_api(
+            self.model_settings,
+            prompt,
+            temperature=config.TEMPERATURE,
+            max_tokens=2048,
+        )
         if on_stream_chunk is not None and result:
             on_stream_chunk(result)
         return result
